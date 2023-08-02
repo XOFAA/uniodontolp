@@ -1,10 +1,11 @@
-import { NavBar } from "../../../components/navbar/NavBar"
+import { NavBar } from "../../components/navbar/NavBar"
 import { Box, Typography, Container, Button } from '@mui/material';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import { Footer } from "../../components/footer/Footer";
 export const Atendimento = () => {
     return (
         <>
@@ -108,7 +109,7 @@ export const Atendimento = () => {
                                 </Box>
                                 <Typography sx={{ fontSize: '18px', mt: 2 }}>Estamos também no WhatsApp para atender nos mais diversos assuntos que você precisar solucionar.</Typography>
                                 <Box sx={{ display: 'flex', gap: 4, flexDirection: { md: 'row', xs: 'column' }, alignItems: { xs: 'center', md: 'start' }, my: 2 }}>
-                                <Button variant="contained" sx={{ width: '200px', height: '50px', bgcolor: '#107E75', fontWeight: 'bolder' }}>PLANO PARA EMPRESA</Button>
+                                <Button variant="contained" sx={{ width: '220px', height: '40px', bgcolor: '#107E75', fontWeight: 'bolder' }}>PLANO PARA EMPRESA</Button>
                                     <Button variant="contained" sx={{ width: '200px', height: '40px', bgcolor: '#107E75', fontWeight: 'bolder' }}>RELACIONAMENTO</Button>
                                     <Button variant="contained" sx={{ width: '200px', height: '40px', bgcolor: '#107E75', fontWeight: 'bolder' }}>FATURAMENTO</Button>
                                     <Button variant="contained" sx={{ width: '200px', height: '40px', bgcolor: '#107E75', fontWeight: 'bolder' }}>SAB</Button>
@@ -162,16 +163,33 @@ export const Atendimento = () => {
                                 <Typography fontSize={'28px'}>Para Cooperados</Typography>
                             </AccordionSummary>
                             <AccordionDetails sx={{ marginTop: '0px' }}>
-                                <Typography>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                                    malesuada lacus ex, sit amet blandit leo lobortis eget.
-                                </Typography>
+                                <Typography sx={{fontSize:'28px',fontWeight:'bolder'}}>Online</Typography>
+                                <Typography sx={{fontSize:'20px',}}>Oferecemos os mais diversos meios de comunicação para falicitar nosso relacionamento com sua empresa ou negócio.</Typography>
+                                   <Box sx={{ display: 'flex', gap: 2 }}>
+                                    <Typography sx={{ fontSize: '22px', fontWeight: 'bolder',mt:3 }}>Atendimento via WhatsApp</Typography>
+                                    <WhatsAppIcon />
+                                </Box>
+                                <Typography sx={{mt:2}}>Estamos também no WhatsApp para atender nos mais diversos assuntos que você precisar solucionar.</Typography>
+                                <Box sx={{display:'flex',gap:3,my:2}}>
+                                <Button variant="contained" sx={{fontSize:'18px',fontWeight:'bolder',bgcolor:'#107E75',color:'#fff'}}>DAC</Button>
+                                 <Button variant="contained" sx={{fontSize:'18px',fontWeight:'bolder',bgcolor:'#107E75'}}>INTERCÂMBIO</Button>
+                                </Box>
+
+                                <Box sx={{display:'flex',flexDirection:'column',gap:2}}>
+                                <Typography sx={{fontSize:'22px',fontWeight:'bolder'}}>Atendimento via E-Mail</Typography>
+                                <Typography >Nós disponibilizamos também e-mails para que você possa encaminhar sua dúvida ou outras demandas referentes às suas necessidades</Typography>
+                                <Typography><span style={{fontSize:'18px',fontWeight:'bolder'}}>Departamento de Atenção ao Cooperado:</span> dac@uniodontomao.com.br</Typography>
+                                <Typography><span style={{fontWeight:'bolder',fontSize:'18px'}}>Intercâmbio:</span>intercâmbio@uniodontomao.com.br</Typography>
+                                <Typography sx={{fontSize:'28px',fontWeight:'bolder'}}>Telefone</Typography>
+                                <Typography>Caso precise, temos telefone de contato para que você possa falar conosco:</Typography>
+                                <Typography><span style={{fontWeight:'bolder',fontSize:'18px'}}>DAC/Intercâmbio:</span>(92) 2126-0608</Typography>
+                                 </Box>
                             </AccordionDetails>
                         </Accordion>
                     </Box>
                 </Box>
             </Container>
-
+            <Footer/>
         </>
     )
 }
