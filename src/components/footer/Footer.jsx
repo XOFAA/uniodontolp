@@ -191,24 +191,33 @@ export const Footer =()=>{
         </Container>
        </Box>
 
-       <Box sx={{bgcolor:'#363636',height:{md:'300px',xs:'100%'}}}>
+       <Box sx={{bgcolor:'#363636',height:{md:'400px',xs:'100%'}}}>
         <Container>
-
-        <Grid container spacing={3}>
-
-        <Grid item xs={12} md={6}>
-        teste
-        </Grid>
-        
-        <Grid item xs={12} md={6}>
-        <Box sx={{display:'flex',gap:2}}>
+        <Box sx={{display:'flex',gap:2,justifyContent:'end'}}>
             <Box sx={{width:'200px',height:'100px',display:'flex',alignItems:'center'}}  component={'div'}  >
             <img src='Logo ANS.PNG' alt="Logo" width={'196px'} height={'40px'}/>
             </Box>
+            
             <Box sx={{width:'200px',height:'100px'}}  component={'div'}  >
             <img src='AM.PNG' alt="Logo" width={'132px'} height={'69px'}/>
             </Box>
           </Box>
+ <Box sx={{ width: '100%', height: '1px', backgroundColor: '#fff' }} component={'div'} />
+ 
+        <Grid container spacing={1}>
+
+        <Grid item xs={12} md={6}>
+
+        <Box sx={{width:'150px',height:'120px',display:'flex',mt:6}}  component={'div'}  >
+          
+            <img src='Logo Coop.png' alt="Logo" width={'100%'} height={'100%'}/>
+            
+            </Box>
+        </Grid>
+          
+        <Grid item xs={12} md={6}>
+       
+       
 
           <Box sx={{display:'flex',flexDirection:'column',alignItems:'end',mt:3}}>
             <Typography sx={{fontSize:'16px',fontWeight:'bolder',color:'#fff'}}>Uniodonto Manaus Cooperativa Odontológica Ltda</Typography>
@@ -216,17 +225,18 @@ export const Footer =()=>{
             <Typography sx={{fontSize:'15px',fontStyle:'italic',color:'#fff'}}>Sede Administrativa: Av. Leonardo Malcher, 598, Centro - Manaus/AM - CEP 69010-170</Typography>
             <Typography sx={{fontSize:'16px',fontWeight:'bolder',color:'#fff',mt:3}}>Responsável técnico: Dra. Michele P. Lemos - CRO/AM 3183</Typography>
           </Box>
-          <Box sx={{display:'flex',gap:2,mt:5}}>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#E1FF7B',fontStyle:'bolder' ,fontSize:'12px'}}>
+          
+          <Box sx={{display:'flex',gap:5,mt:5}}>
+          <Link href="#" sx={{ textDecoration: 'none', color: '#E1FF7B', fontWeight:"bold",fontStyle:"italic" ,fontSize:'12px'}}>
                 Termos de Uso e Política de Privacidade
                 </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#E1FF7B',fontStyle:'bolder' ,fontSize:'12px'}}>
+                <Link href="#" sx={{ textDecoration: 'none', color: '#E1FF7B', fontWeight:"bold",fontStyle:"italic" ,fontSize:'12px'}}>
                 Segurança no Uso da Internet 
                 </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#E1FF7B',fontStyle:'bolder' ,fontSize:'12px'}}>
+                <Link href="#" sx={{ textDecoration: 'none', color: '#E1FF7B', fontWeight:"bold",fontStyle:"italic" ,fontSize:'12px'}}>
                 LGPD
                 </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#E1FF7B',fontStyle:'bolder' ,fontSize:'12px'}}>
+                <Link href="#" sx={{ textDecoration: 'none', color: '#E1FF7B', fontWeight:"bold",fontStyle:"italic" ,fontSize:'12px'}}>
                 Sitemap
                 </Link>
 
