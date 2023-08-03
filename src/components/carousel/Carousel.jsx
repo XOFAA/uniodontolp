@@ -33,7 +33,7 @@ export const Carousel = () => {
         <SwiperSlide><img src="/TopSlide/foto2.png" style={{width:'100%',height:'100%'}}/></SwiperSlide>
       
 
-        <SwiperSlide><img src="/TopSlide/foto1.png" style={{width:'100%',height:'100%'}}/></SwiperSlide>      
+        <SwiperSlide><img src="/TopSlide/foto3.png" style={{width:'100%',height:'100%'}}/></SwiperSlide>      
   
      
       </Swiper>

@@ -15,15 +15,18 @@ import 'swiper/css/scrollbar';
 
 export const CarouselAcessoRapido = ()=>{
     return(
-        <Box sx={{bgcolor:'#f1f1f1',height:'350px',alignItems:'center',display:'flex'}}>
+        <Box sx={{bgcolor:'#f1f1f1',height:'350px'}}>
             <Container>
     
 
         <Typography sx={{textAlign:'center',fontSize:'40px',fontWeight:'bolder',color:'#363636',my:5}}>Acesso Rapido</Typography>
+        <Box>
+
+   
         <Swiper
             
-             modules={[Navigation, Pagination, Scrollbar, A11y,]}
-           
+            modules={[Navigation, Pagination, Scrollbar, A11y,]}
+            spaceBetween={45}
              breakpoints={{
                 0: {
                   slidesPerView: 2,
@@ -37,17 +40,15 @@ export const CarouselAcessoRapido = ()=>{
                   slidesPerView: 6,
                   
                 },
-              }}
-              
+              }}    
              navigation
-            
-             pagination={{ clickable: true }}
-             
              onSwiper={(swiper) => console.log(swiper)}
              onSlideChange={() => console.log('slide change')}
            >
           
-             
+             <Box sx={{ml:'auto'}}>
+
+       
              <SwiperSlide>
                 <Card sx={{height:'130px',width:'120px',p:1,boxShadow:3,bgcolor:'#A60069',borderRadius:3}}>
                 <CardMedia sx={{textAlign:'end'}}><FmdGoodIcon sx={{color:'#fff',fontSize:'50px'}}/></CardMedia>
@@ -132,9 +133,9 @@ export const CarouselAcessoRapido = ()=>{
                 </Card>
                 </SwiperSlide>
                
-          
+                </Box>
            </Swiper>
- 
+           </Box>
            </Container>
            
             </Box>
