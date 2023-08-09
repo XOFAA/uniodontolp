@@ -23,17 +23,16 @@ export const Carousel = () => {
             delay: 2500,
             disableOnInteraction: false,
           }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log('slide change')}
+      
       >
      
         
-        <SwiperSlide><img src="images/TopSlide/foto1.png" style={{width:'100%',height:'100%'}}/></SwiperSlide>
+        <SwiperSlide><img src="images/topslide/foto1.png" style={{width:'100%',height:'100%'}}/></SwiperSlide>
    
-        <SwiperSlide><img src="images/TopSlide/foto2.png" style={{width:'100%',height:'100%'}}/></SwiperSlide>
+        <SwiperSlide><img src="images/topslide/foto2.png" style={{width:'100%',height:'100%'}}/></SwiperSlide>
       
 
-        <SwiperSlide><img src="images/TopSlide/foto3.png" style={{width:'100%',height:'100%'}}/></SwiperSlide>      
+        <SwiperSlide><img src="images/topslide/foto3.png" style={{width:'100%',height:'100%'}}/></SwiperSlide>      
   
      
       </Swiper>

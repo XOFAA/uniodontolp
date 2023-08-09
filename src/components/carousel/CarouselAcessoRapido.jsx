@@ -41,7 +41,7 @@ export const CarouselAcessoRapido = ()=>{
                   slidesPerView: 1,
                  
                 },
-                425:{
+                400:{
                   slidesPerView: 2
                 },
                 600:{
@@ -60,8 +60,7 @@ export const CarouselAcessoRapido = ()=>{
                 }
               }}    
              navigation
-             onSwiper={(swiper) => console.log(swiper)}
-             onSlideChange={() => console.log('slide change')}
+           pagination
              
            >
           

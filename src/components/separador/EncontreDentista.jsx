@@ -2,7 +2,7 @@ import { Box, Button, Typography } from "@mui/material";
 
 export const EncontreDentista = () => {
   const boxStyle = {
-    backgroundImage: 'url("/images/separadorEncontreDentista/Separador Encontre Dentista.png")',
+    backgroundImage: 'url("/images/separadorencontreumdentista/separador_encontre_um_dentista.png")',
     backgroundSize: "cover",
     backgroundPosition: "center",
     height: "150px", // Ajuste a altura conforme necessário

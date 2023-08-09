@@ -14,7 +14,7 @@ export const Importante =()=>{
         <Grid container spacing={2}>
 
         <Grid item xs={12} md={6} >
-        <Box sx={{backgroundImage: 'url("/images/importante/CapacitaCoop.png")',backgroundSize:'cover',backgroundRepeat:'no-repeat',height:{xs:'450px',md:'400px'}}}>
+        <Box sx={{backgroundImage: 'url("/images/importante/capacita_coop.png")',backgroundSize:'cover',borderRadius:'10px',backgroundRepeat:'no-repeat',backgroundPosition:'center',width:'100%',height:{xs:'100%',md:'400px'}}}>
             <Box sx={{p:5}}>
             <Typography sx={{fontSize:'16px',fontStyle:'italic',color:'#fff'}}>Conte com o CapacitaCoop!</Typography>
             <Typography sx={{fontSize:'29px',fontStyle:'italic',fontWeight:'bold',color:'#fff'}}>Curso grátis de Gestão de Produtos e Serviços</Typography>
@@ -25,7 +25,7 @@ export const Importante =()=>{
         </Box>
         </Grid>
         <Grid item xs={12}md={6}>
-        <Box sx={{backgroundImage: 'url("/images/importante/Leão.png")',backgroundSize:'cover',backgroundRepeat:'no-repeat',height:{xs:'450px',md:'400px'}}}>
+        <Box sx={{backgroundImage: 'url("/images/importante/leao.png")',backgroundSize:'cover',borderRadius:'10px',backgroundRepeat:'no-repeat',backgroundPosition:'center',height:{xs:'450px',md:'400px'}}}>
             <Box sx={{p:5}}>
             <Typography sx={{fontSize:'16px',fontStyle:'italic',color:'#fff'}}>Não caia na malha fina!</Typography>
             <Typography sx={{fontSize:'29px',fontStyle:'italic',fontWeight:'bold',color:'#fff'}}>Informe de Rendimentos<br/>disponível para download</Typography>
