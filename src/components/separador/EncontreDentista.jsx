@@ -1,11 +1,11 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 
 export const EncontreDentista = () => {
   const boxStyle = {
-    backgroundImage: 'url("Separador Encontre Dentista.png")',
+    backgroundImage: 'url("/images/separadorEncontreDentista/Separador Encontre Dentista.png")',
     backgroundSize: "cover",
     backgroundPosition: "center",
-    height: "100px", // Ajuste a altura conforme necessário
+    height: "150px", // Ajuste a altura conforme necessário
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -19,24 +19,29 @@ export const EncontreDentista = () => {
     right: 0,
     bottom: 0,
     backgroundColor: "rgba(0, 0, 0, 0.6)", // Você pode ajustar a opacidade aqui
-  
+
     zIndex: 1,
   };
 
-  const textStyle = {
-    zIndex: 2,
-    fontSize: "50px",
-    color: "#fff",
-    fontWeight: "bold",
-  };
+
 
   return (
     <Box sx={boxStyle}>
       <Box sx={overlayStyle}></Box>
-      <Box sx={textStyle}>
-        <Typography sx={{fontStyle:'italic',fontSize:'28px'}}>
-          <span style={{ fontWeight: "bolder",fontSize:'28px' }}>Sempre </span>tem um dentista próximo de você
+      <Box sx={{
+        zIndex: 2,
+        fontSize: "50px",
+        color: "#fff",
+        fontWeight: "bold",
+        display: 'flex',
+        gap:{xs:3,md:5},
+        alignItems:'center',
+        flexDirection:{md:'row',xs:'column'}
+      }}>
+        <Typography sx={{ fontStyle: 'italic', fontSize: {xs:'17px',md:'28px'}}}>
+          <span style={{ fontWeight: "bolder", fontSize: {xs:'25px',md:'28px'}}}>Sempre </span>tem um dentista próximo de você
         </Typography>
+        <Button variant='contained' sx={{ bgcolor: '#E1FF7B', color: '#363636', fontSize: '18px', fontStyle: 'italic', fontWeight: 'bold', textTransform: 'none', width: '320px', height: '40px' }}>Encontre um Dentista</Button>
       </Box>
     </Box>
   );

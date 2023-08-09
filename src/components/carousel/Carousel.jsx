@@ -12,7 +12,7 @@ import 'swiper/css/scrollbar';
 
 export const Carousel = () => {
     return (
-       <Box sx={{mt:8}}>
+       <Box sx={{mt:8,bgcolor:'#f1f1f1'}}>
    <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y,Autoplay]}
         slidesPerView={1}
@@ -28,12 +28,12 @@ export const Carousel = () => {
       >
      
         
-        <SwiperSlide><img src="/TopSlide/foto1.png" style={{width:'100%',height:'100%'}}/></SwiperSlide>
+        <SwiperSlide><img src="images/TopSlide/foto1.png" style={{width:'100%',height:'100%'}}/></SwiperSlide>
    
-        <SwiperSlide><img src="/TopSlide/foto2.png" style={{width:'100%',height:'100%'}}/></SwiperSlide>
+        <SwiperSlide><img src="images/TopSlide/foto2.png" style={{width:'100%',height:'100%'}}/></SwiperSlide>
       
 
-        <SwiperSlide><img src="/TopSlide/foto3.png" style={{width:'100%',height:'100%'}}/></SwiperSlide>      
+        <SwiperSlide><img src="images/TopSlide/foto3.png" style={{width:'100%',height:'100%'}}/></SwiperSlide>      
   
      
       </Swiper>

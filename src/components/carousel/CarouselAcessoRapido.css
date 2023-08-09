@@ -1,0 +1,27 @@
+/* CarouselAcessoRapido.css */
+.carouselAcessoRapido .swiper-slide {
+  display: flex;
+  justify-content: center;
+  height: auto;
+}
+
+.carouselAcessoRapido .swiper {
+  padding: 40px;
+}
+
+.carouselAcessoRapido .swiper-button-prev {
+  font-size: 5px; /* Defina o tamanho desejado para as setinhas */
+}
+/* Rest of your CSS styles */
+/* styles.css */
+
+/* Importe os estilos do Swiper */
+
+
+/* Seus estilos personalizados para as setinhas */
+.swiper-button-next,
+.swiper-button-prev {
+  --swiper-navigation-size: 20px;
+  color: #363636;
+  font-weight: bolder; /* Defina o tamanho desejado para as setinhas */
+}

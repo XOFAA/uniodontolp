@@ -14,16 +14,16 @@ export const Footer =()=>{
         <Grid container spacing={3}>
 
         <Grid item xs={12} md={3} >
-        <Box sx={{pt:2}}>
+        <Box sx={{pt:2,display:{xs:'flex'},flexDirection:{xs:'column'},alignItems:{xs:'center'}}}>
         <Box sx={{ paddingRight: 5, py: 1 }}>
             <Box sx={{width:'200px',height:'50px'}}  component={'div'}  >
-            <img src='LogoUniodonto.png' alt="Logo" width={'100%'} height={'100%'}/>
+            <img src='images/logoUniodonto/LogoUniodonto.png' alt="Logo" width={'100%'} height={'100%'}/>
             </Box>
           </Box>
 
-          <Box sx={{mt:{xs:0,md:3}}}>
+          <Box sx={{display:{xs:'flex'},flexDirection:{xs:'column'},alignItems:{xs:'center'},textAlign:{xs:'center'},mt:{xs:0,md:3}}}>
             <Box sx={{display:'flex',gap:1}}>
-          <Typography sx={{fontSize:'18px',fontWeight:'bolder',color:'#fff'}}>Central de <br/> Relacionamento <WhatsAppIcon sx={{ml:1,fontSize:'30px',color:'#fff'}}/></Typography>
+          <Typography sx={{fontSize:'18px',fontWeight:'bolder',color:'#fff'}}>Central de Relacionamento </Typography>
         
           </Box>
           <Typography sx={{fontSize:'26px',fontWeight:'bolder',color:'#E1FF7B'}}>(92) 2126-0600</Typography>
@@ -31,33 +31,33 @@ export const Footer =()=>{
         </Box>
         </Grid>
         <Grid item xs={12} md={3}>
-        <Box sx={{pt:2}}>
-        <Box sx={{ paddingRight: 5, py: 1,display:'flex',gap:3}}>
+        <Box sx={{pt:2,display:{xs:'flex'},flexDirection:{xs:'column'},alignItems:{xs:'center'}}}>
+        <Box sx={{ paddingRight: {xs:0,md:5}, py: 1,display:'flex',gap:3}}>
             <Box sx={{width:'60px',height:'50px'}}  component={'div'}  >
-            <img src='Botão ANS.png' alt="Logo" width={'100%'} height={'100%'}/>
+            <img src='images/logosFooter/Botão ANS.png' alt="Logo" width={'100%'} height={'100%'}/>
             </Box>
             <Box sx={{width:'110px',height:'20px',mt:2}}  component={'div'}  >
-            <img src='Código ANS.PNG' alt="Logo" width={'100%'} height={'100%'}/>
+            <img src='images/logosFooter/Código ANS.PNG' alt="Logo" width={'100%'} height={'100%'}/>
             </Box>
           </Box>
 
           <Box sx={{mt:{xs:0,md:3}}}>
             <Box sx={{display:'flex'}}>
-          <Typography sx={{fontSize:'18px',fontWeight:'bolder',color:'#fff'}}>Serviço de Atendimento ao Beneficiário  <WhatsAppIcon sx={{ml:1,fontSize:'30px',color:'#fff'}}/></Typography>
+          <Typography sx={{fontSize:'18px',fontWeight:'bolder',color:'#fff',textAlign:'center'}}>Serviço de Atendimento ao Beneficiário </Typography>
          
        
           </Box>
-          <Typography sx={{fontSize:'26px',fontWeight:'bolder',color:'#E1FF7B'}}>(92) 2126-0604</Typography>
+          <Typography sx={{fontSize:'26px',fontWeight:'bolder',color:'#E1FF7B',textAlign:'center'}}>(92) 2126-0604</Typography>
           </Box>
         </Box>
         </Grid>
-        <Grid item md={3}>
-        <Box sx={{pt:2}}>
+        <Grid item md={3} xs={12}>
+        <Box sx={{pt:2,display:{xs:'flex'},flexDirection:{xs:'column'},alignItems:{xs:'center'}}}>
       
 
         <Box sx={{mt:{xs:0,md:3}}}>
             <Box sx={{display:'flex'}}>
-          <Typography sx={{fontSize:'18px',fontWeight:'bolder',color:'#fff',mt:{xs:0,md:8}}}>Ouvidoria<br/> Uniodonto Manaus  <WhatsAppIcon sx={{ml:1,fontSize:'30px',color:'#fff'}}/></Typography>
+          <Typography sx={{fontSize:'18px',fontWeight:'bolder',color:'#fff',mt:{xs:0,md:8}}}>Ouvidoria<br/> Uniodonto Manaus  </Typography>
          
        
           </Box>
@@ -65,8 +65,8 @@ export const Footer =()=>{
           </Box>
         </Box>
         </Grid>
-        <Grid item md={3}>
-        <Box sx={{pt:2}}>
+        <Grid item md={3} xs={12}>
+        <Box sx={{pt:2,display:{xs:'flex'},flexDirection:{xs:'column'},alignItems:{xs:'center'}}}>
         <Box sx={{display:'flex',gap:1}}>
            <FacebookIcon sx={{height:'30px',width:'30px',color:'#fff'}}/>
            <InstagramIcon sx={{height:'30px',width:'30px',color:'#fff'}}/>
@@ -77,12 +77,14 @@ export const Footer =()=>{
           </Box>
 
           <Box sx={{mt:{xs:0,md:3}}}>
-            <Box sx={{display:'flex'}}>
-          <Typography sx={{fontSize:'18px',fontWeight:'bolder',color:'#fff'}}>Canais de atendimento online e telefônico<WhatsAppIcon sx={{ml:1,fontSize:'30px',color:'#fff'}}/></Typography>
+            <Box sx={{display:'flex',textAlign:{xs:'center',md:'unset'}}}>
+          <Typography sx={{fontSize:'18px',fontWeight:'bolder',color:'#fff'}}>Canais de atendimento online e telefônico</Typography>
          
        
           </Box>
+          <Box sx={{display:'flex',justifyContent:'center'}}>
           <Button variant="contained" sx={{mt:3,bgcolor:'#E1FF7B',color:"#363636",fontWeight:'bolder',width:'200px',height:'40px',borderRadius:'20px',fontSize:'24px'}}>Acesse aqui</Button>
+          </Box>
           </Box>
         </Box>
         </Grid>
@@ -195,11 +197,11 @@ export const Footer =()=>{
         <Container>
         <Box sx={{display:'flex',gap:2,justifyContent:'end'}}>
             <Box sx={{width:'200px',height:'100px',display:'flex',alignItems:'center'}}  component={'div'}  >
-            <img src='Logo ANS.PNG' alt="Logo" width={'196px'} height={'40px'}/>
+            <img src='images/logosFooter/Logo ANS.PNG' alt="Logo" width={'196px'} height={'40px'}/>
             </Box>
             
             <Box sx={{width:'200px',height:'100px'}}  component={'div'}  >
-            <img src='AM.PNG' alt="Logo" width={'132px'} height={'69px'}/>
+            <img src='images/logosFooter/AM.PNG' alt="Logo" width={'132px'} height={'69px'}/>
             </Box>
           </Box>
  <Box sx={{ width: '100%', height: '1px', backgroundColor: '#fff' }} component={'div'} />
@@ -210,7 +212,7 @@ export const Footer =()=>{
 
         <Box sx={{width:'150px',height:'120px',display:'flex',mt:6}}  component={'div'}  >
           
-            <img src='Logo Coop.png' alt="Logo" width={'100%'} height={'100%'}/>
+            <img src='images/logosFooter/Logo Coop.png' alt="Logo" width={'100%'} height={'100%'}/>
             
             </Box>
         </Grid>
