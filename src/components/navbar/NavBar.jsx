@@ -75,7 +75,7 @@ export const NavBar = () => {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box sx={{ borderRight: { md: 1, xs: 0 }, paddingRight: 5, py: 1 }}>
-            <Box sx={{width:'200px',height:'50px'}}  component={'div'} onClick={handleLogo} >
+            <Box  sx={{width:'200px',height:'50px'}}  component={'div'} onClick={handleLogo} >
             <img src='/images/logouniodonto/logouniodonto.png' alt="Logo" width={'100%'} height={'100%'}/>
             </Box>
             

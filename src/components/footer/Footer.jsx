@@ -14,25 +14,25 @@ export const Footer =()=>{
         <Grid container spacing={3}>
 
         <Grid item xs={12} md={3} >
-        <Box sx={{pt:2,display:{xs:'flex'},flexDirection:{xs:'column'},alignItems:{xs:'center'}}}>
-        <Box sx={{ paddingRight: 5, py: 1 }}>
+        <Box sx={{pt:2,display:{xs:'flex'},flexDirection:{xs:'column'},alignItems:{xs:'center',md:'flex-start'}}}>
+        <Box sx={{ py: 1 }}>
             <Box sx={{width:'200px',height:'50px'}}  component={'div'}  >
             <img src='images/logouniodonto/logouniodonto.png' alt="Logo" width={'100%'} height={'100%'}/>
             </Box>
           </Box>
 
-          <Box sx={{display:{xs:'flex'},flexDirection:{xs:'column'},alignItems:{xs:'center'},textAlign:{xs:'center'},mt:{xs:0,md:3}}}>
+          <Box sx={{display:{xs:'flex'},flexDirection:{xs:'column'},alignItems:{xs:'center',md:'flex-start'},textAlign:{xs:'center'},mt:{xs:0,md:3}}}>
             <Box sx={{display:'flex',gap:1}}>
-          <Typography sx={{fontSize:'18px',fontWeight:'bolder',color:'#fff'}}>Central de Relacionamento </Typography>
+          <Typography sx={{fontSize:'18px',fontStyle:'italic',fontWeight:'bold',color:'#fff'}}>Central de Relacionamento </Typography>
         
           </Box>
-          <Typography sx={{fontSize:'26px',fontWeight:'bolder',color:'#E1FF7B'}}>(92) 2126-0600</Typography>
+          <Typography sx={{fontSize:'26px',fontStyle:'italic',fontWeight:'bold',color:'#E1FF7B',mt:3}}>(92) 2126-0600</Typography>
           </Box>
         </Box>
         </Grid>
         <Grid item xs={12} md={3}>
-        <Box sx={{pt:2,display:{xs:'flex'},flexDirection:{xs:'column'},alignItems:{xs:'center'}}}>
-        <Box sx={{ paddingRight: {xs:0,md:5}, py: 1,display:'flex',gap:3}}>
+        <Box sx={{pt:2,display:{xs:'flex'},flexDirection:{xs:'column'},alignItems:{xs:'center',md:'flex-start'}}}>
+        <Box sx={{ py: 1,display:'flex',gap:3}}>
             <Box sx={{width:'60px',height:'50px'}}  component={'div'}  >
             <img src='images/logosfooter/botao_ans.png' alt="Logo" width={'100%'} height={'100%'}/>
             </Box>
@@ -43,31 +43,41 @@ export const Footer =()=>{
 
           <Box sx={{mt:{xs:0,md:3}}}>
             <Box sx={{display:'flex'}}>
-          <Typography sx={{fontSize:'18px',fontWeight:'bolder',color:'#fff',textAlign:'center'}}>Serviço de Atendimento ao Beneficiário </Typography>
+          <Typography sx={{fontSize:'18px',fontStyle:'italic',fontWeight:'bold',color:'#fff'}}>Serviço de Atendimento<br/> ao Beneficiário </Typography>
          
        
           </Box>
-          <Typography sx={{fontSize:'26px',fontWeight:'bolder',color:'#E1FF7B',textAlign:'center'}}>(92) 2126-0604</Typography>
+          <Typography sx={{fontSize:'26px',fontStyle:'italic',fontWeight:'bold',color:'#E1FF7B',textAlign:'center'}}>(92) 2126-0604</Typography>
           </Box>
         </Box>
         </Grid>
         <Grid item md={3} xs={12}>
         <Box sx={{pt:2,display:{xs:'flex'},flexDirection:{xs:'column'},alignItems:{xs:'center'}}}>
       
+        
 
-        <Box sx={{mt:{xs:0,md:3}}}>
+        <Box sx={{mt:{xs:0}}}>
+        <Box sx={{ paddingRight: {xs:0,md:5}, py: 1,display:'flex',gap:3}}>
+            <Box sx={{width:'220px',height:'50px'}}  component={'div'}  >
+            <img src='images/logosfooter/google_ssl.png' alt="Logo" width={'100%'} height={'100%'}/>
+            </Box>
+            
+          </Box>
+
             <Box sx={{display:'flex'}}>
-          <Typography sx={{fontSize:'18px',fontWeight:'bolder',color:'#fff',mt:{xs:0,md:8}}}>Ouvidoria Uniodonto Manaus  </Typography>
+          <Typography sx={{fontSize:'18px',fontStyle:'italic',fontWeight:'bold',color:'#fff',mt:{xs:0,md:3}}}>Ouvidoria<br/> Uniodonto Manaus  </Typography>
          
        
           </Box>
-          <Typography sx={{fontSize:'26px',fontWeight:'bolder',color:'#E1FF7B'}}>(92) 2126-0604</Typography>
+          <Typography sx={{fontSize:'26px',fontStyle:'italic',fontWeight:'bold',color:'#E1FF7B'}}>(92) 2126-0604</Typography>
           </Box>
         </Box>
         </Grid>
         <Grid item md={3} xs={12}>
-        <Box sx={{pt:2,display:{xs:'flex'},flexDirection:{xs:'column'},alignItems:{xs:'center'}}}>
+        <Box sx={{pb:5,mt:3,display:{xs:'flex'},flexDirection:{xs:'column'},alignItems:{xs:'center',md:'flex-start'}}}>
+        <Typography sx={{textAlign:'start',fontSize:'18px',color:'#fff',fontStyle:'italic'}}><span style={{fontWeight:'bolder'}}>Siga</span> a gente!</Typography>
         <Box sx={{display:'flex',gap:1}}>
+
            <FacebookIcon sx={{height:'30px',width:'30px',color:'#fff'}}/>
            <InstagramIcon sx={{height:'30px',width:'30px',color:'#fff'}}/>
            <LinkedInIcon sx={{height:'30px',width:'30px',color:'#fff'}}/>
@@ -76,14 +86,14 @@ export const Footer =()=>{
            <WhatsAppIcon sx={{height:'30px',width:'30px',color:'#fff'}}/>
           </Box>
 
-          <Box sx={{mt:{xs:0,md:3}}}>
+          <Box sx={{mt:{xs:0,md:1}}}>
             <Box sx={{display:'flex',textAlign:{xs:'center',md:'unset'}}}>
-          <Typography sx={{fontSize:'18px',fontWeight:'bolder',color:'#fff'}}>Canais de atendimento online e telefônico</Typography>
+          <Typography sx={{fontSize:'18px',fontWeight:'bold',color:'#fff',fontStyle:'italic'}}>Canais de atendimento online e telefônico</Typography>
          
        
           </Box>
-          <Box sx={{display:'flex',justifyContent:'center'}}>
-          <Button variant="contained" sx={{mt:3,bgcolor:'#E1FF7B',color:"#363636",fontWeight:'bolder',width:'200px',height:'40px',borderRadius:'20px',fontSize:'24px'}}>Acesse aqui</Button>
+          <Box sx={{display:'flex',justifyContent:{md:'flex-start',xs:'center'}}}>
+          <Button variant="contained" sx={{mt:1,bgcolor:'#E1FF7B',color:"#363636",fontStyle:'italic',fontWeight:'bold',width:'150px',height:'50px',borderRadius:'5px',fontSize:'18px'}}>Acesse aqui</Button>
           </Box>
           </Box>
         </Box>

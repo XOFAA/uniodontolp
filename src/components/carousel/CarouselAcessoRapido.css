@@ -17,8 +17,11 @@
 
 /* Importe os estilos do Swiper */
 
+:root {
+  --swiper-theme-color: #A60069; /* Defina a cor desejada para as bolinhas */
+}
 
-/* Seus estilos personalizados para as setinhas */
+
 .swiper-button-next,
 .swiper-button-prev {
   --swiper-navigation-size: 20px;

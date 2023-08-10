@@ -23,7 +23,11 @@ export const CarouselAcessoRapido = ()=>{
             <Container>
     
 
-        <Typography sx={{textAlign:'center',fontSize:'40px',fontWeight:'bolder',color:'#363636',pt:5}}>Acesso Rapido</Typography>
+
+            <Typography sx={{ fontStyle: 'italic', textAlign: 'center', fontSize: '28px',color:'#222222',pt:5}}>
+            Acesso 
+        <span style={{ fontWeight: 'bold',fontSize:'28px',color:'#222222' }}> Rápido</span> 
+        </Typography>
         <Box>
 
    

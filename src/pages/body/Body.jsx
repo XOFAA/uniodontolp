@@ -3,7 +3,9 @@ import { CarouselAcessoRapido } from "../../components/carousel/CarouselAcessoRa
 import { Footer } from "../../components/footer/Footer"
 import { Importante } from "../../components/importante/Importante"
 import { NavBar } from "../../components/navbar/NavBar"
+import { NovidadesBlog } from "../../components/novidadesblog/NovidadesBlog"
 import { EncontreDentista } from "../../components/separador/EncontreDentista"
+import { VejaOsPlanos } from "../../components/vejaosplanos/VejaOsPlanos"
 
 export const Body =()=>{
     return(
@@ -14,6 +16,8 @@ export const Body =()=>{
            <CarouselAcessoRapido/>
            <EncontreDentista/>
            <Importante/>
+           <NovidadesBlog/>
+           <VejaOsPlanos/>
            <Footer/>
         </>
     )
