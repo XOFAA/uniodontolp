@@ -13,7 +13,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import './CarouselAcessoRapido.css';
-import { EffectCards } from 'swiper/modules';
+
 export const CarouselAcessoRapido = ()=>{
     return(
 

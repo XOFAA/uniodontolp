@@ -18,7 +18,7 @@ export const Importante =()=>{
             <Box sx={{p:5}}>
             <Typography sx={{fontSize:'16px',fontStyle:'italic',color:'#fff'}}>Conte com o CapacitaCoop!</Typography>
             <Typography sx={{fontSize:'29px',fontStyle:'italic',fontWeight:'bold',color:'#fff'}}>Curso grátis de Gestão de Produtos e Serviços</Typography>
-            <Typography sx={{fontSize:'15px',color:'#fff',fontStyle:'italic',mt:5}}>Utilize técnicas de avaliação de produtos e serviços para definir estratégias mais competitivas!</Typography>
+            <Typography sx={{fontSize:'15px',color:'#fff',fontStyle:'italic',mt:5,width:'300px'}}>Utilize técnicas de avaliação de produtos e serviços para definir estratégias mais competitivas!</Typography>
            <Box sx={{mt:8}}> <Link sx={{color:'#fff',fontSize:'15px',fontStyle:'italic',mt:10,textDecorationColor:'#fff'}}>Inscreva-se agora</Link></Box>
             </Box>
      
@@ -26,7 +26,7 @@ export const Importante =()=>{
         </Grid>
         <Grid item xs={12} md={6}>
         <Box sx={{backgroundImage: 'url("/images/importante/leao.png")',backgroundSize:'cover',borderRadius:'10px',backgroundRepeat:'no-repeat',backgroundPosition:'center',height:{xs:'450px',md:'400px'}}}>
-            <Box sx={{p:5}}>
+            <Box sx={{p:{xs:10,md:5}}}>
             <Typography sx={{fontSize:'16px',fontStyle:'italic',color:'#fff'}}>Não caia na malha fina!</Typography>
             <Typography sx={{fontSize:'29px',fontStyle:'italic',fontWeight:'bold',color:'#fff'}}>Informe de Rendimentos<br/>disponível para download</Typography>
             <Typography sx={{fontSize:'15px',color:'#fff',fontStyle:'italic',mt:5,width:'244px'}}>Para baixar seu comprovante de rendimentos, selecione o ano e digite o número do CPF do Titular do plano</Typography>

@@ -9,8 +9,10 @@ export const Footer =()=>{
     return(
 <>
 
-       <Box sx={{height:{xs:'100%',md:'250px'},bgcolor:'#A60069',mt:10,mb:3}}>
+       <Box sx={{height:{xs:'100%',md:'250px'},bgcolor:'#A60069',mt:3,mb:3}}>
         <Container>
+
+      
         <Grid container spacing={3}>
 
         <Grid item xs={12} md={3} >
@@ -100,12 +102,16 @@ export const Footer =()=>{
         </Grid>
         
         </Grid>
+     
         </Container>
-
        </Box>
 
-       <Box sx={{bgcolor:'#363636',height:{md:'450px',xs:'100%'}}}>
-        <Container>
+     
+        <Box sx={{bgcolor:'#363636'}}>
+      <Container>
+
+    
+      
         <Grid container spacing={3}>
 
         <Grid item xs={12} md={3} >
@@ -200,11 +206,11 @@ export const Footer =()=>{
               </Box>
         </Grid>
         </Grid>
-        </Container>
-       </Box>
+      
+       
 
-       <Box sx={{bgcolor:'#363636',height:{md:'400px',xs:'100%'}}}>
-        <Container>
+     
+    
         <Box sx={{display:'flex',gap:2,justifyContent:'end',flexDirection:{xs:'column',md:'row'},alignItems:{xs:'center',md:'unset'}}}>
             <Box sx={{width:'200px',height:'100px',display:'flex',alignItems:'center'}}  component={'div'}  >
             <img src='images/logosfooter/logo_ans.png' alt="Logo" width={'196px'} height={'40px'}/>
@@ -237,7 +243,7 @@ export const Footer =()=>{
             <Typography sx={{fontSize:'16px',fontWeight:'bolder',color:'#fff'}}>Uniodonto Manaus Cooperativa Odontológica Ltda</Typography>
             <Typography sx={{fontSize:'16px',fontStyle:'italic',color:'#fff'}}>CNPJ 23.031.479/0001-29</Typography>
             <Typography sx={{fontSize:'15px',fontStyle:'italic',color:'#fff'}}>Sede Administrativa: Av. Leonardo Malcher, 598, Centro - Manaus/AM - CEP 69010-170</Typography>
-            <Typography sx={{fontSize:'16px',fontWeight:'bolder',color:'#fff',mt:3}}>Responsável técnico: Dra. Michele P. Lemos - CRO/AM 3183</Typography>
+            <Typography sx={{fontSize:'16px',fontWeight:'bolder',color:'#fff',mt:3}}>Responsável Técnico: Dra. Michele P. Lemos - CRO/AM 3183</Typography>
           </Box>
           
           <Box sx={{display:'flex',gap:{xs:1,md:5},mt:5,justifyContent:'center',flexWrap:{xs:'wrap',md:'unset'}}}>
@@ -258,7 +264,8 @@ export const Footer =()=>{
         </Grid>
         </Grid>
         </Container>
-       </Box>
+        </Box>
+    
        </>
     )
 }

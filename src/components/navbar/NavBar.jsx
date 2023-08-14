@@ -85,11 +85,11 @@ export const NavBar = () => {
           {pages.map((page) => (
             <MenuItem key={page} sx={{ ml: 5, gap: 2 }} onClick={page.page === 'Serviços' ? handleDrawerServicos : null}>
               {page.page === 'Atendimento' ? (
-                <Link to={page.link} style={{ textDecoration: 'none', color: 'inherit', fontSize: '18px' }}>
+                <Link to={page.link} style={{ textDecoration: 'none', color: 'inherit', fontSize: '18px',fontStyle:'italic',fontWeight:'bold' }}>
                   {page.page}
                 </Link>
               ) : (
-                <MenuList sx={{ fontSize: '18px' }}>
+                <MenuList sx={{ fontSize: '18px',fontStyle:'italic',fontWeight:'bold'}}>
                   {page.page}
                 </MenuList>
               )}
@@ -101,7 +101,7 @@ export const NavBar = () => {
                 sx={{ borderLeft: 1, borderRight: 1, p: 1, display: 'flex', alignItems: 'center' }}
                 onClick={handleOpenDesktopMenu}
               >
-                <Typography sx={{ fontSize: '18px' }}>Acesse seu Portal</Typography>
+                <Typography sx={{ fontSize: '18px',fontStyle:'italic',fontWeight:'bold' }}>Acesse seu Portal</Typography>
                 <KeyboardArrowDownIcon />
               </Box>
             </Box>
@@ -164,7 +164,7 @@ export const NavBar = () => {
       >
         {/* Conteúdo do submenu no ícone do portal no desktop */}
         {options.map((option) => (
-          <MenuItem key={option} onClick={handleCloseDesktopMenu} sx={{ color: optionColors[option], fontSize: '18px' }}>
+          <MenuItem key={option} onClick={handleCloseDesktopMenu} sx={{ color: optionColors[option], fontSize: '18px',fontStyle:'italic',fontWeight:'bold' }}>
             <MenuList>
               {option}
             </MenuList>

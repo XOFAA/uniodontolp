@@ -38,8 +38,8 @@ export const Carousel = () => {
                 {isMobile && (
                     <>
                         <SwiperSlide><img src="images/topslide/mobile_foto1.png" style={{ width: '100%', height: '100%' }} /></SwiperSlide>
-                        <SwiperSlide><img src="images/topslide/mobile_foto1.png" style={{ width: '100%', height: '100%' }} /></SwiperSlide>
-                        <SwiperSlide><img src="images/topslide/mobile_foto1.png" style={{ width: '100%', height: '100%' }} /></SwiperSlide>
+                        <SwiperSlide><img src="images/topslide/mobile_foto2.png" style={{ width: '100%', height: '100%' }} /></SwiperSlide>
+                        <SwiperSlide><img src="images/topslide/mobile_foto3.png" style={{ width: '100%', height: '100%' }} /></SwiperSlide>
                     </>
                 )}
             </Swiper>

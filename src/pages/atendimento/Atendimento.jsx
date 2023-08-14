@@ -6,41 +6,50 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { Footer } from "../../components/footer/Footer";
+import { CarouselAcessoRapido } from "../../components/carousel/CarouselAcessoRapido";
 export const Atendimento = () => {
     return (
         <>
-            <NavBar />  <Container>
-                <Box sx={{ mt: { xs: 10, md: 20 } }}>
-                    <Typography sx={{ fontWeight: 'bolder', fontSize: '36px', color: '#A60069' }}>Atendimento</Typography>
-                    <Typography fontSize={'28px'}>Veja os canais de atendimento e horários para resolver todas suas dúvidas sobre nossos produtos e serviços.</Typography>
-                    <Typography fontSize={'18px'} sx={{ mt: 5 }}>Para a segurança de todos, estamos com horário de funcionamento reduzido na Sede Administrativa. <br />
-                        Nosso funcionamento é de 8h às 16h, exceto sábados, domingos e feriados nacionais (sem expediente).</Typography>
-
-                    <Box sx={{ mt: 10, bgcolor: "#F1F1F1" }}>
+            <NavBar />
+            <Box sx={{mt:8}}>
+            <CarouselAcessoRapido/>
+            </Box>
+          
+            <Container>
+                <Box sx={{mt:5}}>
+                <Typography sx={{textAlign:'center',fontWeight: 'bold',fontStyle:'italic', fontSize: '28px', color: '#A60069' }}>Atendimento</Typography>
+                    <Typography sx={{color:'#363636',fontSize:'20px',fontStyle:'italic',textAlign:'center',mt:3}}>Veja os canais de atendimento e horários para resolver todas suas dúvidas sobre nossos produtos e serviços.</Typography>
+                    <Typography  sx={{color:'#363636',mt: 2,fontSize:'16px',fontStyle:'italic',textAlign:'center'}}>Nosso funcionamento é de 7h30 às 18h (horário Manaus), exceto sábados, domingos e feriados nacionais (sem expediente).</Typography>
+                </Box>
+                <Box sx={{ boxShadow:2,mb:10,borderRadius:'10px',mt: { xs: 10, md: 10}}}>
+               
+              
+                    
+                    <Box sx={{ mt: 10, bgcolor: "#F1F1F1"}}>
                         <Accordion>
                             <AccordionSummary
                                 expandIcon={<ExpandMoreIcon />}
                                 aria-controls="panel1a-content"
                                 id="panel1a-header"
-                                sx={{ bgcolor: '#F1F1F1' }}
+                                sx={{ bgcolor: '#F1F1F1'}}
                             >
-                                <Typography fontSize={'28px'}>Para Você</Typography>
+                            <Typography sx={{fontSize:'28px',fontStyle:'italic',color:'#363636'}}>Para <span style={{fontStyle:'italic',fontWeight:'bold'}}>Você</span> (beneficiário pessoa física)</Typography>
                             </AccordionSummary>
-                            <AccordionDetails sx={{ marginTop: '0px' }}>
-                                <Typography sx={{ fontSize: '28px', fontWeight: 'bolder' }}>Online</Typography>
-                                <Typography sx={{ fontSize: '22px', mt: 1 }}>  Temos todos os meios para você falar com a gente sem sair de casa.</Typography>
-                                <Typography sx={{ fontSize: '22px', fontWeight: 'bolder', mt: 2 }}>  Atendimento via Chatbot Cristal</Typography>
-                                <Typography sx={{ fontSize: '18px' }}>Nossa chatbot Cristal está disponível para você resolver problemas rápidos a qualquer hora do dia e da noite.</Typography>
+                            <AccordionDetails sx={{ marginTop: '0px',p:5}}>
+                                <Typography sx={{ fontSize: '28px', fontWeight: 'bold',fontStyle:'italic',color:'#363636' }}>Online</Typography>
+                                <Typography sx={{ fontSize: '20px', mt: 1,color:'#363636',fontStyle:'italic' }}>Temos todos os meios para você falar com a gente onde quer que esteja.</Typography>
+                                <Typography sx={{ fontSize: '20px', fontStyle:'italic',fontWeight:'bold', mt: 2,color:'#363636' }}>Atendimento via WebChat</Typography>
+                                <Typography sx={{ fontSize: '16px',fontStyle:'italic',color:'#363636'}}>Nossa WebChat está disponível para você resolver problemas rápidos a qualquer hora do dia e da noite.</Typography>
 
 
                                 <Box sx={{ textAlign: { xs: 'center', md: 'start' } }}>
-                                    <Button variant="contained" sx={{ marginY: 3, bgcolor: '#229ED9', fontWeight: 'bolder' }}>Fale com a Cristal</Button>
+                                    <Button variant="contained" sx={{my:3,height:'46px',width:'217px',fontWeight: 'bold',fontStyle:'italic' }}>Acesse o WebChat</Button>
                                 </Box>
                                 <Box sx={{ display: 'flex', gap: 2 }}>
-                                    <Typography sx={{ fontSize: '18px', fontWeight: 'bolder' }}>Atendimento via WhatsApp</Typography>
-                                    <WhatsAppIcon />
+                                    <Typography sx={{ fontSize: '20px', fontWeight: 'bold',fontStyle:'italic',color:'#363636'}}>Atendimento via WhatsApp</Typography>
+                            
                                 </Box>
-                                <Typography sx={{ fontSize: '18px', mt: 2 }}>Estamos também no WhatsApp para atender nos mais diversos assuntos que você precisar solucionar.</Typography>
+                                <Typography sx={{fontSize: '16px',fontStyle:'italic',color:'#363636', mt: 2 }}>Estamos também no WhatsApp para atender nos mais diversos assuntos que você precisar solucionar.</Typography>
                                 <Box sx={{ display: 'flex', gap: 4, flexDirection: { md: 'row', xs: 'column' }, alignItems: { xs: 'center', md: 'start' }, my: 2 }}>
                                    <Button variant="contained" sx={{ width: '200px', height: '40px', bgcolor: '#107E75', fontWeight: 'bolder' }}>FAÇA SEU PLANO</Button>
                                     <Button variant="contained" sx={{ width: '200px', height: '40px', bgcolor: '#107E75', fontWeight: 'bolder' }}>RELACIONAMENTO</Button>
@@ -49,38 +58,43 @@ export const Atendimento = () => {
                                     <Button variant="contained" sx={{ width: '200px', height: '40px', bgcolor: '#107E75', fontWeight: 'bolder' }}>OUVIDORIA</Button>
                                 </Box>
                                 <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 3 }}>
-                                    <Typography sx={{ fontSize: '22px', fontWeight: 'bolder' }}>Atendimento via E-Mail</Typography>
-                                    <Typography sx={{ fontSize: '18px' }}>Nossos consultores disponibilizam também e-mails para que você possa encaminhar sua dúvida ou outras demandas referentes ao seu plano.</Typography>
+                                    <Typography sx={{ fontSize: '20px', fontWeight: 'bold',fontStyle:'italic',color:'#363636' }}>Atendimento via E-Mail</Typography>
+                                    <Typography sx={{ fontSize: '16px', mt: 1,color:'#363636',fontStyle:'italic' }}>Nossos consultores disponibilizam também e-mails para que você possa encaminhar sua dúvida ou outras demandas referentes ao seu plano.</Typography>
                                     <Typography component="div">
-                                        <Typography sx={{ fontSize: '18px' }}>
-                                            <span style={{ fontWeight: 'bolder' }}>Relacionamento:</span> relacionamento@uniodontomao.com.br
+                                        <Typography sx={{ fontSize: '16px',color:'#363636',fontStyle:'italic' }}>
+                                            <span style={{ fontWeight: 'bold',fontStyle:'italic' }}>Relacionamento:</span> relacionamento@uniodontomao.com.br
                                         </Typography>
-                                        <Typography sx={{ fontSize: '18px' }}>
-                                            <span style={{ fontWeight: 'bolder' }}>Vendas:</span> vendas@uniodontomao.com.br
+                                        <Typography sx={{ fontSize: '16px',color:'#363636',fontStyle:'italic' }}>
+                                            <span style={{ fontWeight: 'bold',fontStyle:'italic' }}>Vendas:</span> vendas@uniodontomao.com.br
                                         </Typography>
-                                        <Typography sx={{ fontSize: '18px' }}>
-                                            <span style={{ fontWeight: 'bolder' }}>Cobrança e Renegociação:</span> contato@uniodontomao.com.br
+                                        <Typography sx={{ fontSize: '16px',color:'#363636',fontStyle:'italic' }}>
+                                            <span style={{ fontWeight: 'bold',fontStyle:'italic'}}>Cobrança e Renegociação:</span> contato@uniodontomao.com.br
                                         </Typography>
-                                        <Typography sx={{ fontSize: '18px' }}>
-                                            <span style={{ fontWeight: 'bolder' }}>Serviço de Atendimento ao Beneficiário:</span> sab@uniodontomao.com.br
-                                        </Typography>
-                                        {/* Email address wrapped in a separate Typography component */}
-                                        <Typography sx={{ fontSize: '18px' }}>
-                                            <span style={{ fontWeight: 'bolder' }}>Ouvidoria:</span> ouvidoria@uniodontomao.com.br
+                                        <Typography sx={{ fontSize: '16px',color:'#363636',fontStyle:'italic' }}>
+                                            <span style={{fontWeight: 'bold',fontStyle:'italic' }}>Serviço de Atendimento ao Beneficiário:</span> sab@uniodontomao.com.br
                                         </Typography>
                                         {/* Email address wrapped in a separate Typography component */}
-                                        <Typography sx={{ fontSize: '18px' }}>
-                                            <span style={{ fontWeight: 'bolder' }}>Fale Conosco:</span> faleconosco@uniodontomao.com.br
+                                        <Typography sx={{ fontSize: '16px',color:'#363636',fontStyle:'italic' }}>
+                                            <span style={{ fontWeight: 'bold',fontStyle:'italic' }}>Ouvidoria:</span> ouvidoria@uniodontomao.com.br
+                                        </Typography>
+                                        {/* Email address wrapped in a separate Typography component */}
+                                        <Typography sx={{ fontSize: '16px',color:'#363636',fontStyle:'italic' }}>
+                                            <span style={{ fontWeight: 'bold',fontStyle:'italic' }}>Fale Conosco:</span> faleconosco@uniodontomao.com.br
                                         </Typography>
                                     </Typography>
                                 </Box>
-                                <Typography sx={{ fontSize: '22px', fontWeight: 'bolder', mt: 5 }}>Telefone</Typography>
+                                <Typography sx={{ fontSize: '20px', fontWeight: 'bold',fontStyle:'italic',color:'#363636', mt: 5 }}>Telefone</Typography>
 
                                 <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-                                    <Typography sx={{ fontSize: '18px', fontWeight: 'italic' }}>Caso precise, temos telefone de contato para que você possa falar conosco:</Typography>
-                                    <Typography><span style={{ fontWeight: 'bolder' }}>Vendas:</span> (92) 2126-0603</Typography>
-                                    <Typography> <span style={{ fontWeight: 'bolder' }}>Faturamento:</span> (92) 2126-0630</Typography>
-                                    <Typography><span style={{ fontWeight: 'bolder' }}>Serviço de Atendimento ao Beneficiário/Ouvidoria:</span> (92) 2126-0604</Typography>
+                                    <Typography sx={{ fontSize: '20px',fontStyle:'italic',color:'#363636' }}>Entre em contato com a gente pelos telefones para tirar dúvidas e realizar serviços.</Typography>
+                                    <Typography sx={{fontSize: '16px',color:'#363636',fontStyle:'italic'}}><span style={{ fontWeight: 'bold',fontStyle:'italic'  }}>Relacionamento:</span> (92) 2126-0629</Typography>
+                                    <Typography sx={{fontSize: '16px',color:'#363636',fontStyle:'italic'}}><span style={{ fontWeight: 'bold',fontStyle:'italic'  }}>Vendas:</span> (92) 2126-0603</Typography>
+                                    <Typography sx={{fontSize: '16px',color:'#363636',fontStyle:'italic'}}><span style={{ fontWeight: 'bold',fontStyle:'italic'  }}>Cobrança e Renegociação:</span> (92) 2126-0625</Typography>
+                                    <Typography sx={{fontSize: '16px',color:'#363636',fontStyle:'italic'}}><span style={{ fontWeight: 'bold',fontStyle:'italic'  }}>Serviço de Atendimento ao Beneficiário/Ouvidoria:</span> (92) 2126-0604</Typography>
+                                   
+                                    <Typography sx={{fontSize: '16px',color:'#363636',fontStyle:'italic'}}><span style={{ fontWeight: 'bold',fontStyle:'italic'  }}>Ouvidoria:</span> (92) 2126-0604</Typography>
+                                    <Typography sx={{fontSize: '16px',color:'#363636',fontStyle:'italic'}}><span style={{ fontWeight: 'bold',fontStyle:'italic'  }}>Fale Conosco:</span> (92) 2126-0604</Typography>
+                                  
                                 </Box>
                             </AccordionDetails>
                         </Accordion>
@@ -91,65 +105,66 @@ export const Atendimento = () => {
                                 id="panel2a-header"
 
                             >
-                                <Typography fontSize={'28px'}>Para Empresas</Typography>
+                            <Typography sx={{fontSize:'28px',fontStyle:'italic',color:'#363636'}}>Para  <span style={{fontStyle:'italic',fontWeight:'bold'}}>Empresas</span> (pessoa jurídica e RH)</Typography>
                             </AccordionSummary>
-                            <AccordionDetails sx={{ marginTop: '0px' }}>
-                                <Typography sx={{ fontSize: '28px', fontWeight: 'bolder' }}>Online</Typography>
-                                <Typography sx={{ fontSize: '22px', mt: 1 }}>  Temos todos os meios para você falar com a gente sem sair de casa.</Typography>
-                                <Typography sx={{ fontSize: '22px', fontWeight: 'bolder', mt: 2 }}>  Atendimento via Chatbot Cristal</Typography>
-                                <Typography sx={{ fontSize: '18px' }}>Nossa chatbot Cristal está disponível para você resolver problemas rápidos a qualquer hora do dia e da noite.</Typography>
+                            <AccordionDetails sx={{ marginTop: '0px',p:5}}>
+                            <Typography sx={{ fontSize: '28px', fontWeight: 'bold',fontStyle:'italic',color:'#363636' }}>Online</Typography>
+                                <Typography sx={{ fontSize: '20px', mt: 1,color:'#363636',fontStyle:'italic' }}>Temos todos os meios para você falar com a gente onde quer que esteja.</Typography>
+                                <Typography sx={{ fontSize: '20px', fontStyle:'italic',fontWeight:'bold', mt: 2,color:'#363636' }}>Atendimento via WebChat</Typography>
+                                <Typography sx={{ fontSize: '16px',fontStyle:'italic',color:'#363636'}}>Nossa WebChat está disponível para você resolver problemas rápidos a qualquer hora do dia e da noite.</Typography>
 
 
                                 <Box sx={{ textAlign: { xs: 'center', md: 'start' } }}>
-                                    <Button variant="contained" sx={{ marginY: 3, bgcolor: '#229ED9', fontWeight: 'bolder' }}>Fale com a Cristal</Button>
+                                    <Button variant="contained" sx={{my:3,height:'46px',width:'217px',fontWeight: 'bold',fontStyle:'italic' }}>Acesse o WebChat</Button>
                                 </Box>
                                 <Box sx={{ display: 'flex', gap: 2 }}>
-                                    <Typography sx={{ fontSize: '18px', fontWeight: 'bolder' }}>Atendimento via WhatsApp</Typography>
-                                    <WhatsAppIcon />
+                                    <Typography sx={{ fontSize: '20px', fontWeight: 'bold',fontStyle:'italic',color:'#363636'}}>Atendimento via WhatsApp</Typography>
+                            
                                 </Box>
-                                <Typography sx={{ fontSize: '18px', mt: 2 }}>Estamos também no WhatsApp para atender nos mais diversos assuntos que você precisar solucionar.</Typography>
+                                <Typography sx={{fontSize: '16px',fontStyle:'italic',color:'#363636', mt: 2 }}>Estamos também no WhatsApp para atender nos mais diversos assuntos que você precisar solucionar.</Typography>
                                 <Box sx={{ display: 'flex', gap: 4, flexDirection: { md: 'row', xs: 'column' }, alignItems: { xs: 'center', md: 'start' }, my: 2 }}>
-                                <Button variant="contained" sx={{ width: '220px', height: '40px', bgcolor: '#107E75', fontWeight: 'bolder' }}>PLANO PARA EMPRESA</Button>
+                                   <Button variant="contained" sx={{ width: '200px', height: '40px', bgcolor: '#107E75', fontWeight: 'bolder' }}>FAÇA SEU PLANO</Button>
                                     <Button variant="contained" sx={{ width: '200px', height: '40px', bgcolor: '#107E75', fontWeight: 'bolder' }}>RELACIONAMENTO</Button>
-                                    <Button variant="contained" sx={{ width: '200px', height: '40px', bgcolor: '#107E75', fontWeight: 'bolder' }}>FATURAMENTO</Button>
+                                    <Button variant="contained" sx={{ width: '200px', height: '40px', bgcolor: '#107E75', fontWeight: 'bolder' }}>RENEGOCIAÇÃO</Button>
                                     <Button variant="contained" sx={{ width: '200px', height: '40px', bgcolor: '#107E75', fontWeight: 'bolder' }}>SAB</Button>
                                     <Button variant="contained" sx={{ width: '200px', height: '40px', bgcolor: '#107E75', fontWeight: 'bolder' }}>OUVIDORIA</Button>
-
-                                  
                                 </Box>
                                 <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 3 }}>
-                                    <Typography sx={{ fontSize: '22px', fontWeight: 'bolder' }}>Atendimento via E-Mail</Typography>
-                                    <Typography sx={{ fontSize: '18px' }}>Nossos consultores disponibilizam também e-mails para que você possa encaminhar sua dúvida ou outras demandas referentes ao seu plano.</Typography>
+                                    <Typography sx={{ fontSize: '20px', fontWeight: 'bold',fontStyle:'italic',color:'#363636' }}>Atendimento via E-Mail</Typography>
+                                    <Typography sx={{ fontSize: '16px', mt: 1,color:'#363636',fontStyle:'italic' }}>Nossos consultores disponibilizam também e-mails para que você possa encaminhar sua dúvida ou outras demandas referentes ao seu plano.</Typography>
                                     <Typography component="div">
-                                        <Typography sx={{ fontSize: '18px' }}>
-                                            <span style={{ fontWeight: 'bolder' }}>Relacionamento:</span> relacionamento@uniodontomao.com.br
+                                        <Typography sx={{ fontSize: '16px',color:'#363636',fontStyle:'italic' }}>
+                                            <span style={{ fontWeight: 'bold',fontStyle:'italic' }}>Relacionamento:</span> relacionamento@uniodontomao.com.br
                                         </Typography>
-                                        <Typography sx={{ fontSize: '18px' }}>
-                                            <span style={{ fontWeight: 'bolder' }}>Vendas:</span> vendas@uniodontomao.com.br
+                                        <Typography sx={{ fontSize: '16px',color:'#363636',fontStyle:'italic' }}>
+                                            <span style={{ fontWeight: 'bold',fontStyle:'italic' }}>Vendas:</span> vendas@uniodontomao.com.br
                                         </Typography>
-                                        <Typography sx={{ fontSize: '18px' }}>
-                                            <span style={{ fontWeight: 'bolder' }}>Cobrança e Renegociação:</span> contato@uniodontomao.com.br
+                                        <Typography sx={{ fontSize: '16px',color:'#363636',fontStyle:'italic' }}>
+                                            <span style={{ fontWeight: 'bold',fontStyle:'italic'}}>Cobrança e Renegociação:</span> contato@uniodontomao.com.br
                                         </Typography>
-                                        <Typography sx={{ fontSize: '18px' }}>
-                                            <span style={{ fontWeight: 'bolder' }}>Serviço de Atendimento ao Beneficiário:</span> sab@uniodontomao.com.br
-                                        </Typography>
-                                        {/* Email address wrapped in a separate Typography component */}
-                                        <Typography sx={{ fontSize: '18px' }}>
-                                            <span style={{ fontWeight: 'bolder' }}>Ouvidoria:</span> ouvidoria@uniodontomao.com.br
+                                        <Typography sx={{ fontSize: '16px',color:'#363636',fontStyle:'italic' }}>
+                                            <span style={{fontWeight: 'bold',fontStyle:'italic' }}>Serviço de Atendimento ao Beneficiário:</span> sab@uniodontomao.com.br
                                         </Typography>
                                         {/* Email address wrapped in a separate Typography component */}
-                                        <Typography sx={{ fontSize: '18px' }}>
-                                            <span style={{ fontWeight: 'bolder' }}>Fale Conosco:</span> faleconosco@uniodontomao.com.br
+                                        <Typography sx={{ fontSize: '16px',color:'#363636',fontStyle:'italic' }}>
+                                            <span style={{ fontWeight: 'bold',fontStyle:'italic' }}>Ouvidoria:</span> ouvidoria@uniodontomao.com.br
+                                        </Typography>
+                                        {/* Email address wrapped in a separate Typography component */}
+                                        <Typography sx={{ fontSize: '16px',color:'#363636',fontStyle:'italic' }}>
+                                            <span style={{ fontWeight: 'bold',fontStyle:'italic' }}>Fale Conosco:</span> faleconosco@uniodontomao.com.br
                                         </Typography>
                                     </Typography>
                                 </Box>
-                                <Typography sx={{ fontSize: '22px', fontWeight: 'bolder', mt: 5 }}>Telefone</Typography>
+                                <Typography sx={{ fontSize: '20px', fontWeight: 'bold',fontStyle:'italic',color:'#363636', mt: 5 }}>Telefone</Typography>
 
                                 <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-                                    <Typography sx={{ fontSize: '18px', fontWeight: 'italic' }}>Caso precise, temos telefone de contato para que você possa falar conosco:</Typography>
-                                    <Typography><span style={{ fontWeight: 'bolder' }}>Vendas:</span> (92) 2126-0603</Typography>
-                                    <Typography> <span style={{ fontWeight: 'bolder' }}>Faturamento:</span> (92) 2126-0630</Typography>
-                                    <Typography><span style={{ fontWeight: 'bolder' }}>Serviço de Atendimento ao Beneficiário/Ouvidoria:</span> (92) 2126-0604</Typography>
+                                    <Typography sx={{ fontSize: '20px',fontStyle:'italic',color:'#363636' }}>Entre em contato com a gente pelos telefones para tirar dúvidas e realizar serviços.</Typography>
+                                    <Typography sx={{fontSize: '16px',color:'#363636',fontStyle:'italic'}}><span style={{ fontWeight: 'bold',fontStyle:'italic'  }}>Relacionamento:</span> (92) 2126-0629</Typography>
+                                    <Typography sx={{fontSize: '16px',color:'#363636',fontStyle:'italic'}}><span style={{ fontWeight: 'bold',fontStyle:'italic'  }}>Vendas:</span> (92) 2126-0603</Typography>
+                                    <Typography sx={{fontSize: '16px',color:'#363636',fontStyle:'italic'}}><span style={{ fontWeight: 'bold',fontStyle:'italic'  }}>Faturamento:</span> (92) 2126-0630</Typography>
+                                    <Typography sx={{fontSize: '16px',color:'#363636',fontStyle:'italic'}}><span style={{ fontWeight: 'bold',fontStyle:'italic'  }}>Ouvidoria:</span> (92) 2126-0604</Typography>
+                                    <Typography sx={{fontSize: '16px',color:'#363636',fontStyle:'italic'}}><span style={{ fontWeight: 'bold',fontStyle:'italic'  }}>Fale Conosco:</span> (92) 2126-0604</Typography>
+                                  
                                 </Box>
                             </AccordionDetails>
                         </Accordion>
@@ -160,30 +175,52 @@ export const Atendimento = () => {
                                 id="panel3a-header"
 
                             >
-                                <Typography fontSize={'28px'}>Para Cooperados</Typography>
+                      <Typography sx={{fontSize:'28px',fontStyle:'italic',color:'#363636'}}>Para  <span style={{fontStyle:'italic',fontWeight:'bold'}}>Cooperados</span> (dentistas)</Typography>
                             </AccordionSummary>
-                            <AccordionDetails sx={{ marginTop: '0px' }}>
-                                <Typography sx={{fontSize:'28px',fontWeight:'bolder'}}>Online</Typography>
-                                <Typography sx={{fontSize:'20px',}}>Oferecemos os mais diversos meios de comunicação para falicitar nosso relacionamento com sua empresa ou negócio.</Typography>
-                                   <Box sx={{ display: 'flex', gap: 2 }}>
-                                    <Typography sx={{ fontSize: '22px', fontWeight: 'bolder',mt:3 }}>Atendimento via WhatsApp</Typography>
-                                    <WhatsAppIcon />
-                                </Box>
-                                <Typography sx={{mt:2}}>Estamos também no WhatsApp para atender nos mais diversos assuntos que você precisar solucionar.</Typography>
-                                <Box sx={{display:'flex',gap:3,my:2}}>
-                                <Button variant="contained" sx={{fontSize:'18px',fontWeight:'bolder',bgcolor:'#107E75',color:'#fff'}}>DAC</Button>
-                                 <Button variant="contained" sx={{fontSize:'18px',fontWeight:'bolder',bgcolor:'#107E75'}}>INTERCÂMBIO</Button>
-                                </Box>
+                            <AccordionDetails sx={{ marginTop: '0px',p:5}}>
+                            <Typography sx={{ fontSize: '28px', fontWeight: 'bold',fontStyle:'italic',color:'#363636' }}>Online</Typography>
+                                <Typography sx={{ fontSize: '20px', mt: 1,color:'#363636',fontStyle:'italic' }}>Temos todos os meios para você falar com a gente onde quer que esteja.</Typography>
+                                <Typography sx={{ fontSize: '20px', fontStyle:'italic',fontWeight:'bold', mt: 2,color:'#363636' }}>Atendimento via WebChat</Typography>
+                                <Typography sx={{ fontSize: '16px',fontStyle:'italic',color:'#363636'}}>Nossa WebChat está disponível para você resolver problemas rápidos a qualquer hora do dia e da noite.</Typography>
 
-                                <Box sx={{display:'flex',flexDirection:'column',gap:2}}>
-                                <Typography sx={{fontSize:'22px',fontWeight:'bolder'}}>Atendimento via E-Mail</Typography>
-                                <Typography >Nós disponibilizamos também e-mails para que você possa encaminhar sua dúvida ou outras demandas referentes às suas necessidades</Typography>
-                                <Typography><span style={{fontSize:'18px',fontWeight:'bolder'}}>Departamento de Atenção ao Cooperado:</span> dac@uniodontomao.com.br</Typography>
-                                <Typography><span style={{fontWeight:'bolder',fontSize:'18px'}}>Intercâmbio:</span>intercâmbio@uniodontomao.com.br</Typography>
-                                <Typography sx={{fontSize:'28px',fontWeight:'bolder'}}>Telefone</Typography>
-                                <Typography>Caso precise, temos telefone de contato para que você possa falar conosco:</Typography>
-                                <Typography><span style={{fontWeight:'bolder',fontSize:'18px'}}>DAC/Intercâmbio:</span>(92) 2126-0608</Typography>
-                                 </Box>
+
+                                <Box sx={{ textAlign: { xs: 'center', md: 'start' } }}>
+                                    <Button variant="contained" sx={{my:3,height:'46px',width:'217px',fontWeight: 'bold',fontStyle:'italic' }}>Acesse o WebChat</Button>
+                                </Box>
+                                <Box sx={{ display: 'flex', gap: 2 }}>
+                                    <Typography sx={{ fontSize: '20px', fontWeight: 'bold',fontStyle:'italic',color:'#363636'}}>Atendimento via WhatsApp</Typography>
+                            
+                                </Box>
+                                <Typography sx={{fontSize: '16px',fontStyle:'italic',color:'#363636', mt: 2 }}>Estamos também no WhatsApp para atender nos mais diversos assuntos que você precisar solucionar.</Typography>
+                                <Box sx={{ display: 'flex', gap: 4, flexDirection: { md: 'row', xs: 'column' }, alignItems: { xs: 'center', md: 'start' }, my: 2 }}>
+                                   <Button variant="contained" sx={{ width: '200px', height: '40px', bgcolor: '#107E75', fontWeight: 'bolder' }}>DAC/Intercâmbio</Button>
+                                   
+                                </Box>
+                                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 3 }}>
+                                    <Typography sx={{ fontSize: '20px', fontWeight: 'bold',fontStyle:'italic',color:'#363636' }}>Atendimento via E-Mail</Typography>
+                                    <Typography sx={{ fontSize: '16px', mt: 1,color:'#363636',fontStyle:'italic' }}>Nossos consultores disponibilizam também e-mails para que você possa encaminhar sua dúvida ou outras demandas referentes ao seu plano.</Typography>
+                                    <Typography component="div">
+                                        <Typography sx={{ fontSize: '16px',color:'#363636',fontStyle:'italic' }}>
+                                            <span style={{ fontWeight: 'bold',fontStyle:'italic' }}>Departamento de Atenção ao Cooperado:</span> dac@uniodontomao.com.br
+                                        </Typography>
+                                        <Typography sx={{ fontSize: '16px',color:'#363636',fontStyle:'italic' }}>
+                                            <span style={{ fontWeight: 'bold',fontStyle:'italic' }}>Produção:</span> producao@uniodontomao.com.br
+                                        </Typography>
+                                        <Typography sx={{ fontSize: '16px',color:'#363636',fontStyle:'italic' }}>
+                                            <span style={{ fontWeight: 'bold',fontStyle:'italic'}}>Intercâmbio:</span> intercâmbio@uniodontomao.com.br
+                                        </Typography>
+                                    
+                                    </Typography>
+                                </Box>
+                                <Typography sx={{ fontSize: '20px', fontWeight: 'bold',fontStyle:'italic',color:'#363636', mt: 5 }}>Telefone</Typography>
+
+                                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                                    <Typography sx={{ fontSize: '20px',fontStyle:'italic',color:'#363636' }}>Entre em contato com a gente pelos telefones para tirar dúvidas e realizar serviços.</Typography>
+                                    
+               
+                                    <Typography sx={{fontSize: '16px',color:'#363636',fontStyle:'italic'}}><span style={{ fontWeight: 'bold',fontStyle:'italic'  }}>DAC/Intercâmbio:</span> (92) 2126-0608</Typography>
+                                  
+                                </Box>
                             </AccordionDetails>
                         </Accordion>
                     </Box>

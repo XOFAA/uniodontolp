@@ -1,15 +1,15 @@
 /* CarouselAcessoRapido.css */
-.carouselAcessoRapido .swiper-slide {
+.CarouselParcerias .swiper-slide {
   display: flex;
   justify-content: center;
   height: auto;
 }
 
-.carouselAcessoRapido .swiper {
-  padding: 40px;
+.CarouselParcerias .swiper {
+  padding: 30px;
 }
 
-.carouselAcessoRapido .swiper-button-prev {
+.CarouselParcerias .swiper-button-prev {
   font-size: 5px; /* Defina o tamanho desejado para as setinhas */
 }
 /* Rest of your CSS styles */
@@ -17,8 +17,8 @@
 
 /* Importe os estilos do Swiper */
 
-.carouselAcessoRapido .swiper-pagination-bullet {
-  background-color: #363636; /* Altere para a cor desejada */
+.CarouselParcerias .swiper-pagination-bullet {
+  background-color: #f1f1f1; /* Altere para a cor desejada */
 }
 
 .swiper-button-next,
