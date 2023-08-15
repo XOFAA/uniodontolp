@@ -16,7 +16,7 @@ import './CarouselParcerias.css'
 
 export const Parcerias = ()=>{
   const numParcerias = 17;
-  const parcerias = Array.from({ length: numParcerias }, (_, index) => `/images/parcerias/link${index + 1}.svg`);
+  const parcerias = Array.from({ length: numParcerias }, (_, index) => `/images/parcerias/link${index + 1}.png`);
     return(
       
 
