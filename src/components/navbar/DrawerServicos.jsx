@@ -57,7 +57,7 @@ export const DrawerServicos = ({ onOpenDrawer, onCloseDrawer }) => {
                 <Link href="#" sx={{ textDecoration: 'none', color: '#373737' }}>
                  Renegociar Débitos
                 </Link>
-                <Link href="#" sx={{ textDecoration: 'none',color: '#373737' }}>
+                <Link href="/pessoajuridica" sx={{ textDecoration: 'none',color: '#373737' }}>
                  Solicite uma proposta
                 </Link>
             
