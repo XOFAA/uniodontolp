@@ -57,32 +57,21 @@ export const PessoaJuridica = () => {
                 </Swiper>
             </Box>
             <Container>
-                <Box sx={{ mt: 5, display: 'flex', flexDirection: 'column', gap: 3 }}>
+                <Box sx={{ mt: 5, display: 'flex', flexDirection: 'column' }}>
                     <Typography sx={{ fontSize: '28px', fontStyle: 'italic', color: '#A60069', textAlign: 'center' }}>Enquanto você se dedica em sua empresa ou negócio, <span style={{ fontStyle: 'italic', fontWeight: 'bold' }}>nós cuidamos dos sorrisos e da saúde bucal de seus colaboradores</span></Typography>
-                    <Typography sx={{ fontStyle: 'italic', fontSize: '20px', textAlign: 'center', color: '#363636' }}>A Uniodonto Manaus oferece benefícios e serviços personalizados, garantindo o bem-estar dos seus colaboradores, além de proporcionar gestão e contratação dos nossos planos sem burocracia e sob medida para o tamanho de sua empresa ou negócio.</Typography>
-                    <Typography sx={{ fontStyle: 'italic', fontSize: '20px', textAlign: 'center', color: '#363636' }}>Além de cobertura completa, conte com a maior rede de atendimento em odontologia do Brasil, aprovação online de procedimentos, planos com atendimento local e/ou nacional, além de muitos outros benefícios. Aqui, sua empresa ou negócio tem atendimento personalizado e seus colaboradores e familiares contarão com tratamentos de qualidade.
-                    </Typography>
-                    <Typography sx={{ fontStyle: 'italic', fontSize: '20px', textAlign: 'center', color: '#363636', fontWeight: 'bold' }}>
-                        Faça sua proposta de adesão ou fale com um consultor para que você tenha um plano odontológico adequado ao seu tipo de negócio e necessidade de seus colaboradores.{' '}
-                        <span style={{ color: '#A60069', fontWeight: 'bold', fontSize: '20px', fontStyle: 'italic' }}>Aqui, o seu sorriso é único.</span>
-                    </Typography>
-                    <Box sx={{ textAlign: 'center' }}>
-                        <Button variant='contained' sx={{ width: '220px', height: '50px', borderRadius: '5px' }}>Solicite uma Proposta</Button>
-                    </Box>
+                  
+               
+                  
                 </Box>
             </Container>
-            <Parcerias />
-            <VantagensBeneficio />
-            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, alignItems: 'center', textAlign: 'center' }}>
-                <Typography sx={{ fontSize: '28px', fontStyle: 'italic', color: '#A60069', my: 3 }}>De MEI a grandes empresas, <span style={{ fontWeight: 'bold' }}>temos o plano ideal para você</span></Typography>
-                <Typography sx={{ fontStyle: 'italic', fontSize: '20px', color: '#363636' }}>Solicite uma proposta, preenchendo o formulário abaixo ou clique no botão para falar com um consultor</Typography>
-                <Typography sx={{ fontSize: '16px', fontStyle: 'italic', color: '#363636' }}>Nossos consultores ficam disponíveis 7h30 às 18h (horário Manaus), exceto sábados, domingos e feriados nacionais (sem expediente).</Typography>
-            </Box>
+         
+          
+        
 
             <Container>
 
 
-                <Box sx={{ display: 'flex', flexDirection: 'column', boxShadow: 2, p: 5 }}>
+                <Box sx={{ display: 'flex', flexDirection: 'column', boxShadow: 2, p: 5,mt:10}}>
                     <Box sx={{ display: 'flex', gap: 2, textAlign: { xs: 'center', md: 'initial' } }}>
                         <Box>
                             <Typography sx={{ fontSize: '28px', fontStyle: 'italic', color: '#A60069' }}><span style={{ fontWeight: 'bold' }}>Solicite</span> uma Proposta</Typography>

@@ -1,25 +1,44 @@
-import * as React from 'react';
-import { Box, Button, Container, Drawer, Grid, Link, Typography } from '@mui/material';
+import { Accordion, AccordionDetails, AccordionSummary, Box, Button, Drawer, Link, Typography } from "@mui/material"
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-export const DrawerServicos = ({ onOpenDrawer, onCloseDrawer }) => {
-  return (
-    <Drawer
-      anchor="top"
-      open={onOpenDrawer}
-      onClose={onCloseDrawer}
-      PaperProps={{
-        style: {
-         
-          height: '100%' // Altura do AppBar (ajuste conforme a altura do seu AppBar)
-        },
-      }}
-    >
-      <Container>
-        <Box sx={{ padding: '20px' }}>
-          <Grid container spacing={2}>
-            {/* Coluna 1 */}
-            <Grid item xs={12} sm={3}>
-              <Typography sx={{ fontWeight: 'bold', fontStyle: 'italic', fontSize: '18px', color: '#A60069' }}>Para Você</Typography>
+export const DrawerServicosMobile = ({onOpenDrawer,onCloseDrawer}) => {
+    const options = ['Portal Pessoa Física', 'Portal Pessoa Jurídica', 'Portal Cooperado', 'Portal Vendas'];
+    const optionColors = {
+        'Portal Pessoa Física': '#373737', // Vermelho
+        'Portal Pessoa Jurídica': '#AD611F', // Verde
+        'Portal Cooperado': '#680E35', // Azul
+        'Portal Vendas': '#076A38', // Magenta
+      };
+    return(
+
+        
+
+        <Drawer
+        anchor="top"
+        open={onOpenDrawer}
+        onClose={onCloseDrawer}
+        PaperProps={{
+            sx:{backgroundColor: '#A60069'},
+            style: {
+              top: '64px',
+               // Altura do AppBar (ajuste conforme a altura do seu AppBar)
+            }}}
+      >
+        
+        <Accordion sx={{bgcolor:'#A60069',boxShadow:'none'}}>
+            <AccordionSummary
+            >
+            <Typography sx={{fontStyle:'italic',fontWeight:'bold',fontSize:'22px',color:'#fff'}}>Serviços</Typography>
+            </AccordionSummary>
+            <AccordionDetails >
+            <Accordion>
+                <AccordionSummary
+                 expandIcon={<ExpandMoreIcon />}
+                >
+                <Typography sx={{ fontWeight: 'bold', fontStyle: 'italic', fontSize: '18px', color: '#A60069' }}>Para Você</Typography>
+                </AccordionSummary>
+                <AccordionDetails >
+               
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 5 }}>
                 <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '14px' }}>
                   Acesso Pessoa Física
@@ -55,11 +74,17 @@ export const DrawerServicos = ({ onOpenDrawer, onCloseDrawer }) => {
                   Documentos Importantes
                 </Link>
               </Box>
-            </Grid>
-
-            {/* Coluna 2 */}
-            <Grid item xs={12} sm={3}>
-              <Typography sx={{ fontWeight: 'bold', fontStyle: 'italic', fontSize: '18px', color: '#A60069' }}>Para Empresas</Typography>
+                    </AccordionDetails>
+               
+            </Accordion>
+            <Accordion>
+                <AccordionSummary
+                 expandIcon={<ExpandMoreIcon />}
+                >
+                <Typography sx={{ fontWeight: 'bold', fontStyle: 'italic', fontSize: '18px', color: '#A60069' }}>Para Empresas</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+              
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 5 }}>
                 <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '14px' }}>
                   Acesso Pessoa Jurídica
@@ -85,11 +110,17 @@ export const DrawerServicos = ({ onOpenDrawer, onCloseDrawer }) => {
                   Acesso Colaborador
                 </Link>
               </Box>
-            </Grid>
-
-            {/* Coluna 3 */}
-            <Grid item xs={12} sm={3}>
-              <Typography sx={{ fontWeight: 'bold', fontStyle: 'italic', fontSize: '18px', color: '#A60069' }}>Para Cooperados</Typography>
+                    </AccordionDetails>
+               
+            </Accordion>
+            <Accordion>
+                <AccordionSummary
+                 expandIcon={<ExpandMoreIcon />}
+                >
+               <Typography sx={{ fontWeight: 'bold', fontStyle: 'italic', fontSize: '18px', color: '#A60069' }}>Para Cooperados</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+            
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 5 }}>
                 <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '14px' }}>
                   Acesso Cooperados
@@ -129,11 +160,17 @@ export const DrawerServicos = ({ onOpenDrawer, onCloseDrawer }) => {
                   </Link>
                 </Box>
               </Box>
-            </Grid>
-
-            {/* Coluna 4 */}
-            <Grid item xs={12} sm={3}>
-              <Typography sx={{ fontWeight: 'bold', fontStyle: 'italic', fontSize: '18px', color: '#A60069' }}>Sobre Uniodonto Manaus</Typography>
+                    </AccordionDetails>
+               
+            </Accordion>
+            <Accordion>
+                <AccordionSummary
+                 expandIcon={<ExpandMoreIcon />}
+                >
+          <Typography sx={{ fontWeight: 'bold', fontStyle: 'italic', fontSize: '18px', color: '#A60069' }}>Sobre Uniodonto Manaus</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 2, fontSize: '18px' }}>
                 <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '14px' }}>
                   Instituicional
@@ -170,36 +207,40 @@ export const DrawerServicos = ({ onOpenDrawer, onCloseDrawer }) => {
                 </Link>
 
               </Box>
-            </Grid>
-          </Grid>
-          <Box sx={{ display: 'flex', gap: 3, justifyContent: 'end', mt: 5 }}>
-            <Link href="#" sx={{ color: '#A60069', fontWeight: 'bold', fontStyle: 'italic', fontSize: '14px' }}>
-              Diretiva de Privacidade
-            </Link>
-            <Link href="#" sx={{ color: '#A60069', fontWeight: 'bold', fontStyle: 'italic', fontSize: '14px' }}>
-              Segurança no Uso da Internet
-            </Link>
-            <Link href="#" sx={{ color: '#A60069', fontWeight: 'bold', fontStyle: 'italic', fontSize: '14px' }}>
-              LGPD
-            </Link>
-            <Link href="#" sx={{ color: '#A60069', fontWeight: 'bold', fontStyle: 'italic', fontSize: '14px' }}>
-              Sitemap
-            </Link>
-          </Box>
+                    </AccordionDetails>
+               
+            </Accordion>
+            </AccordionDetails>
+            
+        </Accordion>
+        <Box sx={{p:2}}>
+        <Typography sx={{fontStyle:'italic',fontWeight:'bold',fontSize:'22px',color:'#fff'}}>Atendimento</Typography>
         </Box>
-
-
-      </Container>
-      <Box sx={{ position: 'fixed', bottom: 0, left: 0, right: 0, bgcolor: '#E1FF7B', display: 'flex', alignItems: 'center', justifyContent: 'space-evenly', height: '120px' }}>
-        <Box sx={{display:'flex',gap:20}}>
+        <Accordion sx={{bgcolor:'#A60069',boxShadow:'none',position:'unset'}}>
+            <AccordionSummary>
+            <Typography sx={{fontStyle:'italic',fontWeight:'bold',fontSize:'22px',color:'#fff',boxShadow:'none'}}>Acesse seu Portal</Typography>
+            </AccordionSummary>
+            <AccordionDetails sx={{bgcolor:'#fff'}}>
+                <Box sx={{display:'flex',flexDirection:'column',gap:2}}>
+                <Link href="https://tiss.uniodontomanaus.com.br/SolucoesExtras/consultaBeneficiarios/InformacaoDados.aspx" sx={{color:'#373737',fontStyle:'italic',fontSize: '18px',fontWeight:'bold',textDecoration:'none'}}>Portal Pessoa Física</Link>
+                <Link href="https://tiss.uniodontomanaus.com.br/SAEX/Modulos/Empresa/Paginas/Login.aspx" sx={{color:'#AD611F',fontSize: '18px',fontStyle:'italic',fontWeight:'bold',textDecoration:'none'}}>Portal Pessoa Jurídica</Link>
+                <Link href="https://tiss.uniodontomanaus.com.br/SAEX/Modulos/RedeCredenciada/Paginas/Login.aspx" target="_top" sx={{color:'#680E35',fontStyle:'italic',fontSize: '18px',fontWeight:'bold',textDecoration:'none'}}>Portal Cooperado</Link>
+                <Link href="https://seuplanoonline.fisistemas.com.br/vendedor" sx={{color:'#076A38',fontSize: '18px',fontWeight:'bold',fontStyle:'italic',textDecoration:'none'}}>Portal Vendas</Link>
+                </Box>
+            </AccordionDetails>
+        </Accordion>
+        
+        <Box sx={{bgcolor: '#E1FF7B', display: 'flex',flexDirection:'column',alignItems:'center',gap:2,p:3,textAlign:'center'}}>
         <Typography sx={{ color: '#363636', fontSize: '24px',fontStyle:'italic',}}>
           <span style={{ fontStyle: 'italic', fontWeight: 'bold' }}>Você </span>ainda não tem um plano odontológico?
         </Typography>
-        <Button variant='contained' sx={{ fontSize: '18px', fontStyle: 'italic', fontWeight: 'bold', borderRadius: '5px', width: '291px', height: '42px', marginLeft: 'auto' }}>
+        <Box>
+        <Button variant='contained' sx={{fontSize: '18px', fontStyle: 'italic', fontWeight: 'bold', borderRadius: '5px', width: '291px', height: '42px', marginLeft: 'auto' }}>
           Conheça Nossos Planos
         </Button>
+        </Box>
       </Box>
-      </Box>
-    </Drawer>
-  );
-};
+        
+        </Drawer>
+    )
+}

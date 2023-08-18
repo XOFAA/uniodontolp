@@ -3,17 +3,17 @@
   "name": "Create React App Sample",
   "icons": [
     {
-      "src": "images/logouniodonto/logounidonto.png",
+      "src": "images/logouniodonto/LogoUniodonto.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "images/logouniodonto/logounidonto.png",
+      "src": "images/logouniodonto/LogoUniodonto.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "images/logouniodonto/logounidonto.png",
+      "src": "images/favicon.svg/LogoUniodonto.png",
       "type": "image/png",
       "sizes": "512x512"
     }

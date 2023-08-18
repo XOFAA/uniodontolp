@@ -12,9 +12,10 @@ import Menu from '@mui/material/Menu';
 import MenuList from '@mui/material/MenuList';
 import SearchIcon from '@mui/icons-material/Search';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import { Accordion, AccordionDetails, AccordionSummary } from '@mui/material';
-import { Link, useNavigate } from 'react-router-dom';
+import { Accordion, AccordionDetails, AccordionSummary, Link } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 import { DrawerServicos } from './DrawerServicos';
+import { DrawerServicosMobile } from './DrawerServicosMobile';
 
 
 
@@ -30,7 +31,24 @@ export const NavBar = () => {
       link: '/atendimento', // Endereço da página de atendimento
     }
   ];
-  const options = ['Portal Pessoa Física', 'Portal Pessoa Jurídica', 'Portal Cooperado', 'Portal Vendas'];
+  const options = [
+    {
+      page:'Portal Pessoa Física',
+      link:"https://tiss.uniodontomanaus.com.br/SolucoesExtras/consultaBeneficiarios/InformacaoDados.aspx"
+    },
+    {
+      page:'Portal Pessoa Jurídica',
+      link:"https://tiss.uniodontomanaus.com.br/SAEX/Modulos/Empresa/Paginas/Login.aspx"
+    },
+    {
+      page:'Portal Cooperado',
+      link:"https://tiss.uniodontomanaus.com.br/SAEX/Modulos/RedeCredenciada/Paginas/Login.aspx"
+    },
+    {
+      page:'Portal Vendas',
+      link:"https://seuplanoonline.fisistemas.com.br/vendedor"
+    }
+];
 
   const navigate=useNavigate()
 
@@ -43,9 +61,10 @@ export const NavBar = () => {
     'Portal Vendas': '#076A38', // Magenta
   };
 
-  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+
   const [desktopMenuOpen, setDesktopMenuOpen] = React.useState(null);
   const [drawerServicos, setDrawerServicos] = React.useState(false)
+  const [mobileMenuOpen,setMobileMenuOpen]=React.useState(false)
 
   const handleLogo =()=>{
     navigate('/')
@@ -54,12 +73,9 @@ export const NavBar = () => {
   const handleDrawerServicos = () => {
     setDrawerServicos(true)
   }
-  const handleOpenMobileMenu = () => {
+  
+  const handleOpenMobileMenu = (event) => {
     setMobileMenuOpen(true);
-  };
-
-  const handleCloseMobileMenu = () => {
-    setMobileMenuOpen(false);
   };
 
   const handleOpenDesktopMenu = (event) => {
@@ -101,6 +117,7 @@ export const NavBar = () => {
                 sx={{ borderLeft: 1, borderRight: 1, p: 1, display: 'flex', alignItems: 'center' }}
                 onClick={handleOpenDesktopMenu}
               >
+               
                 <Typography sx={{ fontSize: '18px',fontStyle:'italic',fontWeight:'bold' }}>Acesse seu Portal</Typography>
                 <KeyboardArrowDownIcon />
               </Box>
@@ -118,36 +135,7 @@ export const NavBar = () => {
         </Toolbar>
       </Container>
       {/* Menu para o ícone do portal no celular */}
-      <Menu
-        anchorEl={mobileMenuOpen ? mobileMenuOpen : null}
-        open={mobileMenuOpen}
-        onClose={handleCloseMobileMenu}
-        anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'center',
-        }}
-        transformOrigin={{
-          vertical: 'top',
-          horizontal: 'center',
-        }}
-      >
-        {/* Conteúdo do menu no ícone do portal no celular */}
-        {options.map((option) => (
-          <Accordion key={option} sx={{ color: optionColors[option], fontSize: '18px' }}>
-
-            <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
-              {option}
-            </AccordionSummary>
-            <AccordionDetails>
-              {/* Conteúdo do Accordion aqui */}
-              {/* Adicione o conteúdo que você deseja mostrar quando o Accordion é expandido */}
-              <Typography>
-                Conteúdo do Accordion para {option}
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-        ))}
-      </Menu>
+      <DrawerServicosMobile onOpenDrawer={mobileMenuOpen} onCloseDrawer={()=>setMobileMenuOpen(false)}/>
       {/* Submenu para o ícone do portal no desktop */}
       <Menu
         anchorEl={desktopMenuOpen}
@@ -164,9 +152,9 @@ export const NavBar = () => {
       >
         {/* Conteúdo do submenu no ícone do portal no desktop */}
         {options.map((option) => (
-          <MenuItem key={option} onClick={handleCloseDesktopMenu} sx={{ color: optionColors[option], fontSize: '18px',fontStyle:'italic',fontWeight:'bold' }}>
+          <MenuItem key={option} onClick={handleCloseDesktopMenu} >
             <MenuList>
-              {option}
+             <Link  href={option.link} target='_blank' sx={{ color: optionColors[option.page], fontSize: '18px',fontStyle:'italic',fontWeight:'bold',textDecoration:'none' }}>{option.page}</Link>
             </MenuList>
           </MenuItem>
 
