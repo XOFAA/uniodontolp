@@ -9,7 +9,7 @@ export const Footer =()=>{
     return(
 <>
 
-       <Box sx={{height:{xs:'100%',md:'250px'},bgcolor:'#A60069',mt:3,mb:3}}>
+       <Box sx={{height:{xs:'100%',md:'250px'},bgcolor:'#A60069',mt:10,mb:3}}>
         <Container>
 
       
@@ -61,7 +61,7 @@ export const Footer =()=>{
         <Box sx={{mt:{xs:0}}}>
         <Box sx={{ paddingRight: {xs:0,md:5}, py: 1,display:'flex',gap:3}}>
             <Box sx={{width:'220px',height:'50px'}}  component={'div'}  >
-            <img src='images/logosfooter/google_ssl.png' alt="Logo" width={'100%'} height={'100%'}/>
+            <img src='images/logosfooter/google_ssl.svg' alt="Logo" width={'100%'} height={'100%'}/>
             </Box>
             
           </Box>
@@ -107,7 +107,7 @@ export const Footer =()=>{
        </Box>
 
      
-        <Box sx={{bgcolor:'#363636'}}>
+        <Box sx={{bgcolor:'#A60069'}}>
       <Container>
 
     
@@ -220,6 +220,7 @@ export const Footer =()=>{
             <img src='images/logosfooter/am.png' alt="Logo" width={'132px'} height={'69px'}/>
             </Box>
           </Box>
+          
           <Box sx={{ width: '100%', height: '1px', backgroundColor: '#fff' }} component={'div'} />
  
         <Grid container spacing={1}>

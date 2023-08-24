@@ -1,16 +1,18 @@
 import * as React from 'react';
 import { Box, Button, Container, Drawer, Grid, Link, Typography } from '@mui/material';
+import { DownloadApp } from '../downloadapp/DownloadApp';
 
 export const DrawerServicos = ({ onOpenDrawer, onCloseDrawer }) => {
   return (
     <Drawer
+      hideBackdrop={true}
       anchor="top"
       open={onOpenDrawer}
       onClose={onCloseDrawer}
       PaperProps={{
         style: {
-         
-          height: '100%' // Altura do AppBar (ajuste conforme a altura do seu AppBar)
+          top:"123px",
+          height: '100%'
         },
       }}
     >
@@ -171,9 +173,14 @@ export const DrawerServicos = ({ onOpenDrawer, onCloseDrawer }) => {
 
               </Box>
             </Grid>
+            <Grid item sm={6}>
+          <Box sx={{ display: 'flex',alignItems:'center',mt:8}}>
+            <DownloadApp/>
+          </Box>
           </Grid>
-          <Box sx={{ display: 'flex', gap: 3, justifyContent: 'end', mt: 5 }}>
-            <Link href="#" sx={{ color: '#A60069', fontWeight: 'bold', fontStyle: 'italic', fontSize: '14px' }}>
+            <Grid item sm={6}>
+          <Box sx={{ display: 'flex', gap: 5, mt: 10, alignItems: 'center',justifyContent:'end'}}>
+            <Link href="#" sx={{ color: '#A60069', fontWeight: 'bold', fontStyle: 'italic', fontSize: '14px',  }}>
               Diretiva de Privacidade
             </Link>
             <Link href="#" sx={{ color: '#A60069', fontWeight: 'bold', fontStyle: 'italic', fontSize: '14px' }}>
@@ -186,19 +193,25 @@ export const DrawerServicos = ({ onOpenDrawer, onCloseDrawer }) => {
               Sitemap
             </Link>
           </Box>
-        </Box>
+          </Grid>
+       
+          </Grid>
+          
+       
 
+        </Box>
+    
 
       </Container>
       <Box sx={{ position: 'fixed', bottom: 0, left: 0, right: 0, bgcolor: '#E1FF7B', display: 'flex', alignItems: 'center', justifyContent: 'space-evenly', height: '120px' }}>
-        <Box sx={{display:'flex',gap:20}}>
-        <Typography sx={{ color: '#363636', fontSize: '24px',fontStyle:'italic',}}>
-          <span style={{ fontStyle: 'italic', fontWeight: 'bold' }}>Você </span>ainda não tem um plano odontológico?
-        </Typography>
-        <Button variant='contained' sx={{ fontSize: '18px', fontStyle: 'italic', fontWeight: 'bold', borderRadius: '5px', width: '291px', height: '42px', marginLeft: 'auto' }}>
-          Conheça Nossos Planos
-        </Button>
-      </Box>
+        <Box sx={{ display: 'flex', gap: 20 }}>
+          <Typography sx={{ color: '#363636', fontSize: '24px', fontStyle: 'italic', }}>
+            <span style={{ fontStyle: 'italic', fontWeight: 'bold' }}>Você </span>ainda não tem um plano odontológico?
+          </Typography>
+          <Button variant='contained' sx={{ fontSize: '18px', fontStyle: 'italic', fontWeight: 'bold', borderRadius: '5px', width: '291px', height: '42px', marginLeft: 'auto' }}>
+            Conheça Nossos Planos
+          </Button>
+        </Box>
       </Box>
     </Drawer>
   );

@@ -5,7 +5,7 @@ export const Importante =()=>{
     return(
         <Container>
 
-            <Box sx={{my:5}}>
+            <Box sx={{mb:5}}>
         <Typography sx={{ fontStyle: 'italic', textAlign: 'center', fontSize: '28px',color:'#222222' }}>
         <span style={{ fontWeight: 'bold',fontSize:'28px',color:'#222222' }}>Importante</span> para você
         </Typography>

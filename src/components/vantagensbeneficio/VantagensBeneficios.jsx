@@ -3,7 +3,6 @@ import { Box, Container, Typography } from "@mui/material"
 export const VantagensBeneficio = () => {
   return (
     <>
- 
     <Box sx={{
       
       height:{xs:'100%'},

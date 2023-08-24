@@ -12,11 +12,10 @@ import Menu from '@mui/material/Menu';
 import MenuList from '@mui/material/MenuList';
 import SearchIcon from '@mui/icons-material/Search';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import { Accordion, AccordionDetails, AccordionSummary, Link } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,Link} from 'react-router-dom';
 import { DrawerServicos } from './DrawerServicos';
 import { DrawerServicosMobile } from './DrawerServicosMobile';
-
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 
 
@@ -87,9 +86,46 @@ export const NavBar = () => {
   };
 
   return (
-    <AppBar position="fixed">
+    <Box>
+   
+   
+    <AppBar position="fixed" sx={{
+    background: !drawerServicos
+      ? 'linear-gradient(rgba(0, 0, 0, 0.8) , rgba(0, 0, 0, 0.0))'
+      
+      : '#A6009',
+    boxShadow: 'none'
+  }}>
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
+    
+      <Box sx={{ display: 'flex', gap: 5, my: 2 }}>
+       
+          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+            <Typography sx={{ fontSize: '16px', fontWeight: 'bold', fontStyle: 'italic' }}>
+              Mais buscados
+            </Typography>
+            <ArrowForwardIosIcon sx={{ ml: 3 }} />
+          </Box>
+      
+        <Link to="/contratar-plano" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <Typography sx={{ fontSize: '16px', fontStyle: 'italic' }}>Contrate um Plano</Typography>
+        </Link>
+        <Link to="/atendimento" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <Typography sx={{ fontSize: '16px', fontStyle: 'italic' }}>Atendimento</Typography>
+        </Link>
+        <Link to="/encontrar-dentista" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <Typography sx={{ fontSize: '16px', fontStyle: 'italic' }}>Encontre um dentista</Typography>
+        </Link>
+        <Link to="/renegociar-debitos" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <Typography sx={{ fontSize: '16px', fontStyle: 'italic' }}>Renegociar débitos</Typography>
+        </Link>
+      </Box>
+      
+      </Container>
+      <Box sx={{ width: '100%', height: '1px', backgroundColor: '#CCCCCC' }} component={'div'} />  
+      <Container maxWidth="xl">
+      
+        <Toolbar disableGutters >
           <Box sx={{ borderRight: { md: 1, xs: 0 }, paddingRight: 5, py: 1 }}>
             <Box  sx={{width:'200px',height:'50px'}}  component={'div'} onClick={handleLogo} >
             <img src='/images/logouniodonto/logouniodonto.png' alt="Logo" width={'100%'} height={'100%'}/>
@@ -162,5 +198,6 @@ export const NavBar = () => {
       </Menu>
       <DrawerServicos onOpenDrawer={drawerServicos} onCloseDrawer={()=>setDrawerServicos(false)} />
     </AppBar>
+     </Box>
   );
 }

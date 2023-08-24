@@ -1,4 +1,5 @@
 
+import { Box } from "@mui/material"
 import { BoxAcessos } from "../../components/boxacessos/BoxAcessos"
 import { Carousel } from "../../components/carousel/Carousel"
 import { CarouselAcessoRapido } from "../../components/carousel/CarouselAcessoRapido"
@@ -10,21 +11,23 @@ import { NovidadesBlog } from "../../components/novidadesblog/NovidadesBlog"
 import { Parcerias } from "../../components/parcerias/Parcerias"
 import { EncontreDentista } from "../../components/separador/EncontreDentista"
 import { VejaOsPlanos } from "../../components/vejaosplanos/VejaOsPlanos"
+import { BotoesPlanos } from "../../components/botoesplanos/BotoesPlanos"
 
 export const Body =()=>{
     return(
      
         <>
+             
            <NavBar/>
            <Carousel/>
-           <CarouselAcessoRapido/>
+            <BoxAcessos/>
+            <VejaOsPlanos/>
+            <Parcerias/>
            <EncontreDentista/>
+           <CarouselAcessoRapido/>
            <Importante/>
            <NovidadesBlog/>
-           <VejaOsPlanos/>
            <BoxAcessos/>
-           <DownloadApp/>
-           <Parcerias/>
            <Footer/>
         </>
     )

@@ -19,14 +19,14 @@ export const CarouselAcessoRapido = ()=>{
 
 
 
-          <Box  className="carouselAcessoRapido"  sx={{bgcolor:'#f1f1f1',height:'350px'}}>
+          <Box  className="carouselAcessoRapido"  sx={{bgcolor:'#f1f1f1',height:'340px'}}>
             <Container>
     
 
 
             <Typography sx={{ fontStyle: 'italic', textAlign: 'center', fontSize: '28px',color:'#222222',pt:5}}>
             Acesso 
-        <span style={{ fontWeight: 'bold',fontSize:'28px',color:'#222222' }}> Rápido</span> 
+        <span style={{ fontWeight: 'bold',fontSize:'28px',color:'#363636' }}> Rápido</span> 
         </Typography>
         <Box>
 
