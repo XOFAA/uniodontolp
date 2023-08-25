@@ -18,7 +18,7 @@ export const Body =()=>{
      
         <>
              
-           <NavBar/>
+           <NavBar backgroundColor={'linear-gradient(rgba(0, 0, 0, 0.8) , rgba(0, 0, 0, 0.0))'}/>
            <Carousel/>
             <BoxAcessos/>
             <VejaOsPlanos/>

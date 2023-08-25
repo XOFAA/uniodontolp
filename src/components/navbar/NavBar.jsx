@@ -16,20 +16,30 @@ import { useNavigate,Link} from 'react-router-dom';
 import { DrawerServicos } from './DrawerServicos';
 import { DrawerServicosMobile } from './DrawerServicosMobile';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import CloseIcon from '@mui/icons-material/Close';
 
 
+export const NavBar = ({backgroundColor,draweropen,drawerclose}) => {
 
-export const NavBar = () => {
+ 
 
-  const pages = [
-    {
-      page: 'Serviços',
-    },
-    {
-      page: 'Atendimento',
-      link: '/atendimento', // Endereço da página de atendimento
+  const [scrollBackgroundColor, setScrollBackgroundColor] = React.useState(backgroundColor);
+
+  const handleScroll = () => {
+    if (window.scrollY > 200) {
+      setScrollBackgroundColor('#A60069');
+    } else {
+      setScrollBackgroundColor(backgroundColor);
     }
-  ];
+  };
+
+  React.useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   const options = [
     {
       page:'Portal Pessoa Física',
@@ -89,16 +99,12 @@ export const NavBar = () => {
     <Box>
    
    
-    <AppBar position="fixed" sx={{
-    background: !drawerServicos
-      ? 'linear-gradient(rgba(0, 0, 0, 0.8) , rgba(0, 0, 0, 0.0))'
-      
-      : '#A6009',
-    boxShadow: 'none'
-  }}>
+   <AppBar position="fixed" sx={{ background: scrollBackgroundColor, boxShadow: 'none', transition: 'background 0.2s ease-in-out' }}>
+    
+ 
       <Container maxWidth="xl">
     
-      <Box sx={{ display: 'flex', gap: 5, my: 2 }}>
+      <Box sx={{ display:{xs:'none',lg:'flex'}, gap: 5, my: 2 }}>
        
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <Typography sx={{ fontSize: '16px', fontWeight: 'bold', fontStyle: 'italic' }}>
@@ -134,28 +140,36 @@ export const NavBar = () => {
           </Box>
 
           <Box sx={{ display: { xs: 'none', md: 'flex' }, flexGrow: 1, alignItems: 'center' }}>
-          {pages.map((page) => (
-            <MenuItem key={page} sx={{ ml: 5, gap: 2 }} onClick={page.page === 'Serviços' ? handleDrawerServicos : null}>
-              {page.page === 'Atendimento' ? (
-                <Link to={page.link} style={{ textDecoration: 'none', color: 'inherit', fontSize: '18px',fontStyle:'italic',fontWeight:'bold' }}>
-                  {page.page}
-                </Link>
-              ) : (
-                <MenuList sx={{ fontSize: '18px',fontStyle:'italic',fontWeight:'bold'}}>
-                  {page.page}
-                </MenuList>
-              )}
+          {draweropen ? 
+           <IconButton onClick={drawerclose} disableRipple sx={{color:'#fff'}}>
+           <MenuItem sx={{ml:1,fontSize:'18px',fontWeight:'bold',fontStyle:'italic',}}>
+             <CloseIcon sx={{fontSize:'25px'}}/>
+             Fechar
+             </MenuItem>
+             </IconButton> :    <IconButton onClick={handleDrawerServicos} disableRipple sx={{color:'#fff'}}>
+          <MenuItem sx={{ml:1,fontSize:'18px',fontWeight:'bold',fontStyle:'italic',}}>
+            <KeyboardArrowDownIcon sx={{fontSize:'40px'}}/>
+            Serviços  
             </MenuItem>
-          ))}
+            </IconButton>
+        }
+         
+            <MenuItem sx={{ml:5,fontSize:'18px',fontWeight:'bold',fontStyle:'italic'}}>
+            <Link to={'#'} style={{textDecoration:'none',color:'#fff'}}>
+            Atendimento
+            </Link>
+              
+            </MenuItem>
+        
             <Box sx={{ marginLeft: 'auto', display: 'flex', gap: 2, alignItems: 'center' }}>
               <SearchIcon sx={{ fontSize: '25px' }} />
               <Box
-                sx={{ borderLeft: 1, borderRight: 1, p: 1, display: 'flex', alignItems: 'center' }}
+                sx={{ borderLeft: 1, borderRight: 1, px:3, display: 'flex', alignItems: 'center' }}
                 onClick={handleOpenDesktopMenu}
               >
-               
+                <KeyboardArrowDownIcon sx={{fontSize:'40px'}}/>
                 <Typography sx={{ fontSize: '18px',fontStyle:'italic',fontWeight:'bold' }}>Acesse seu Portal</Typography>
-                <KeyboardArrowDownIcon />
+               
               </Box>
             </Box>
           </Box>

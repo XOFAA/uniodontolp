@@ -1,30 +1,40 @@
 import * as React from 'react';
 import { Box, Button, Container, Drawer, Grid, Link, Typography } from '@mui/material';
 import { DownloadApp } from '../downloadapp/DownloadApp';
+import { NavBar } from './NavBar';
 
 export const DrawerServicos = ({ onOpenDrawer, onCloseDrawer }) => {
   return (
     <Drawer
-      hideBackdrop={true}
+    
       anchor="top"
       open={onOpenDrawer}
       onClose={onCloseDrawer}
+      transitionDuration={300} 
       PaperProps={{
         style: {
-          top:"123px",
-          height: '100%'
+          height: '100%',
+          width:'100%'
         },
       }}
     >
-      <Container>
-        <Box sx={{ padding: '20px' }}>
+    
+   
+  
+     
+    
+  
+   
+      <Container maxWidth="xl">
+      <NavBar draweropen={true} drawerclose={onCloseDrawer}/>
+        <Box sx={{ padding: '20px',mt:{md:15,lg:18},mb:15 }}>
           <Grid container spacing={2}>
             {/* Coluna 1 */}
             <Grid item xs={12} sm={3}>
               <Typography sx={{ fontWeight: 'bold', fontStyle: 'italic', fontSize: '18px', color: '#A60069' }}>Para Você</Typography>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 5 }}>
                 <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '14px' }}>
-                  Acesso Pessoa Física
+                  Acesso Beneficiário
                 </Link>
                 <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '14px' }}>
                   Conheça Nossos Planos
@@ -45,17 +55,12 @@ export const DrawerServicos = ({ onOpenDrawer, onCloseDrawer }) => {
                   Pagamento Cartões
                 </Link>
                 <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '14px' }}>
-                  Carta de Quitação de Débitos
-                </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '14px' }}>
                   Clube de Vantagens
                 </Link>
                 <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '14px' }}>
                   Pronto Atendimento 24h
                 </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '14px' }}>
-                  Documentos Importantes
-                </Link>
+               
               </Box>
             </Grid>
 
@@ -64,7 +69,7 @@ export const DrawerServicos = ({ onOpenDrawer, onCloseDrawer }) => {
               <Typography sx={{ fontWeight: 'bold', fontStyle: 'italic', fontSize: '18px', color: '#A60069' }}>Para Empresas</Typography>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 5 }}>
                 <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '14px' }}>
-                  Acesso Pessoa Jurídica
+                  Acesso Empresas
                 </Link>
                 <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '14px' }}>
                   Solicite uma Proposta
@@ -82,10 +87,8 @@ export const DrawerServicos = ({ onOpenDrawer, onCloseDrawer }) => {
                 <Link sx={{ textDecoration: 'none', color: '#373737', fontSize: '14px', mt: 3 }}>
                   Acesso Consultores
                 </Link>
-                <Typography sx={{ fontWeight: 'bold', fontStyle: 'italic', fontSize: '18px', color: '#A60069', mt: 2 }}>Para Colaboradores</Typography>
-                <Link sx={{ textDecoration: 'none', color: '#373737', fontSize: '14px', mt: 3 }}>
-                  Acesso Colaborador
-                </Link>
+              
+               
               </Box>
             </Grid>
 
@@ -97,23 +100,14 @@ export const DrawerServicos = ({ onOpenDrawer, onCloseDrawer }) => {
                   Acesso Cooperados
                 </Link>
                 <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '14px' }}>
-                  Aprovação Online
-                </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '14px' }}>
                   Relacionamento com Cooperado
                 </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '14px' }}>
-                  Seja nosso Cooperado
-                </Link>
+               
 
                 <Box sx={{ mt: 3 }}>
                   <Typography sx={{ fontWeight: 'bold', fontStyle: 'italic', fontSize: '18px', color: '#A60069' }}>Outros Links</Typography>
                 </Box>
                 <Box sx={{ mt: 1, display: 'flex', flexDirection: 'column', gap: 2 }}>
-
-                  <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '14px' }}>
-                    ANS
-                  </Link>
                   <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '14px' }}>
                     Outras Uniodontos
                   </Link>
@@ -124,11 +118,11 @@ export const DrawerServicos = ({ onOpenDrawer, onCloseDrawer }) => {
                     Código de Defesa do Consumidor
                   </Link>
                   <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '14px' }}>
-                    OCB/AM
-                  </Link>
-                  <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '14px' }}>
                     CapacitaCoop
                   </Link>
+                  <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '14px' }}>
+                  Documentos Importantes
+                </Link>
                 </Box>
               </Box>
             </Grid>
@@ -161,9 +155,7 @@ export const DrawerServicos = ({ onOpenDrawer, onCloseDrawer }) => {
                 <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '14px' }}>
                   ESG
                 </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '14px' }}>
-                  Atenção à Saúde Bucal
-                </Link>
+             
                 <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '14px' }}>
                   Blog da Uniodonto Manaus
                 </Link>
@@ -203,7 +195,7 @@ export const DrawerServicos = ({ onOpenDrawer, onCloseDrawer }) => {
     
 
       </Container>
-      <Box sx={{ position: 'fixed', bottom: 0, left: 0, right: 0, bgcolor: '#E1FF7B', display: 'flex', alignItems: 'center', justifyContent: 'space-evenly', height: '120px' }}>
+      <Box sx={{ position: 'fixed', bottom: 0, left: 0, right: 0, bgcolor: '#E1FF7B', display: 'flex', alignItems: 'center', justifyContent: 'space-evenly', height: {lg:'70px',md:'80px'} }}>
         <Box sx={{ display: 'flex', gap: 20 }}>
           <Typography sx={{ color: '#363636', fontSize: '24px', fontStyle: 'italic', }}>
             <span style={{ fontStyle: 'italic', fontWeight: 'bold' }}>Você </span>ainda não tem um plano odontológico?
