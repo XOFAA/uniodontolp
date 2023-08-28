@@ -11,7 +11,7 @@ import { NovidadesBlog } from "../../components/novidadesblog/NovidadesBlog"
 import { Parcerias } from "../../components/parcerias/Parcerias"
 import { EncontreDentista } from "../../components/separador/EncontreDentista"
 import { VejaOsPlanos } from "../../components/vejaosplanos/VejaOsPlanos"
-import { BotoesPlanos } from "../../components/botoesplanos/BotoesPlanos"
+
 
 export const Body =()=>{
     return(
@@ -27,7 +27,10 @@ export const Body =()=>{
            <CarouselAcessoRapido/>
            <Importante/>
            <NovidadesBlog/>
+           <Box sx={{pb:5}}>
            <BoxAcessos/>
+           </Box>
+   
            <Footer/>
         </>
     )

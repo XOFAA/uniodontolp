@@ -8,6 +8,7 @@
 
 .carouselAcessoRapido .swiper {
   padding: 40px;
+  height: auto;
 }
 
 .carouselAcessoRapido .swiper-button-prev {

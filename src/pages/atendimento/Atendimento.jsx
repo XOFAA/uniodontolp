@@ -4,28 +4,30 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+
 import { Footer } from "../../components/footer/Footer";
 import { CarouselAcessoRapido } from "../../components/carousel/CarouselAcessoRapido";
 export const Atendimento = () => {
     return (
         <>
             <NavBar />
-            <Box sx={{mt:8}}>
+            <Box sx={{mt:15}}>
             <CarouselAcessoRapido/>
             </Box>
-          
+          <Box sx={{bgcolor:'#fff',pb:10}}>
+            
+    
             <Container>
                 <Box sx={{mt:5}}>
                 <Typography sx={{textAlign:'center',fontWeight: 'bold',fontStyle:'italic', fontSize: '28px', color: '#A60069' }}>Atendimento</Typography>
                     <Typography sx={{color:'#363636',fontSize:'20px',fontStyle:'italic',textAlign:'center',mt:3}}>Veja os canais de atendimento e horários para resolver todas suas dúvidas sobre nossos produtos e serviços.</Typography>
                     <Typography  sx={{color:'#363636',mt: 2,fontSize:'16px',fontStyle:'italic',textAlign:'center'}}>Nosso funcionamento é de 7h30 às 18h (horário Manaus), exceto sábados, domingos e feriados nacionais (sem expediente).</Typography>
                 </Box>
-                <Box sx={{ boxShadow:2,mb:10,borderRadius:'10px',mt: { xs: 10, md: 10}}}>
+                <Box sx={{ boxShadow:2,borderRadius:'10px',mt: { xs: 10, md: 10}}}>
                
               
                     
-                    <Box sx={{ mt: 10, bgcolor: "#F1F1F1"}}>
+                    <Box>
                         <Accordion>
                             <AccordionSummary
                                 expandIcon={<ExpandMoreIcon />}
@@ -226,6 +228,7 @@ export const Atendimento = () => {
                     </Box>
                 </Box>
             </Container>
+            </Box>
             <Footer/>
         </>
     )

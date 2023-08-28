@@ -9,7 +9,7 @@ export const Footer = () => {
   return (
  
 
-      <Box sx={{bgcolor: '#A60069',mt:5}}>
+      <Box sx={{bgcolor: '#A60069'}}>
         <Container >
           <Box sx={{pt:5}}>
 

@@ -7,13 +7,13 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { useTheme } from '@emotion/react';
 import { BotoesPlanos } from '../botoesplanos/BotoesPlanos';
-
+import './Carousel.css';
 export const Carousel = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
-    <Box sx={{ position: 'relative', bgcolor: '#f1f1f1',mb:10}}>
+    <Box  sx={{position: 'relative', bgcolor: '#f1f1f1',mb:10}}>
       <Swiper
         slidesPerView={1}
         autoplay={{

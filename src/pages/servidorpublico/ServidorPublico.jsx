@@ -1,11 +1,67 @@
-
-import { Box, Button, Container, Typography } from '@mui/material';
+import React from 'react';
+import { Box, Button, Container, Typography, useMediaQuery } from '@mui/material';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { useTheme } from '@emotion/react';
 import { VantagensBeneficio } from '../../components/vantagensbeneficio/VantagensBeneficios';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import { NavBar } from '../../components/navbar/NavBar';
+
 export const ServidorPublico=()=>{
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     return(
         <>
        
+       <NavBar backgroundColor={'linear-gradient(rgba(0, 0, 0, 0.8) , rgba(0, 0, 0, 0.0))'}/>
+             <Box sx={{ position: 'relative', bgcolor: '#f1f1f1'}}>
+      <Swiper
+        slidesPerView={1}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+      >
+        {/* Desktop Images */}
+        {!isMobile && (
+          <>
+            <SwiperSlide>
+            <Box  sx={{
+            position: 'relative',
+            width: '100%',
+            height:'100%'
+          }}> 
+              <img src="images/servidorpublico/foto1.png" style={{ width: '100%', height: '100%' }} />
+              <Box
+            sx={{
+              position: 'absolute',
+              top: '50%',
+              left: '70%',
+              transform: 'translate(-50%, -50%)',
+           
+            }}
+          >
+          
+            <Typography sx={{fontStyle:'italic', fontSize:'42px',textAlign:'end',color:'#A60069'}}><span style={{fontWeight:'bold'}}>Servidor público</span>, seu<br/>sorriso e de sua família<br/>aqui é único!</Typography>
+       
+         
+            <Typography sx={{fontStyle:'italic',fontSize:'28px',textAlign:'end',color:'#A60069'}}>A Uniodonto Manaus oferece uma condição especial para servidores públicos da Prefeitura de Manaus e Governo do Estado do Amazonas</Typography>
+          </Box>
+              </Box>
+            </SwiperSlide>
+            {/* Add more slides as needed */}
+          </>
+        )}
+
+        {/* Mobile Images */}
+        {isMobile && (
+          <>
+            <SwiperSlide>
+              <img src="images/servidorpublico/foto1.png" style={{ width: '100%', height: '100%' }} />
+            </SwiperSlide>
+            {/* Add more slides as needed */}
+          </>
+        )}
+      </Swiper>
+    </Box>
         <VantagensBeneficio/>
         <Container>
         <Box sx={{display:'flex',mt:5}}>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Box, Button, Checkbox, Container, Link, TextField, Typography, useMediaQuery } from '@mui/material';
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
+
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -11,15 +11,17 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { useTheme } from '@emotion/react';
 import { NavBar } from '../../components/navbar/NavBar';
-import { Parcerias } from '../../components/parcerias/Parcerias';
-import { VantagensBeneficio } from '../../components/vantagensbeneficio/VantagensBeneficios';
-import { CheckBox } from '@mui/icons-material';
+
 
 export const PessoaJuridica = () => {
     const [consultorVisita, setConsultorVisita] = useState(null);
-
-    const handleCheckboxChange = (option) => {
+    const [coberturaOdonto, setCoberturaOdonto] = useState(null);
+    const handleCheckboxVisita = (option) => {
         setConsultorVisita(option);
+       
+    };
+    const handleCheckboxCobertura = (option) => {
+        setCoberturaOdonto(option);
        
     };
     const theme = useTheme();
@@ -27,36 +29,42 @@ export const PessoaJuridica = () => {
 
     return (
         <>
-            <Box sx={{ mt: 8, bgcolor: '#f1f1f1' }}>
-                <NavBar />
-                <Swiper
-                    slidesPerView={1}
-                    scrollbar={{ draggable: true }}
-                    autoplay={{
-                        delay: 2500,
-                        disableOnInteraction: false,
-                    }}
-                >
-                    {/* Desktop Images */}
-                    {!isMobile && (
-                        <>
-                            <SwiperSlide><img src="images/pessoajuridica/foto1.png" style={{ width: '100%', height: '100%' }} /></SwiperSlide>
+               <NavBar backgroundColor={'linear-gradient(rgba(0, 0, 0, 0.8) , rgba(0, 0, 0, 0.0))'}/>
+             <Box sx={{ position: 'relative', bgcolor: '#f1f1f1'}}>
+      <Swiper
+        slidesPerView={1}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+      >
+        {/* Desktop Images */}
+        {!isMobile && (
+          <>
+            <SwiperSlide>
+              <img src="images/pessoajuridica/foto1.png" style={{ width: '100%', height: '100%' }} />
+            </SwiperSlide>
+            {/* Add more slides as needed */}
+          </>
+        )}
 
-                        </>
-                    )}
+        {/* Mobile Images */}
+        {isMobile && (
+          <>
+            <SwiperSlide>
+              <img src="images/topslide/mobile_foto1.png" style={{ width: '100%', height: '100%' }} />
+            </SwiperSlide>
+            {/* Add more slides as needed */}
+          </>
+        )}
+      </Swiper>
+    </Box>
+  
 
-                    {/* Mobile Images */}
-                    {isMobile && (
-                        <>
 
-
-                            <SwiperSlide><img src="images/topslide/mobile_foto2.png" style={{ width: '100%', height: '100%' }} /></SwiperSlide>
-
-                        </>
-                    )}
-                </Swiper>
-            </Box>
             <Container>
+             
+
                 <Box sx={{ mt: 5, display: 'flex', flexDirection: 'column' }}>
                     <Typography sx={{ fontSize: '28px', fontStyle: 'italic', color: '#A60069', textAlign: 'center' }}>Enquanto você se dedica em sua empresa ou negócio, <span style={{ fontStyle: 'italic', fontWeight: 'bold' }}>nós cuidamos dos sorrisos e da saúde bucal de seus colaboradores</span></Typography>
                   
@@ -75,14 +83,14 @@ export const PessoaJuridica = () => {
                     <Box sx={{ display: 'flex', gap: 2, textAlign: { xs: 'center', md: 'initial' } }}>
                         <Box>
                             <Typography sx={{ fontSize: '28px', fontStyle: 'italic', color: '#A60069' }}><span style={{ fontWeight: 'bold' }}>Solicite</span> uma Proposta</Typography>
-                            <Typography sx={{ fontStyle: 'italic', fontSize: '20px', color: '#363636' }}>Os planos para empresas e negócios são voltados na modalidade Pessoa Jurídica e estão disponíveis para a partir de 3 vidas.</Typography>
+                            <Typography sx={{ fontStyle: 'italic', fontSize: '20px', color: '#363636' }}>Os planos para empresas e negócios são voltados na modalidade Pessoa Jurídica e estão disponíveis para a partir de 2 vidas.</Typography>
                         </Box>
                         <Box>
                             <Button variant='contained' sx={{ borderRadius: '10px', width: '370px', height: '111px', bgcolor: '#107E75', display: { xs: 'none', md: 'flex' }, gap: 1 }}><img src='images/pessoajuridica/icon-wpp.png' />Fale com um<br />Consultor</Button>
                         </Box>
                     </Box>
                     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 5 }}>
-                        <TextField label="Nome da empresa"
+                        <TextField label="Razão social da empresa"
                             required
                             type='text'
                         />
@@ -90,19 +98,19 @@ export const PessoaJuridica = () => {
                             required
                             type='text'
                         />
-                        <TextField label="Nome do responsável legal"
+                        <TextField label="Nome completo do solicitante"
                             required
                             type='text'
                         />
-                        <TextField label="CPF do responsável legal"
+                        <TextField label="Cargo do solicitante"
                             required
                             type='text'
                         />
-                        <TextField label="E-mail do responsável legal"
+                        <TextField label="E-mail do solicitante"
                             required
                             type='text'
                         />
-                        <TextField label="Celular/WhatsApp do responsável legal"
+                        <TextField label="Celular/WhatsApp do solicitante"
                             required
                             type='text'
                         />
@@ -110,11 +118,11 @@ export const PessoaJuridica = () => {
                             required
                             type='text'
                         />
-                        <Typography sx={{ fontSize: '14px', fontStyle: 'italic', color: '#363636' }}>Deseja que um consultor faça uma visita?</Typography>
+                        <Typography sx={{ fontSize: '14px', fontStyle: 'italic', color: '#363636' }}>Deseja receber uma visita presencial nossa em sua empresa?</Typography>
                         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                             <Checkbox
                                 checked={consultorVisita === true}
-                                onChange={() => handleCheckboxChange(true)}
+                                onChange={() => handleCheckboxVisita(true)}
                                 inputProps={{ 'aria-label': 'controlled' }}
                             />
                             <Typography sx={{ fontSize: '14px', fontStyle: 'italic', color: '#363636' }}>
@@ -124,7 +132,28 @@ export const PessoaJuridica = () => {
                         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                             <Checkbox
                                 checked={consultorVisita === false}
-                                onChange={() => handleCheckboxChange(false)}
+                                onChange={() => handleCheckboxVisita(false)}
+                                inputProps={{ 'aria-label': 'controlled' }}
+                            />
+                            <Typography sx={{ fontSize: '14px', fontStyle: 'italic', color: '#363636' }}>
+                                Não
+                            </Typography>
+                        </Box>
+                           <Typography sx={{ fontSize: '14px', fontStyle: 'italic', color: '#363636' }}>Já possui cobertura odontológica?</Typography>
+                        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                            <Checkbox
+                                checked={coberturaOdonto === true}
+                                onChange={() => handleCheckboxCobertura(true)}
+                                inputProps={{ 'aria-label': 'controlled' }}
+                            />
+                            <Typography sx={{ fontSize: '14px', fontStyle: 'italic', color: '#363636' }}>
+                                Sim
+                            </Typography>
+                        </Box>
+                        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                            <Checkbox
+                                checked={coberturaOdonto === false}
+                                onChange={() => handleCheckboxCobertura(false)}
                                 inputProps={{ 'aria-label': 'controlled' }}
                             />
                             <Typography sx={{ fontSize: '14px', fontStyle: 'italic', color: '#363636' }}>
