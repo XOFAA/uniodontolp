@@ -40,10 +40,10 @@ export const ServidorPublico=()=>{
             }}
           >
           
-            <Typography sx={{fontStyle:'italic', fontSize:'42px',textAlign:'end',color:'#A60069'}}><span style={{fontWeight:'bold'}}>Servidor público</span>, seu<br/>sorriso e de sua família<br/>aqui é único!</Typography>
+            <Typography sx={{fontStyle:'italic', fontSize:'2.6vw',textAlign:'end',color:'#A60069'}}><span style={{fontWeight:'bold'}}>Servidor público</span>, seu<br/>sorriso e de sua família<br/>aqui é único!</Typography>
        
          
-            <Typography sx={{fontStyle:'italic',fontSize:'28px',textAlign:'end',color:'#A60069'}}>A Uniodonto Manaus oferece uma condição especial para servidores públicos da Prefeitura de Manaus e Governo do Estado do Amazonas</Typography>
+            <Typography sx={{fontStyle:'italic',fontSize:'1.3vw',textAlign:'end',color:'#A60069'}}>A Uniodonto Manaus oferece uma condição especial para servidores públicos da Prefeitura de Manaus e Governo do Estado do Amazonas</Typography>
           </Box>
               </Box>
             </SwiperSlide>

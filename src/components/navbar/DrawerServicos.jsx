@@ -43,14 +43,14 @@ export const DrawerServicos = ({ onOpenDrawer, onCloseDrawer }) => {
                 <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
                   Segunda via de Boleto
                 </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
-                  Regenegociar Débitos
+                <Link href="renegociacao" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
+                  Renegociar Débitos
                 </Link>
                 <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
                   Informe de Rendimentos
                 </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
-                  Pagamento Cartões
+                <Link href="/trocacartao" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
+                 Trocar Cartão
                 </Link>
                 <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
                   Clube de Vantagens
@@ -73,7 +73,7 @@ export const DrawerServicos = ({ onOpenDrawer, onCloseDrawer }) => {
                   Solicite uma Proposta
                 </Link>
              
-                <Link sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
+                <Link href='/renegociacao' sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
                   Renegociar Débitos
                 </Link>
               

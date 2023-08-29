@@ -25,7 +25,7 @@ export const Body =()=>{
             <Parcerias/>
            <EncontreDentista/>
            <CarouselAcessoRapido/>
-           <Importante/>
+       
            <NovidadesBlog/>
            <Box sx={{pb:5}}>
            <BoxAcessos/>

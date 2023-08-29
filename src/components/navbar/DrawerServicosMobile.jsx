@@ -29,6 +29,7 @@ export const DrawerServicosMobile = ({onOpenDrawer,onCloseDrawer}) => {
             <AccordionSummary
             >
             <Typography sx={{fontStyle:'italic',fontWeight:'bold',fontSize:'22px',color:'#fff'}}>Serviços</Typography>
+            <ExpandMoreIcon sx={{color:'#fff',fontSize:'35px'}}/>
             </AccordionSummary>
             <AccordionDetails >
             <Accordion>
@@ -219,6 +220,7 @@ export const DrawerServicosMobile = ({onOpenDrawer,onCloseDrawer}) => {
         <Accordion sx={{bgcolor:'#A60069',boxShadow:'none',position:'unset'}}>
             <AccordionSummary>
             <Typography sx={{fontStyle:'italic',fontWeight:'bold',fontSize:'22px',color:'#fff',boxShadow:'none'}}>Acesse seu Portal</Typography>
+            <ExpandMoreIcon sx={{color:'#fff',fontSize:'35px'}}/>
             </AccordionSummary>
             <AccordionDetails sx={{bgcolor:'#fff'}}>
                 <Box sx={{display:'flex',flexDirection:'column',gap:2}}>

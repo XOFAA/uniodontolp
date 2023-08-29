@@ -12,11 +12,12 @@ import Menu from '@mui/material/Menu';
 import MenuList from '@mui/material/MenuList';
 import SearchIcon from '@mui/icons-material/Search';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import { useNavigate,Link} from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 import { DrawerServicos } from './DrawerServicos';
 import { DrawerServicosMobile } from './DrawerServicosMobile';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import CloseIcon from '@mui/icons-material/Close';
+import { Link } from '@mui/material';
 
 
 export const NavBar = ({backgroundColor,draweropen,drawerclose}) => {
@@ -62,13 +63,6 @@ export const NavBar = ({backgroundColor,draweropen,drawerclose}) => {
   const navigate=useNavigate()
 
 
-  // Objeto com cores associadas a cada opção
-  const optionColors = {
-    'Portal Pessoa Física': '#373737', // Vermelho
-    'Portal Pessoa Jurídica': '#AD611F', // Verde
-    'Portal Cooperado': '#680E35', // Azul
-    'Portal Vendas': '#076A38', // Magenta
-  };
 
 
   const [desktopMenuOpen, setDesktopMenuOpen] = React.useState(null);
@@ -98,7 +92,9 @@ export const NavBar = ({backgroundColor,draweropen,drawerclose}) => {
   return (
     <Box>
    
-   
+
+
+ 
    <AppBar position="fixed" sx={{ background: scrollBackgroundColor, boxShadow: 'none', transition: 'background 0.2s ease-in-out' }}>
     
  
@@ -113,16 +109,16 @@ export const NavBar = ({backgroundColor,draweropen,drawerclose}) => {
             <ArrowForwardIosIcon sx={{ ml: 3 }} />
           </Box>
       
-        <Link to="/contratar-plano" style={{ textDecoration: 'none', color: 'inherit' }}>
+        <Link href="/contratar-plano" style={{ textDecoration: 'none', color: 'inherit' }}>
           <Typography sx={{ fontSize: '16px', fontStyle: 'italic' }}>Contrate um Plano</Typography>
         </Link>
-        <Link to="/atendimento" style={{ textDecoration: 'none', color: 'inherit' }}>
+        <Link href="/atendimento" style={{ textDecoration: 'none', color: 'inherit' }}>
           <Typography sx={{ fontSize: '16px', fontStyle: 'italic' }}>Atendimento</Typography>
         </Link>
-        <Link to="/encontrar-dentista" style={{ textDecoration: 'none', color: 'inherit' }}>
+        <Link href="/encontrar-dentista" style={{ textDecoration: 'none', color: 'inherit' }}>
           <Typography sx={{ fontSize: '16px', fontStyle: 'italic' }}>Encontre um dentista</Typography>
         </Link>
-        <Link to="/renegociar-debitos" style={{ textDecoration: 'none', color: 'inherit' }}>
+        <Link href="/renegociacao" style={{ textDecoration: 'none', color: 'inherit' }}>
           <Typography sx={{ fontSize: '16px', fontStyle: 'italic' }}>Renegociar débitos</Typography>
         </Link>
       </Box>
@@ -133,7 +129,7 @@ export const NavBar = ({backgroundColor,draweropen,drawerclose}) => {
       
         <Toolbar disableGutters >
           <Box sx={{ borderRight: { md: 1, xs: 0 }, paddingRight: 5, py: 1 }}>
-            <Box  sx={{width:'200px',height:'50px'}}  component={'div'} onClick={handleLogo} >
+            <Box  sx={{width:'200px',height:'50px',cursor:'pointer'}}  component={'div'} onClick={handleLogo} >
             <img src='/images/logouniodonto/logouniodonto.png' alt="Logo" width={'100%'} height={'100%'}/>
             </Box>
             
@@ -155,19 +151,20 @@ export const NavBar = ({backgroundColor,draweropen,drawerclose}) => {
         }
          
             <MenuItem sx={{ml:5,fontSize:'18px',fontWeight:'bold',fontStyle:'italic'}}>
-            <Link to={'#'} style={{textDecoration:'none',color:'#fff'}}>
+            <Link href={'atendimento'} style={{textDecoration:'none',color:'#fff'}}>
             Atendimento
             </Link>
               
             </MenuItem>
-        
-            <Box sx={{ marginLeft: 'auto', display: 'flex', gap: 2, alignItems: 'center' }}>
+         
+            <Box sx={{ marginLeft: 'auto', display: 'flex', gap: 2, alignItems: 'center',cursor:'pointer'}} >
               <SearchIcon sx={{ fontSize: '25px' }} />
               <Box
                 sx={{ borderLeft: 1, borderRight: 1, px:3, display: 'flex', alignItems: 'center' }}
                 onClick={handleOpenDesktopMenu}
               >
                 <KeyboardArrowDownIcon sx={{fontSize:'40px'}}/>
+                
                 <Typography sx={{ fontSize: '18px',fontStyle:'italic',fontWeight:'bold' }}>Acesse seu Portal</Typography>
                
               </Box>
@@ -201,10 +198,10 @@ export const NavBar = ({backgroundColor,draweropen,drawerclose}) => {
         }}
       >
         {/* Conteúdo do submenu no ícone do portal no desktop */}
-        {options.map((option) => (
-          <MenuItem key={option} onClick={handleCloseDesktopMenu} >
+        {options.map((option,index) => (
+          <MenuItem key={index} onClick={handleCloseDesktopMenu} >
             <MenuList>
-             <Link  href={option.link} target='_blank' sx={{ color: optionColors[option.page], fontSize: '18px',fontStyle:'italic',fontWeight:'bold',textDecoration:'none' }}>{option.page}</Link>
+             <Link  href={option.link} target='_blank' sx={{ color: "#323232", fontSize: '18px',fontStyle:'italic',fontWeight:'bold',textDecoration:'none' }}>{option.page}</Link>
             </MenuList>
           </MenuItem>
 
@@ -212,6 +209,7 @@ export const NavBar = ({backgroundColor,draweropen,drawerclose}) => {
       </Menu>
       <DrawerServicos onOpenDrawer={drawerServicos} onCloseDrawer={()=>setDrawerServicos(false)} />
     </AppBar>
+
      </Box>
   );
 }
