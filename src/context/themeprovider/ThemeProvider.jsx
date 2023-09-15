@@ -2,7 +2,7 @@ import { ThemeProvider } from "@emotion/react";
 import { createContext } from "react";
 import { Box, CssBaseline } from "@mui/material";
 import { ThemeLight } from "../../theme/ThemeLight";
-
+import '../../theme/Scrolbar.css'
 
 
 

@@ -7,10 +7,12 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import { Footer } from "../../components/footer/Footer";
 import { CarouselAcessoRapido } from "../../components/carousel/CarouselAcessoRapido";
+import TawkToChatbot from "../../config/TawkToChatbot";
 export const Atendimento = () => {
     return (
         <>
             <NavBar />
+            <TawkToChatbot/>
             <Box sx={{mt:15}}>
             <CarouselAcessoRapido/>
             </Box>

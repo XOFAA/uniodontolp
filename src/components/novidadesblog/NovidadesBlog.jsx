@@ -11,7 +11,7 @@ export const NovidadesBlog = () => {
 
     // Define Substack feed widget parameters
     window.SubstackFeedWidget = {
-      substackUrl: "indeias.substack.com",
+      substackUrl: "uniodontomanaus.substack.com",
       posts: 3,
       filter: "top",
       layout: "center",

@@ -17,7 +17,6 @@ export const Body =()=>{
     return(
      
         <>
-             
            <NavBar backgroundColor={'linear-gradient(rgba(0, 0, 0, 0.8) , rgba(0, 0, 0, 0.0))'}/>
            <Carousel/>
             <BoxAcessos/>
@@ -25,12 +24,10 @@ export const Body =()=>{
             <Parcerias/>
            <EncontreDentista/>
            <CarouselAcessoRapido/>
-       
            <NovidadesBlog/>
            <Box sx={{pb:5}}>
            <BoxAcessos/>
            </Box>
-   
            <Footer/>
         </>
     )

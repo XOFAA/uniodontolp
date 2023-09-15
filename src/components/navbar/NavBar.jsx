@@ -6,7 +6,6 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import MenuList from '@mui/material/MenuList';
@@ -95,7 +94,7 @@ export const NavBar = ({backgroundColor,draweropen,drawerclose}) => {
 
 
  
-   <AppBar position="fixed" sx={{ background: scrollBackgroundColor, boxShadow: 'none', transition: 'background 0.2s ease-in-out' }}>
+   <AppBar position="fixed" sx={{background: scrollBackgroundColor, boxShadow: 'none', transition: 'background 0.2s ease-in-out' }}>
     
  
       <Container maxWidth="xl">
@@ -174,7 +173,7 @@ export const NavBar = ({backgroundColor,draweropen,drawerclose}) => {
           <Box sx={{ display: { xs: 'flex', md: 'none' }, flexGrow: 1, alignItems: 'center' }}>
             <Box sx={{ marginLeft: 'auto' }}>
               <IconButton onClick={handleOpenMobileMenu}>
-                <MenuIcon />
+                <MenuIcon sx={{color:'#fff'}} />
               </IconButton>
             </Box>
           </Box>
@@ -198,12 +197,14 @@ export const NavBar = ({backgroundColor,draweropen,drawerclose}) => {
         }}
       >
         {/* Conteúdo do submenu no ícone do portal no desktop */}
-        {options.map((option,index) => (
-          <MenuItem key={index} onClick={handleCloseDesktopMenu} >
-            <MenuList>
-             <Link  href={option.link} target='_blank' sx={{ color: "#323232", fontSize: '18px',fontStyle:'italic',fontWeight:'bold',textDecoration:'none' }}>{option.page}</Link>
-            </MenuList>
-          </MenuItem>
+        {options.map((option) => (
+          <Link href={option.link} target='_blank' sx={{ color: "#323232", fontSize: '18px', fontStyle:'italic', fontWeight:'bold', textDecoration:'none' }}>
+        <MenuItem   onClick={handleCloseDesktopMenu}>
+        <MenuList>
+            {option.page}
+        </MenuList>
+      </MenuItem>
+      </Link>
 
         ))}
       </Menu>

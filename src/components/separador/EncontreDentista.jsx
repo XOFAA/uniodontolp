@@ -1,5 +1,5 @@
 import { Box, Button, Typography } from "@mui/material";
-
+import { motion } from "framer-motion";
 export const EncontreDentista = () => {
   const boxStyle = {
     backgroundImage: 'url("/images/separadorencontreumdentista/separador_encontre_um_dentista.png")',
@@ -34,14 +34,21 @@ export const EncontreDentista = () => {
         color: "#fff",
         fontWeight: "bold",
         display: 'flex',
-        gap:{xs:3,md:5},
+        gap:{xs:1,md:5},
         alignItems:'center',
         flexDirection:{md:'row',xs:'column'}
       }}>
         <Typography sx={{ fontStyle: 'italic', fontSize: {xs:'17px',md:'28px'}}}>
           <span style={{ fontWeight: "bolder", fontSize: {xs:'25px',md:'28px'}}}>Sempre </span>tem um dentista próximo de você
         </Typography>
-        <Button variant='contained' sx={{ bgcolor: '#E1FF7B', color: '#363636', fontSize: '18px', fontStyle: 'italic', fontWeight: 'bold', textTransform: 'none', width: '320px', height: '40px' }}>Encontre um Dentista</Button>
+        <motion.div
+             whileHover={{ scale: 1.1 }} 
+             
+            
+            >
+        <Button variant='contained' sx={{ bgcolor: '#E1FF7B','&:hover': {
+                bgcolor: '#A60069',color:'#fff'},color: '#363636', fontSize: '18px', fontStyle: 'italic', fontWeight: 'bold', textTransform: 'none', width:{xs:'100%',md:'320px'}, height: '40px' }}>Encontre um Dentista</Button>
+        </motion.div>
       </Box>
     </Box>
   );

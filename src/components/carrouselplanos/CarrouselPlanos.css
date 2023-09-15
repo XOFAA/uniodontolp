@@ -1,0 +1,22 @@
+/* CarouselAcessoRapido.css */
+.CarrouselPlanos .swiper-slide {
+  display: flex;
+  height: auto;
+ 
+}
+
+.CarrouselPlanos .swiper {
+padding: 50px;
+
+}
+.CarrouselPlanos .swiper-pagination-bullet {
+  background-color: #363636; /* Altere para a cor desejada */
+}
+
+.CarrouselPlanos .swiper-button-next,
+.CarrouselPlanos .swiper-button-prev {
+  --swiper-navigation-size: 40px;
+  color: #363636;
+  font-weight: bolder; 
+ 
+}

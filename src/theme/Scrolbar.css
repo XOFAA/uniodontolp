@@ -1,0 +1,14 @@
+/* Estilos da barra de rolagem */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #be8cac; /* Cor de fundo do polegar */
+    border-radius: 8px; /* Raio das bordas do polegar */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #1b1919; /* Cor de fundo da pista */
+  }
+  /* Altera a cor do cursor do mouse em todo o site */
