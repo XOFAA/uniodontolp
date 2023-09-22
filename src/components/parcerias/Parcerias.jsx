@@ -1,10 +1,6 @@
 import React from 'react';
-import {Box, Card, CardMedia, Container, Typography} from '@mui/material';
+import {Box,Container, Typography} from '@mui/material';
 import { Navigation, Pagination, Scrollbar, A11y,Autoplay } from 'swiper/modules';
-import FmdGoodIcon from '@mui/icons-material/FmdGood';
-import RequestQuoteIcon from '@mui/icons-material/RequestQuote';
-import ExitToAppIcon from '@mui/icons-material/ExitToApp';
-import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -20,8 +16,8 @@ export const Parcerias = ()=>{
     return(
       
 
-        <Box  className="CarouselParcerias"  sx={{mt:5,bgcolor:'#60EBFF',height:{xs:'100%',md:'300px'}}}>
-            <Container>
+        <Box  className="CarouselParcerias"  sx={{width:'100%',mt:5,bgcolor:'#60EBFF',height:{xs:'100%',md:'300px'}}}>
+         
     
 
 
@@ -31,7 +27,7 @@ export const Parcerias = ()=>{
         </Typography>
         <Box >
 
-   
+        <Container>
         <Swiper
             
             modules={[Navigation, Pagination, Scrollbar, A11y,Autoplay]}
@@ -84,8 +80,9 @@ export const Parcerias = ()=>{
                
                
            </Swiper>
-           </Box>
            </Container>
+           </Box>
+        
            
             </Box>
      

@@ -9,6 +9,7 @@ import { ProntoAtendimento } from "./pages/prontoatendimento/ProntoAtendimento";
 import { PessoaFisica } from "./pages/pessoafisica/PessoaFisica";
 import { Home } from "./pages/body/Home";
 import { Atendimento } from "./pages/atendimento/Atendimento";
+import { FacaParte } from "./pages/facaparte/FacaParte";
 
 
 
@@ -26,6 +27,7 @@ function App() {
             <Route path="/trocacartao" element={<TrocaCartao/>} />
             <Route path="/renegociacao" element={<Renegociacao/>} />
             <Route path="/prontoatendimento" element={<ProntoAtendimento/>} />
+            <Route path="/facaparte" element={<FacaParte/>} />
 
           </Routes>
       </BrowserRouter>

@@ -35,16 +35,10 @@ export const ServidorPublico=()=>{
             width: '100%',
             height:'100%'
           }}> 
-               {!imageLoaded && ( // Renderiza o Skeleton se a imagem não estiver carregada
-               <Box sx={{height:'400px'}}>
-                    <Skeleton variant="rectangular"  sx={{bgcolor:'#CC9DFF'}} animation='wave' width="100%" height="100%" />
-              </Box>
-            
-              )}
+           
               <img
                 src="images/servidorpublico/foto1.png"
-                style={{ width: '100%', height: '100%', display: imageLoaded ? 'block' : 'none' }}
-                onLoad={() => setImageLoaded(true)} // Define imageLoaded como true quando a imagem é carregada
+                style={{ width: '100%', height: '100%' }}
               />
               <Box
             sx={{
@@ -55,16 +49,8 @@ export const ServidorPublico=()=>{
            
             }}
           >
-              {imageLoaded && (
-                <>
-                
-          
             <Typography sx={{fontStyle:'italic', fontSize:'2.6vw',textAlign:'end',color:'#A60069'}}><span style={{fontWeight:'bold'}}>Servidor público</span>, seu<br/>sorriso e de sua família<br/>aqui é único!</Typography>
-       
-         
             <Typography sx={{fontStyle:'italic',fontSize:'1.3vw',textAlign:'end',color:'#A60069'}}>A Uniodonto Manaus oferece uma condição especial para servidores públicos da Prefeitura de Manaus e Governo do Estado do Amazonas</Typography>
-            </>
-              )}
             </Box>
               </Box>
             </SwiperSlide>
@@ -75,22 +61,15 @@ export const ServidorPublico=()=>{
         {/* Mobile Images */}
         {isMobile && (
           <>
-                    <SwiperSlide>
+            <SwiperSlide>
             <Box  sx={{
             position: 'relative',
             width: '100%',
             height:'100%'
           }}> 
-                {!imageLoaded && ( // Renderiza o Skeleton se a imagem não estiver carregada
-               <Box sx={{height:'600px'}}>
-                    <Skeleton variant="rectangular"  sx={{bgcolor:'#CC9DFF'}} animation='wave' width="100%" height="100%" />
-              </Box>
-            
-              )}
              <img
                 src="images/servidorpublico/foto1_mobile.png"
-                style={{ width: '100%', height: '100%', display: imageLoaded ? 'block' : 'none' }}
-                onLoad={() => setImageLoaded(true)} // Define imageLoaded como true quando a imagem é carregada
+                style={{ width: '100%', height: '100%' }}
               />
               <Box
             sx={{
@@ -101,10 +80,7 @@ export const ServidorPublico=()=>{
                 width:'60%'
             }}
           >
-           {imageLoaded && (
             <Typography sx={{fontStyle:'italic', fontSize:'7vw',textAlign:'center',color:'#A60069',width:'100%'}}><span style={{fontWeight:'bold'}}>Planos</span> para servidor público</Typography>
-           )}
-           
           </Box>
               </Box>
             </SwiperSlide>
