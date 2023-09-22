@@ -15,6 +15,7 @@ import { Parcerias } from '../../components/parcerias/Parcerias';
 import TawkToChatbot from '../../config/TawkToChatbot';
 import { Faqpj } from '../../components/faqpj/Faqpj';
 import { Footer } from '../../components/footer/Footer';
+import AppWithPreloader from '../../components/appwithpreloader/AppWithPreloader';
 
 
 export const PessoaJuridica = () => {
@@ -32,7 +33,8 @@ export const PessoaJuridica = () => {
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
     return (
-        <>
+        <AppWithPreloader>
+
             <NavBar backgroundColor={'linear-gradient(rgba(0, 0, 0, 0.8) , rgba(0, 0, 0, 0.0))'} />
             <TawkToChatbot />
             <Box sx={{ position: 'relative', bgcolor: '#f1f1f1' }}>
@@ -146,17 +148,9 @@ export const PessoaJuridica = () => {
 
 
 
-            <Container>
+       
 
-
-                <Box sx={{ mt: 5, display: 'flex', flexDirection: 'column', gap: 1 }}>
-                    <Typography sx={{ fontSize: '28px', fontStyle: 'italic', color: '#A60069', textAlign: 'center' }}>De MEI a grandes empresas, <span style={{ fontStyle: 'italic', fontWeight: 'bold' }}>temos o plano ideal para você</span></Typography>
-                    <Typography sx={{ fontSize: '20px', fontStyle: 'italic', color: '#323232', textAlign: 'center' }}>Solicite uma proposta, preenchendo o formulário abaixo ou clique no botão para falar com um consultor</Typography>
-                    <Typography sx={{ fontSize: '16px', fontStyle: 'italic', color: '#323232', textAlign: 'center' }}>Nossos consultores ficam disponíveis 7h30 às 18h (horário Manaus), exceto sábados, domingos e feriados nacionais (sem expediente).</Typography>
-
-
-                </Box>
-            </Container>
+    
 
 
 
@@ -165,10 +159,19 @@ export const PessoaJuridica = () => {
 
 
                 <Box sx={{ bgcolor:'#fff',borderRadius:3,display: 'flex', flexDirection: 'column', boxShadow: 2, p: 5, mt: { xs: 90, md: 2 } }}>
-                    <Box sx={{ display: 'flex', gap: 2, textAlign: { xs: 'center', md: 'initial' } }}>
+                    
+
+                <Box sx={{ mt: 5, display: 'flex', flexDirection: 'column', gap: 1 }}>
+                    <Typography sx={{ fontSize: {xs:'22px',md:'28px'}, fontStyle: 'italic', color: '#A60069', textAlign: 'center' }}>De MEI a grandes empresas, <span style={{ fontStyle: 'italic', fontWeight: 'bold' }}>temos o plano ideal para você</span></Typography>
+                    <Typography sx={{ fontSize: {xs:'14px',md:'28px'}, fontStyle: 'italic', color: '#323232', textAlign: 'center' }}>Solicite uma proposta, preenchendo o formulário abaixo ou clique no botão para falar com um consultor</Typography>
+                    <Typography sx={{ fontSize: {xs:'14px',md:'28px'}, fontStyle: 'italic', color: '#323232', textAlign: 'center' }}>Nossos consultores ficam disponíveis 7h30 às 18h (horário Manaus), exceto sábados, domingos e feriados nacionais (sem expediente).</Typography>
+
+
+                </Box>
+                    <Box sx={{ display: 'flex', gap: 2, textAlign: { xs: 'center', md: 'initial' },mt:10}}>
                         <Box>
-                            <Typography sx={{ fontSize: '28px', fontStyle: 'italic', color: '#A60069' }}><span style={{ fontWeight: 'bold' }}>Solicite</span> uma Proposta</Typography>
-                            <Typography sx={{ fontStyle: 'italic', fontSize: '20px', color: '#363636' }}>Os planos para empresas e negócios são voltados na modalidade Pessoa Jurídica e estão disponíveis para a partir de 2 vidas.</Typography>
+                            <Typography sx={{ fontSize: '28px', fontStyle: 'italic', color: '#A60069' ,textAlign:{xs:'center',md:'start'}}}><span style={{ fontWeight: 'bold' }}>Solicite</span> uma Proposta</Typography>
+                            <Typography sx={{ fontStyle: 'italic', fontSize: '20px', color: '#363636',textAlign:{xs:'center',md:'start'}}}>Os planos para empresas e negócios são voltados na modalidade Pessoa Jurídica e estão disponíveis para a partir de 2 vidas.</Typography>
                         </Box>
                         <Box>
                             <Button variant='contained' sx={{ borderRadius: '10px', width: '370px', height: '111px', bgcolor: '#107E75', display: { xs: 'none', md: 'flex' }, gap: 1 }}><img src='images/pessoajuridica/icon-wpp.png' />Fale com um<br />Consultor</Button>
@@ -264,7 +267,8 @@ export const PessoaJuridica = () => {
             <Parcerias />
             <Faqpj />
             <Footer />
-        </>
+              
+            </AppWithPreloader>
 
     );
 };

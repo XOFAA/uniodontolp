@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box, Card, CardMedia, Container, Typography} from '@mui/material';
+import {Box, Card, CardMedia, Container, Link, Typography} from '@mui/material';
 import { Navigation, Pagination, Scrollbar, A11y,Autoplay } from 'swiper/modules';
 import FmdGoodIcon from '@mui/icons-material/FmdGood';
 import RequestQuoteIcon from '@mui/icons-material/RequestQuote';
@@ -15,6 +15,81 @@ import 'swiper/css/scrollbar';
 import './CarouselAcessoRapido.css';
 
 export const CarouselAcessoRapido = ()=>{
+
+    const acessorapido =[
+      {
+        
+        icon:<img src='images/carrouselmenu/link1.svg'/>,
+        texto:'Encontre um Dentista',
+        link:'#'
+      },
+      {
+        
+        icon:<img src='images/carrouselmenu/link2.svg'/>,
+        texto:'Segunda Via de Boleto',
+        link:'#'
+      },
+      {
+        
+        icon:<img src='images/carrouselmenu/link3.svg'/>,
+        texto:'Pronto Atendimento',
+        link:'#'
+      },
+      {
+        
+        icon:<img src='images/carrouselmenu/link4.svg'/>,
+        texto:'Acesso Portal Pessoa Física',
+        link:'#'
+      },
+      {
+        
+        icon:<img src='images/carrouselmenu/link5.svg'/>,
+        texto:'Canais de Atendimento',
+        link:'#'
+      },
+      {
+        
+        icon:<img src='images/carrouselmenu/link6.svg'/>,
+        texto:'Renegociar Débitos',
+        link:'#'
+      },
+      {
+        
+        icon:<img src='images/carrouselmenu/link7.svg'/>,
+        texto:'Informe de Rendimentos',
+        link:'#'
+      },
+      {
+        
+        icon:<img src='images/carrouselmenu/link8.svg'/>,
+        texto:'Happy Clube de Vantagens',
+        link:'#'
+      },
+      {
+        
+        icon:<img src='images/carrouselmenu/link9.svg'/>,
+        texto:'Guia Nacional Uniodonto',
+        link:'#'
+      },
+      {
+        
+        icon:<img src='images/carrouselmenu/link10.svg'/>,
+        texto:'O Que o Dentista Disse?',
+        link:'#'
+      },
+      {
+        
+        icon:<img src='images/carrouselmenu/link11.svg'/>,
+        texto:'Acesso Portal Pessoa Jurídica',
+        link:'#'
+      },
+      {
+        
+        icon:<img src='images/carrouselmenu/link12.svg'/>,
+        texto:'Outras Uniodontos',
+        link:'#'
+      }
+    ]
     return(
 
 
@@ -70,92 +145,21 @@ export const CarouselAcessoRapido = ()=>{
           
            
 
-       
-      <SwiperSlide>
+       {acessorapido.map((menu,index)=>(
+
+      <SwiperSlide key={index}>
+        <Link href='#'>
+     
               <Card  sx={{ height: '130px', width: '120px', p: 1, boxShadow: 3, bgcolor: '#A60069', borderRadius: 3 }}>
                 <CardMedia sx={{ textAlign: 'end' }}>
-                  <FmdGoodIcon sx={{ color: '#fff', fontSize: '50px' }} />
+                  {menu.icon}
                 </CardMedia>
-                <Typography sx={{ fontSize: '16px', fontWeight: 'bolder', color: '#fff', mt: 3 }}>Encontre um dentista</Typography>
+                <Typography sx={{ fontSize: '16px', fontWeight: 'bolder', color: '#fff', mt: 3 }}>{menu.texto}</Typography>
               </Card>
+              </Link>
             </SwiperSlide>
-
-                <SwiperSlide>
-                <Card sx={{height:'130px',width:'120px',p:1,boxShadow:1,bgcolor:'#A60069',borderRadius:3}}>
-                <CardMedia sx={{textAlign:'end'}}><RequestQuoteIcon sx={{color:'#fff',fontSize:'50px'}}/></CardMedia>
-               <Typography sx={{fontSize:'16px',fontWeight:'bolder',color:'#fff',mt:3}}>Segunda via de Boleto</Typography>
-                </Card>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                <Card sx={{height:'130px',width:'120px',p:1,boxShadow:1,bgcolor:'#A60069',borderRadius:3}}>
-                <CardMedia sx={{textAlign:'end'}}><FmdGoodIcon sx={{color:'#fff',fontSize:'50px'}}/></CardMedia>
-               <Typography sx={{fontSize:'16px',fontWeight:'bolder',color:'#fff',mt:3}}>Pronto atendimento</Typography>
-                </Card>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                <Card sx={{height:'130px',width:'120px',p:1,boxShadow:1,bgcolor:'#A60069',borderRadius:3}}>
-                <CardMedia sx={{textAlign:'end'}}><ExitToAppIcon sx={{color:'#fff',fontSize:'50px'}}/></CardMedia>
-               <Typography sx={{fontSize:'16px',fontWeight:'bolder',color:'#fff',mt:3}}>Acessar Área Beneficiário</Typography>
-                </Card>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                <Card sx={{height:'130px',width:'120px',p:1,boxShadow:1,bgcolor:'#A60069',borderRadius:3}}>
-                <CardMedia sx={{textAlign:'end'}}><FmdGoodIcon sx={{color:'#fff',fontSize:'50px'}}/></CardMedia>
-               <Typography sx={{fontSize:'16px',fontWeight:'bolder',color:'#fff',mt:3}}>Canais de Atendimento</Typography>
-                </Card>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                <Card sx={{height:'130px',width:'120px',p:1,boxShadow:1,bgcolor:'#A60069',borderRadius:3}}>
-                <CardMedia sx={{textAlign:'end'}}><MonetizationOnIcon sx={{color:'#fff',fontSize:'50px'}}/></CardMedia>
-               <Typography sx={{fontSize:'16px',fontWeight:'bolder',color:'#fff',mt:3}}>Renegociar Débitos</Typography>
-                </Card>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                <Card sx={{height:'130px',width:'120px',p:1,boxShadow:1,bgcolor:'#A60069',borderRadius:3}}>
-                <CardMedia sx={{textAlign:'end'}}><FmdGoodIcon sx={{color:'#fff',fontSize:'50px'}}/></CardMedia>
-               <Typography sx={{fontSize:'16px',fontWeight:'bolder',color:'#fff',mt:3}}>Encontre um dentista</Typography>
-                </Card>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                <Card sx={{height:'130px',width:'120px',p:1,boxShadow:1,bgcolor:'#A60069',borderRadius:3}}>
-                <CardMedia sx={{textAlign:'end'}}><RequestQuoteIcon sx={{color:'#fff',fontSize:'50px'}}/></CardMedia>
-               <Typography sx={{fontSize:'16px',fontWeight:'bolder',color:'#fff',mt:3}}>Segunda via de Boleto</Typography>
-                </Card>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                <Card sx={{height:'130px',width:'120px',p:1,boxShadow:1,bgcolor:'#A60069',borderRadius:3}}>
-                <CardMedia sx={{textAlign:'end'}}><FmdGoodIcon sx={{color:'#fff',fontSize:'50px'}}/></CardMedia>
-               <Typography sx={{fontSize:'16px',fontWeight:'bolder',color:'#fff',mt:3}}>Pronto atendimento</Typography>
-                </Card>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                <Card sx={{height:'130px',width:'120px',p:1,boxShadow:1,bgcolor:'#A60069',borderRadius:3}}>
-                <CardMedia sx={{textAlign:'end'}}><ExitToAppIcon sx={{color:'#fff',fontSize:'50px'}}/></CardMedia>
-               <Typography sx={{fontSize:'16px',fontWeight:'bolder',color:'#fff',mt:3}}>Acessar Área Beneficiário</Typography>
-                </Card>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                <Card sx={{height:'130px',width:'120px',p:1,boxShadow:1,bgcolor:'#A60069',borderRadius:3}}>
-                <CardMedia sx={{textAlign:'end'}}><FmdGoodIcon sx={{color:'#fff',fontSize:'50px'}}/></CardMedia>
-               <Typography sx={{fontSize:'16px',fontWeight:'bolder',color:'#fff',mt:3}}>Canais de Atendimento</Typography>
-                </Card>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                <Card sx={{height:'130px',width:'120px',p:1,boxShadow:1,bgcolor:'#A60069',borderRadius:3}}>
-                <CardMedia sx={{textAlign:'end'}}><MonetizationOnIcon sx={{color:'#fff',fontSize:'50px'}}/></CardMedia>
-               <Typography sx={{fontSize:'16px',fontWeight:'bolder',color:'#fff',mt:3}}>Renegociar Débitos</Typography>
-                </Card>
-                </SwiperSlide>
+  ))}
+           
                
                
            </Swiper>

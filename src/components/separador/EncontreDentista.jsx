@@ -1,4 +1,4 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Typography,Link} from "@mui/material";
 import { motion } from "framer-motion";
 export const EncontreDentista = () => {
   const boxStyle = {
@@ -46,8 +46,12 @@ export const EncontreDentista = () => {
              
             
             >
+              <Link href="https://seguro.fisistemas.com.br/EncontreSeuDentista/pesquisa;s=311391
+" target="_blank">
+            
         <Button variant='contained' sx={{ bgcolor: '#E1FF7B','&:hover': {
                 bgcolor: '#A60069',color:'#fff'},color: '#363636', fontSize: '18px', fontStyle: 'italic', fontWeight: 'bold', textTransform: 'none', width:{xs:'100%',md:'320px'}, height: '40px' }}>Encontre um Dentista</Button>
+          </Link>
         </motion.div>
       </Box>
     </Box>

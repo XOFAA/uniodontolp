@@ -69,6 +69,7 @@ export const NavBar = ({backgroundColor,draweropen,drawerclose}) => {
   const [mobileMenuOpen,setMobileMenuOpen]=React.useState(false)
 
   const handleLogo =()=>{
+    
     navigate('/')
   }
 
@@ -108,13 +109,14 @@ export const NavBar = ({backgroundColor,draweropen,drawerclose}) => {
             <ArrowForwardIosIcon sx={{ ml: 3 }} />
           </Box>
       
-        <Link href="/contratar-plano" style={{ textDecoration: 'none', color: 'inherit' }}>
+        <Link href="/pessoafisica" style={{ textDecoration: 'none', color: 'inherit' }}>
           <Typography sx={{ fontSize: '16px', fontStyle: 'italic' }}>Contrate um Plano</Typography>
         </Link>
         <Link href="/atendimento" style={{ textDecoration: 'none', color: 'inherit' }}>
           <Typography sx={{ fontSize: '16px', fontStyle: 'italic' }}>Atendimento</Typography>
         </Link>
-        <Link href="/encontrar-dentista" style={{ textDecoration: 'none', color: 'inherit' }}>
+        <Link href="https://seguro.fisistemas.com.br/EncontreSeuDentista/pesquisa;s=311391
+" target="_blank" style={{ textDecoration: 'none', color: 'inherit' }}>
           <Typography sx={{ fontSize: '16px', fontStyle: 'italic' }}>Encontre um dentista</Typography>
         </Link>
         <Link href="/renegociacao" style={{ textDecoration: 'none', color: 'inherit' }}>

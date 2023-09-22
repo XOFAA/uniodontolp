@@ -6,11 +6,14 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Footer } from "../../components/footer/Footer";
 import TawkToChatbot from "../../config/TawkToChatbot";
 import { Faqreneg } from "../../components/faqrenegociacao/Faqreneg";
+import AppWithPreloader from "../../components/appwithpreloader/AppWithPreloader";
 export const Renegociacao = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     return (
-        <>
+        <AppWithPreloader>
+
+    
             <NavBar backgroundColor={'linear-gradient(rgba(0, 0, 0, 0.8) , rgba(0, 0, 0, 0.0))'} />
             <TawkToChatbot/>
             <Swiper
@@ -65,7 +68,7 @@ export const Renegociacao = () => {
             <Box sx={{ height: '420px', background: 'linear-gradient(to bottom, #A60069 50%, #f1f1f1 50%)'}}>
                 <Container>
                     <Box>
-                        <Typography sx={{ pt: 6, color: '#ffff', fontSize: '28px', fontStyle: 'italic' }}><span style={{ fontWeight: 'bold' }}>Veja como é fácil consultar seus débitos</span> e voltar a sorrir com a Uniodonto Manaus!</Typography>
+                        <Typography sx={{ pt: 6, color: '#ffff', fontSize: '28px', fontStyle: 'italic',textAlign:'center' }}><span style={{ fontWeight: 'bold' }}>Veja como é fácil consultar seus débitos</span> e voltar a sorrir com a Uniodonto Manaus!</Typography>
                     </Box>
 
                     <Box sx={{ display: 'flex',justifyContent:'center',alignItems:'center', flexDirection: { xs: 'column', md: 'row' }, gap: 3, mt: 8 }}>
@@ -111,6 +114,6 @@ export const Renegociacao = () => {
                 <Faqreneg/>
                 <Footer/>
             </Box>
-        </>
+            </AppWithPreloader>
     )
 }

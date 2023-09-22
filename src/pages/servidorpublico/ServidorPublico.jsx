@@ -6,14 +6,16 @@ import { NavBar } from '../../components/navbar/NavBar';
 import TawkToChatbot from '../../config/TawkToChatbot';
 import { Faqsp } from '../../components/faqsp/Faqsp';
 import { Footer } from '../../components/footer/Footer';
+import AppWithPreloader from '../../components/appwithpreloader/AppWithPreloader';
 
 export const ServidorPublico=()=>{
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     const [imageLoaded, setImageLoaded] = useState(false);
     return(
-        <>
-       
+        <AppWithPreloader>
+
+   
        <NavBar backgroundColor={'linear-gradient(rgba(0, 0, 0, 0.8) , rgba(0, 0, 0, 0.0))'}/>
        <TawkToChatbot/>
              <Box sx={{ position: 'relative', bgcolor: '#f1f1f1'}}>
@@ -166,6 +168,7 @@ export const ServidorPublico=()=>{
         <Faqsp/>
         </Container>
         <Footer/>
-        </>
+        </AppWithPreloader>
+       
     )
 }

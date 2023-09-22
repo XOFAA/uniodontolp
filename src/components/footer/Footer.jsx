@@ -58,7 +58,7 @@ export const Footer = () => {
             Uniodonto Manaus</Typography>
             <Typography sx={{fontSize:'22px',color:'#E1FF7B',fontWeight:'bold',fontStyle:'italic'}}>(92) 2126-0604</Typography>
           </Box>
-          <Box sx={{display:'flex',flexDirection:'column'}}>
+          <Box sx={{display:'flex',flexDirection:'column',alignItems:{md:'center',lg:'start'}}}>
             <Typography sx={{fontSize:'18px',fontWeight:'bold',color:'#fff',fontStyle:'italic'}}>Canais de atendimento online<br/> e telefônico</Typography>
             <Box sx={{display:'flex',justifyContent:{md:'flex-start',xs:'center'}}}>
           <Button variant="contained" sx={{mt:1,bgcolor:'#E1FF7B',color:"#363636",fontStyle:'italic',fontWeight:'bold',width:'150px',height:'50px',borderRadius:'5px',fontSize:'18px'}}>Acesse aqui</Button>
@@ -72,25 +72,29 @@ export const Footer = () => {
             <Grid item xs={12} md={3} >
               <Typography sx={{ fontSize: '18px', fontWeight: 'bolder', color: '#E1FF7B', textAlign: { xs: 'center', md: 'unset' } }}>Para Você</Typography>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 2, fontSize: '18px', alignItems: { xs: 'center', md: 'normal' } }}>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#fff', fontStyle: 'italic', fontSize: '16px' }}>
-                  Segunda via do Boleto
+              <Link href="#" sx={{ textDecoration: 'none', color: '#fff', fontSize: '16px' }}>
+                  Acesso Beneficiário
                 </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#fff', fontStyle: 'italic', fontSize: '16px' }}>
-                  Clube de Vantagens
+               
+                <Link href="#" sx={{ textDecoration: 'none', color: '#fff', fontSize: '16px' }}>
+                  Encontre um Dentista
                 </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#fff', fontStyle: 'italic', fontSize: '16px' }}>
+                <Link href="#" sx={{ textDecoration: 'none', color: '#fff', fontSize: '16px' }}>
+                  Segunda via de Boleto
+                </Link>
+                <Link href="renegociacao" sx={{ textDecoration: 'none', color: '#fff', fontSize: '16px' }}>
                   Renegociar Débitos
                 </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#fff', fontStyle: 'italic', fontSize: '16px' }}>
-                  Rol de Cobertura
-                </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#fff', fontStyle: 'italic', fontSize: '16px' }}>
-                  Pagamento Cartões
-                </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#fff', fontStyle: 'italic', fontSize: '16px' }}>
+                <Link href="#" sx={{ textDecoration: 'none', color: '#fff', fontSize: '16px' }}>
                   Informe de Rendimentos
                 </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#fff', fontStyle: 'italic', fontSize: '16px' }}>
+                <Link href="/trocacartao" sx={{ textDecoration: 'none', color: '#fff', fontSize: '16px' }}>
+                 Trocar Cartão
+                </Link>
+                <Link href="#" sx={{ textDecoration: 'none', color: '#fff', fontSize: '16px' }}>
+                  Clube de Vantagens
+                </Link>
+                <Link href="#" sx={{ textDecoration: 'none', color: '#fff', fontSize: '16px' }}>
                   Pronto Atendimento 24h
                 </Link>
               </Box>
@@ -98,18 +102,22 @@ export const Footer = () => {
             <Grid item xs={12} md={3}>
               <Typography sx={{ fontSize: '18px', fontWeight: 'bolder', color: '#E1FF7B', textAlign: { xs: 'center', md: 'unset' } }}>Para Empresas</Typography>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 2, fontSize: '18px', alignItems: { xs: 'center', md: 'normal' } }}>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#fff', fontStyle: 'italic', fontSize: '16px' }}>
-                  Rol de Cobertura
+              <Link href="#" sx={{ textDecoration: 'none', color: '#fff', fontSize: '16px' }}>
+                  Acesso Empresas
                 </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#fff', fontStyle: 'italic', fontSize: '16px' }}>
-                  Segunda via de Boleto
+                <Link href="#" sx={{ textDecoration: 'none', color: '#fff', fontSize: '16px' }}>
+                  Solicite uma Proposta
                 </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#fff', fontStyle: 'italic', fontSize: '16px' }}>
+             
+                <Link href='/renegociacao' sx={{ textDecoration: 'none', color: '#fff', fontSize: '16px' }}>
                   Renegociar Débitos
                 </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#fff', fontStyle: 'italic', fontSize: '16px' }}>
-                  Solicite uma proposta
+              
+                <Typography sx={{ fontWeight: 'bold', fontStyle: 'italic', fontSize: '18px', color: '#E1FF7B', mt: 5 }}>Para Consultores</Typography>
+                <Link sx={{ textDecoration: 'none', color: '#fff', fontSize: '16px', mt: 3 }}>
+                  Acesso Consultores
                 </Link>
+              
 
               </Box>
               <Typography sx={{ fontSize: '16px', fontWeight: 'bolder', color: '#E1FF7B', mt: 2, textAlign: { xs: 'center', md: 'unset' } }}>Para Vendedores e Representantes</Typography>
@@ -166,43 +174,8 @@ export const Footer = () => {
 
 
 
-          <Box sx={{ display: 'flex', gap: 2, justifyContent: 'end', flexDirection: { xs: 'column', md: 'row' }, alignItems: { xs: 'center', md: 'unset' } }}>
-            <Box sx={{ width: '200px', height: '100px', display: 'flex', alignItems: 'center' }} component={'div'}  >
-              <img src='images/logosfooter/logo_ans.png' alt="Logo" width={'196px'} height={'40px'} />
-            </Box>
-
-            <Box sx={{ width: '200px', height: '100px', display: 'flex', justifyContent: 'center' }} component={'div'}  >
-              <img src='images/logosfooter/am.png' alt="Logo" width={'132px'} height={'69px'} />
-            </Box>
-          </Box>
-
- 
-
-          <Grid container spacing={1}>
-
-            <Grid item xs={12} md={6}>
-
-              <Box sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'unset' } }}>
-                <Box sx={{ width: '150px', height: '120px', mt: 6 }} component={'div'}  >
-
-                  <img src='images/logosfooter/logo_coop.png' alt="Logo" width={'100%'} height={'100%'} />
-
-                </Box>
-              </Box>
-            </Grid>
-
-            <Grid item xs={12} md={6}>
-
-
-
-              <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: { xs: 'center', md: 'end' }, textAlign: { xs: 'center', md: 'unset' }, mt: 3 }}>
-                <Typography sx={{ fontSize: '16px', fontWeight: 'bolder', color: '#fff' }}>Uniodonto Manaus Cooperativa Odontológica Ltda</Typography>
-                <Typography sx={{ fontSize: '16px', fontStyle: 'italic', color: '#fff' }}>CNPJ 23.031.479/0001-29</Typography>
-                <Typography sx={{ fontSize: '15px', fontStyle: 'italic', color: '#fff' }}>Sede Administrativa: Av. Leonardo Malcher, 598, Centro - Manaus/AM - CEP 69010-170</Typography>
-                <Typography sx={{ fontSize: '16px', fontWeight: 'bolder', color: '#fff', mt: 3 }}>Responsável Técnico: Dra. Michele P. Lemos - CRO/AM 3183</Typography>
-              </Box>
-
-              <Box sx={{ display: 'flex', gap: { xs: 1, md: 5 }, mt: 5, justifyContent: 'center', flexWrap: { xs: 'wrap', md: 'unset' } }}>
+        
+          <Box sx={{ display: 'flex', gap: { xs: 1, md: 5 }, mt: 5, justifyContent: 'end', flexWrap: { xs: 'wrap', md: 'unset' } }}>
                 <Link href="#" sx={{ textDecoration: 'none', color: '#E1FF7B', fontWeight: "bold", fontStyle: "italic", fontSize: '12px' }}>
                   Termos de Uso e Política de Privacidade
                 </Link>
@@ -217,8 +190,28 @@ export const Footer = () => {
                 </Link>
 
               </Box>
-            </Grid>
-          </Grid>
+
+         
+
+            
+
+            <Box sx={{mt:15}}>
+
+
+
+              <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: { xs: 'center', md: 'end' }, textAlign: { xs: 'center', md: 'unset' }, mt: 3 }}>
+                <Typography sx={{ fontSize: '16px', fontWeight: 'bolder', color: '#fff' }}>Uniodonto Manaus Cooperativa Odontológica Ltda</Typography>
+                <Typography sx={{ fontSize: '16px', fontStyle: 'italic', color: '#fff' }}>CNPJ 23.031.479/0001-29</Typography>
+                <Typography sx={{ fontSize: '15px', fontStyle: 'italic', color: '#fff' }}>Sede Administrativa: Av. Leonardo Malcher, 598, Centro - Manaus/AM - CEP 69010-170</Typography>
+                <Typography sx={{ fontSize: '16px', fontWeight: 'bolder', color: '#fff', mt: 3 }}>Responsável Técnico: Dra. Michele P. Lemos - CRO/AM 3183</Typography>
+              </Box>
+            </Box>
+        
+
+          <Box sx={{display:'flex',justifyContent:'center',alignItems:'center',mt:8,gap:2,pb:4}}>
+            <Typography sx={{fontStyle:'italic',fontSize:'13px',color:'#fff'}}>Tecnologia desenvolvida por</Typography>
+            <img src="images/indeias/logoindeias.png"/>
+          </Box>
           </Container>
         </Box>
   )

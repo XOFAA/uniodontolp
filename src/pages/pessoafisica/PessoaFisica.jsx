@@ -16,6 +16,7 @@ import TawkToChatbot from '../../config/TawkToChatbot';
 import { Faqpj } from '../../components/faqpj/Faqpj';
 import { Footer } from '../../components/footer/Footer';
 import { CarrouselPlanos } from '../../components/carrouselplanos/CarrouselPlanos';
+import AppWithPreloader from '../../components/appwithpreloader/AppWithPreloader';
 
 
 export const PessoaFisica = () => {
@@ -24,7 +25,7 @@ export const PessoaFisica = () => {
 
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-  const [imageLoaded, setImageLoaded] = useState(false);
+
   const [selecao, setSelecao] = useState(1); // Valor inicial: "Somente eu" (1 pessoa)
 
   const handleChange = (event) => {
@@ -34,7 +35,9 @@ export const PessoaFisica = () => {
   };
 
   return (
-    <>
+    <AppWithPreloader>
+
+   
       <NavBar backgroundColor={'linear-gradient(rgba(0, 0, 0, 0.8) , rgba(0, 0, 0, 0.0))'} />
       <TawkToChatbot />
       <Box sx={{ position: 'relative', bgcolor: '#f1f1f1' }}>
@@ -54,16 +57,11 @@ export const PessoaFisica = () => {
             width: '100%',
             height:'100%'
           }}> 
-               {!imageLoaded && ( // Renderiza o Skeleton se a imagem não estiver carregada
-               <Box sx={{height:{md:'333px',lg:'468px',xl:'833px'}}}>
-                    <Skeleton variant="rectangular"  sx={{bgcolor:'#E1FF7B'}} animation='wave' width="100%" height="100%" />
-              </Box>
-            
-              )}
+           
               <img
                 src="images/pessoafisica/foto1.png"
-                style={{ width: '100%', height: '100%', display: imageLoaded ? 'block' : 'none' }}
-                onLoad={() => setImageLoaded(true)} // Define imageLoaded como true quando a imagem é carregada
+                style={{ width: '100%', height: '100%' }}
+             
               />
               
               <Box
@@ -76,7 +74,7 @@ export const PessoaFisica = () => {
             }}
           >
             
-            {imageLoaded && (
+          
 
           
               <>
@@ -85,7 +83,7 @@ export const PessoaFisica = () => {
        
               <Typography sx={{fontStyle:'italic',fontSize:'1.3vw',textAlign:'end',color:'#A60069'}}>A Uniodonto Manaus tem planos odontológicos que atendam adequadamente às suas necessidades e de seus familiares, levando serviços de qualidade e ampla coberura.</Typography>
               </>
-         )}
+     
             
           </Box>
               </Box>
@@ -98,16 +96,11 @@ export const PessoaFisica = () => {
         {isMobile && (
           <>
             <SwiperSlide>
-            {!imageLoaded && ( // Renderiza o Skeleton se a imagem não estiver carregada
-               <Box sx={{height:'600px'}}>
-                    <Skeleton variant="rectangular"  sx={{bgcolor:'#E1FF7B'}} animation='wave' width="100%" height="100%" />
-              </Box>
-            
-              )}
+          
              <img
                 src="images/pessoafisica/foto_mobile1.png"
-                style={{ width: '100%', height: '100%', display: imageLoaded ? 'block' : 'none' }}
-                onLoad={() => setImageLoaded(true)} // Define imageLoaded como true quando a imagem é carregada
+                style={{ width: '100%', height: '100%' }}
+              
               />
                 <Box
             sx={{
@@ -156,19 +149,8 @@ export const PessoaFisica = () => {
     
       <Faqpj />
       <Footer />
-    </>
+      </AppWithPreloader>
 
   );
 };
-
-
-
-
-
-
-
-
-
-
-
 

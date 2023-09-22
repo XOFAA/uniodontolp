@@ -3,9 +3,12 @@ import { NavBar } from "../../components/navbar/NavBar"
 import { Footer } from "../../components/footer/Footer"
 import TawkToChatbot from "../../config/TawkToChatbot";
 import { Faqreneg } from "../../components/faqrenegociacao/Faqreneg";
+import AppWithPreloader from "../../components/appwithpreloader/AppWithPreloader";
 export const TrocaCartao =()=>{
     return(
-        <>
+        <AppWithPreloader>
+
+      
     
       <NavBar/>
       <TawkToChatbot/>
@@ -39,6 +42,6 @@ export const TrocaCartao =()=>{
       
         <Footer/>
    
-        </>
+        </AppWithPreloader>
     )
 }

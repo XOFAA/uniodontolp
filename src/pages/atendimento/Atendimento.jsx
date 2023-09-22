@@ -8,9 +8,12 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Footer } from "../../components/footer/Footer";
 import { CarouselAcessoRapido } from "../../components/carousel/CarouselAcessoRapido";
 import TawkToChatbot from "../../config/TawkToChatbot";
+import AppWithPreloader from "../../components/appwithpreloader/AppWithPreloader";
 export const Atendimento = () => {
     return (
-        <>
+        <AppWithPreloader>
+
+  
             <NavBar />
             <TawkToChatbot/>
             <Box sx={{mt:15}}>
@@ -21,7 +24,7 @@ export const Atendimento = () => {
     
             <Container>
                 <Box sx={{mt:5}}>
-                <Typography sx={{textAlign:'center',fontWeight: 'bold',fontStyle:'italic', fontSize: '28px', color: '#A60069' }}>Atendimento</Typography>
+                <Typography sx={{textAlign:'center',fontWeight: 'bold',fontStyle:'italic', fontSize: '28px', color: '#A60069',pt:3 }}>Atendimento</Typography>
                     <Typography sx={{color:'#363636',fontSize:'20px',fontStyle:'italic',textAlign:'center',mt:3}}>Veja os canais de atendimento e horários para resolver todas suas dúvidas sobre nossos produtos e serviços.</Typography>
                     <Typography  sx={{color:'#363636',mt: 2,fontSize:'16px',fontStyle:'italic',textAlign:'center'}}>Nosso funcionamento é de 7h30 às 18h (horário Manaus), exceto sábados, domingos e feriados nacionais (sem expediente).</Typography>
                 </Box>
@@ -232,6 +235,6 @@ export const Atendimento = () => {
             </Container>
             </Box>
             <Footer/>
-        </>
+            </AppWithPreloader>
     )
 }

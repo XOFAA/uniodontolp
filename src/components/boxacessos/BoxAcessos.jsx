@@ -11,7 +11,7 @@ export const BoxAcessos = () => {
         <motion.div
           whileHover={{ scale: 1.1 }}
         >
-          <Link href="http://onelink.to/uniodontomao" target="_blank">
+          <Link href="https://onelink.to/appuniomao" target="_blank">
             <Box sx={{ width: "100%",height:{xs:'150px',md:'100%'} }}>
               <img
                 src="images/botoesacessos/link1.svg"
@@ -27,7 +27,8 @@ export const BoxAcessos = () => {
           <motion.div
             whileHover={{ scale: 1.1 }}
           >
-            <Link target="_blank" >
+            <Link href="https://tiss.uniodontomanaus.com.br/SAEX/Modulos/RedeCredenciada/Paginas/Login.aspx
+" target="_blank" >
             <Box sx={{ width: "100%",height:{xs:'150px',md:'100%'} }}>
                 <img src="images/botoesacessos/link2.svg" alt="Link 5" width={'100%'} height={'100%'} />
               </Box>
@@ -38,7 +39,8 @@ export const BoxAcessos = () => {
         <motion.div
           whileHover={{ scale: 1.1 }}
         >
-          <Link href="https://tiss.uniodontomanaus.com.br/SAEX/Modulos/Empresa/Paginas/Login.aspx" target="_blank">
+          <Link href="https://tiss.uniodontomanaus.com.br/SAEX/Modulos/Empresa/Paginas/Login.aspx
+" target="_blank">
           <Box sx={{ width: "100%",height:{xs:'150px',md:'100%'} }}>
               <img src="images/botoesacessos/link3.svg" alt="Link 5" width={'100%'} height={'100%'} />
             </Box>
@@ -47,7 +49,7 @@ export const BoxAcessos = () => {
         <motion.div
           whileHover={{ scale: 1.1 }}
         >
-          <Link href="/" target="_blank">
+          <Link href="https://seuplanoonline.fisistemas.com.br/vendedor/" target="_blank">
           <Box sx={{ width: "100%",height:{xs:'150px',md:'100%'} }}>
               <img src="images/botoesacessos/link4.svg" alt="Link 5" width={'100%'} height={'100%'} />
             </Box>

@@ -65,7 +65,7 @@ export const Parcerias = ()=>{
                 }
               }}    
              navigation
-    
+              loop={true}
              
            >
           

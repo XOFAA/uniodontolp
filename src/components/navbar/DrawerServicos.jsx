@@ -33,29 +33,32 @@ export const DrawerServicos = ({ onOpenDrawer, onCloseDrawer }) => {
             <Grid item xs={12} sm={3}>
               <Typography sx={{ fontWeight: 'bold', fontStyle: 'italic', fontSize: '18px', color: '#A60069' }}>Para Você</Typography>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 2 }}>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
+                <Link href="https://onelink.to/appuniomao" target="_blank" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
                   Acesso Beneficiário
                 </Link>
                
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
+                <Link href="https://seguro.fisistemas.com.br/EncontreSeuDentista/pesquisa;s=311391
+" target='_blank' sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
                   Encontre um Dentista
                 </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
+                <Link href="http://cloud4.fisistemas.com.br/manaus/itau/
+" target='_blank' sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
                   Segunda via de Boleto
                 </Link>
                 <Link href="renegociacao" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
                   Renegociar Débitos
                 </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
+                <Link href="https://tiss.uniodontomanaus.com.br/solucoesextras/irpf/InformacaoDados.aspx
+" target='_blank' sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
                   Informe de Rendimentos
                 </Link>
-                <Link href="/trocacartao" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
+                <Link href="/trocacartao" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px'}}>
                  Trocar Cartão
                 </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
+                <Link sx={{ textDecoration: 'none', color: '#999999', fontSize: '16px' }}>
                   Clube de Vantagens
                 </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
+                <Link href="prontoatendimento" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
                   Pronto Atendimento 24h
                 </Link>
                
@@ -195,9 +198,11 @@ export const DrawerServicos = ({ onOpenDrawer, onCloseDrawer }) => {
           <Typography sx={{ color: '#363636', fontSize: '24px', fontStyle: 'italic', }}>
             <span style={{ fontStyle: 'italic', fontWeight: 'bold' }}>Você </span>ainda não tem um plano odontológico?
           </Typography>
+          <Link href='/pessoafisica'>
           <Button variant='contained' sx={{ fontSize: '18px', fontStyle: 'italic', fontWeight: 'bold', borderRadius: '5px', width: '291px', height: '42px', marginLeft: 'auto' }}>
             Conheça Nossos Planos
           </Button>
+          </Link>
         </Box>
       </Box>
     </Drawer>
