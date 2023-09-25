@@ -20,15 +20,18 @@ export const FacaParte = () => {
     const handleTabChange = (event, newValue) => {
         setSelectedTab(newValue);
     };
+    useEffect(() => {
+        console.log(selectedTab)
+    }, [selectedTab])
     const tabComponents = [
-        <NossosBeneficios/>,
-      
+        <NossosBeneficios />,
+
     ];
     return (
         <AppWithPreloader>
             <NavBar backgroundColor={'linear-gradient(rgba(0, 0, 0, 0.8) , rgba(0, 0, 0, 0.0))'} />
             <TawkToChatbot />
-            <Box sx={{ position: 'relative', bgcolor: '#f1f1f1'}}>
+            <Box sx={{ position: 'relative', bgcolor: '#f1f1f1' }}>
                 <Swiper
                     slidesPerView={1}
                     autoplay={{
@@ -104,37 +107,105 @@ export const FacaParte = () => {
                     <Typography sx={{ fontSize: '20px', fontStyle: 'italic', color: '#363636', textAlign: 'center' }}>Venha fazer parte da Uniodonto Manaus.. Aqui, seguimos os princípios universais do cooperativismo, com o objetivo de proporcionar uma saúde bucal de excelência aos brasileiros, por meio de assistência odontológica de alta qualidade.</Typography>
                     <Typography sx={{ fontSize: '20px', fontStyle: 'italic', color: '#363636', textAlign: 'center' }}>Selecione a opção desejada e preencha o formulário abaixo para a gente conhecer melhor você!</Typography>
                 </Box>
-                </Container>
-              
-                <Box sx={{ display: 'flex',flexDirection:'column',justifyContent:'center'}}>
-                    <Box sx={{width:'100%'}}>
-                        <Box sx={{display:'flex',justifyContent:'center',p:1}}>
-                    <Tabs value={selectedTab} onChange={handleTabChange} centered
-                       variant="scrollable"
-                       sx={{
-                        '& .MuiTabs-indicator': {
-                          height: '5px', // Aumente a altura do indicador conforme necessário
-                          backgroundColor: '#A60069', // Cor do indicador
-                        },
-                      }}
-                      
-                       >
-                            <Tab label="Seja nosso Colaborador" sx={{textTransform:'none',fontSize:'22px',fontStyle:'italic',fontWeight:'bolder',mr:3}}/>
-                            <Tab label="Seja nosso Colaborador" sx={{textTransform:'none',fontSize:'22px',fontStyle:'italic',fontWeight:'bolder',mr:3}}/>
-                            <Tab label="Seja um Consultor de Vendas" sx={{textTransform:'none',fontSize:'22px',fontStyle:'italic',fontWeight:'bolder',mr:3}}/>
+            </Container>
+
+            <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', mt: 4 }}>
+                <Box sx={{ width: '100%' }}>
+                    <Box sx={{ display: 'flex', justifyContent: 'center'}}>
+                        <Tabs value={selectedTab} onChange={handleTabChange} centered
+
+                            variant="scrollable"
+                            sx={{
+                            
+
+                                '& .MuiTabs-indicator': {
+                                    height: '0px'
+                                },
+
+
+                            }}
+
+                        >
+                            <Tab
+                                label="Seja nosso Colaborador"
+                                sx={{
+                                   borderTopLeftRadius:'10px',
+                                   borderTop:1,
+                                   width:'380px',
+                                   borderLeft:1,
+                                   borderRight:1,
+                                    '&.Mui-selected': {
+                                        color: '#fff',
+                                        backgroundColor:'#A60069'
+                                      },
+                                    color:'#A60069',
+                                    borderColor: '#E4E4E4',
+                                    textTransform: 'none',
+                                    fontSize: '22px',
+                                    fontStyle: 'italic',
+                                    fontWeight: 'bolder',
+                                   
+                                }}
+                            />
+                           <Tab
+                                label="Seja nosso Colaborador"
+                                sx={{
+                                   borderTopLeftRadius:'10px',
+                                   width:'380px',
+                                   py:2,
+                                   borderTop:1,
+                                   borderLeft:1,
+                                   borderRight:1,
+                                    '&.Mui-selected': {
+                                        color: '#fff',
+                                        backgroundColor:'#A60069'
+                                      },
+                                    color:'#A60069',
+                                    borderColor: '#E4E4E4',
+                                    textTransform: 'none',
+                                    fontSize: '22px',
+                                    fontStyle: 'italic',
+                                    fontWeight: 'bolder',
+                                   
+                                }}
+                            />
+
+        
+
+                             <Tab
+                                label="Seja nosso Colaborador"
+                                sx={{
+                                   borderTopLeftRadius:'10px',
+                                   borderTop:1,
+                                   width:'380px',
+                                   borderLeft:1,
+                                   borderRight:1,
+                                    '&.Mui-selected': {
+                                        color: '#fff',
+                                        backgroundColor:'#A60069'
+                                      },
+                                    color:'#A60069',
+                                    borderColor: '#E4E4E4',
+                                    textTransform: 'none',
+                                    fontSize: '22px',
+                                    fontStyle: 'italic',
+                                    fontWeight: 'bolder',
+                                   
+                                }}
+                            />
                         </Tabs>
-                        </Box>
-                   
-                      {tabComponents[selectedTab]}
-                             
-            
-                        
                     </Box>
-              
+
+                    {tabComponents[selectedTab]}
+
+
 
                 </Box>
-            
-             <Footer/>
+
+
+            </Box>
+
+            <Footer />
         </AppWithPreloader>
     )
 }

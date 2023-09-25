@@ -1,13 +1,33 @@
 import React from 'react';
-import {Box,Button,Container, Typography} from '@mui/material';
+import {Box,Button,Container, Typography,TextField,MenuItem } from '@mui/material';
 import { Navigation, Pagination, Scrollbar, A11y,Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 export const NossosBeneficios =()=>{
     const numParcerias = 6;
   const parcerias = Array.from({ length: numParcerias }, (_, index) => `/images/nossosbeneficios/link${index + 1}.png`);
+  const Setores = [
+    {
+      value: 'Atendimento',
+    },
+    {
+      value: 'Vendas',
+    
+    },
+    {
+      value: 'Saúde odontológica',
+    
+    },
+    {
+      value: 'Recursos Humanos',
+    
+    }, {
+      value: 'Tecnologia da Informação(TI)',
+    
+    },
+  ];
     return(
         <>
-        <Box  className="CarouselParcerias"  sx={{mt:5,height:'100%'}}>
+        <Box  className="CarouselParcerias"  sx={{height:'100%'}}>
             <Box sx={{display:'flex',bgcolor:'#A60069',p:4}}>
              
 
@@ -21,13 +41,9 @@ export const NossosBeneficios =()=>{
             </Container>
             </Box>
         <Container>
-      
             <Typography sx={{ fontStyle: 'italic', textAlign: 'center', fontSize: '28px',color:'#222222',pt:5}}>
             Nossos  <span style={{ fontWeight: 'bold',fontSize:'28px',color:'#222222' }}> Benefícios</span> 
             </Typography>
-   
-            
-    
         <Box>
   
         <Swiper
@@ -81,20 +97,82 @@ export const NossosBeneficios =()=>{
            </Box>
 
     
-           <Box sx={{display:'flex',alignItems:'center',mt:5,boxShadow:5,p:5,borderRadius:'10px'}}>
-            <Box sx={{display:'flex',flexDirection:'column',textAlign:'start'}}>
-           <Typography sx={{fontSize:'28px',fontStyle:'italic',color:'#A60069'}}><span style={{fontWeight:'bold'}}>Participe</span> do Banco de Talentos</Typography> 
+           <Box sx={{display:'flex',flexDirection:'column',mt:5,boxShadow:5,p:5,borderRadius:'10px',mb:5}}>
+            <Box sx={{display:'flex'}}>
+              <Box sx={{display:'flex',flexDirection:'column'}}>
+            <Typography sx={{fontSize:'28px',fontStyle:'italic',color:'#A60069'}}><span style={{fontWeight:'bold'}}>Participe</span> do Banco de Talentos</Typography> 
             <Typography sx={{color:'#363636',fontSize:'20px',fontStyle:'italic'}}>Solicitamos que preencha o máximo de informações possíveis para que seja realizada a avaliação por parte dos conselhos diretivos</Typography>
-            </Box>
-           <Button variant='contained' sx={{textTransform:'none',height:'124px',width:'370px',borderRadius: '10px', bgcolor: '#A60069'}}>
+            
+              </Box>
+            <Button variant='contained' sx={{textTransform:'none',height:'124px',width:'370px',borderRadius: '10px', bgcolor: '#A60069',mr:5}}>
            <img src='images/nossosbeneficios/icon1.png' style={{marginLeft:'30px'}}/>
             <Typography sx={{fontSize:'22px',fontStyle:'italic',textAlign:'center'}}>Conheça vagas <span style={{fontWeight:'bolder',fontSize:'27px'}}>Disponíveis</span></Typography>
            </Button>
+            </Box>
          
-       
+          
+        <Box sx={{display:'flex',flexDirection:'column',gap:2,mt:3}}>
+        <TextField
+        label='Nome Completo'
+        required
+        
+        />
+        
+        <TextField
+        label='Contato de Telefone/Celular/Whatsapp'
+        required
+        />
+        
+        <TextField
+        label='E-mail do solicitante'
+        required
+        />
+
+        <TextField
+        label='Selecione sua formação acadêmica'
+        required
+        />
+        
+        <TextField
+        label='Caso tenha especialização acadêmica, favor fazer um resumo'
+        required
+        />
+        
+      
+           <TextField
+          id="outlined-select-currency"
+          select
+          label="'Selecione a área de atuação que deseja ou tem interesse em ingressar (atendimento, vendas, saúde odontológica, recursos humanos, TI etc)"
+          required
+          helperText="Selecione a sua área de atuação"
+        >
+          {Setores.map((option) => (
+            <MenuItem key={option.value} value={option.value}>
+              {option.value}
+            </MenuItem>
+          ))}
+        </TextField>
+        
+        <TextField
+        label='Caso queira, pode deixar um resumo sobre você. Iremos gostar!'
+      
+        />
+        <TextField
+        label='Inclua em anexo seu currículo para verificação (jpg, jpeg, png, pdf, doc e docx)'
+        required
+        type='file'
+          InputLabelProps={{shrink:true}}
+        />
+          </Box>
+       <Box sx={{mt:3}}>
+        <Typography sx={{color:'#363636',fontStyle:'italic',fontSize:'15px'}}><span style={{fontWeight:'bolder'}}>LGPD:</span> Ao enviar este formulário, estou declarando, para todos os fins, ser titular dos dados pessoais inseridos e, desde já, consinto com o tratamento dos mesmos para os fins do contato referido na respectiva mensagem inserida no campo apropriado para tanto.</Typography>
+       </Box>
+       <Box sx={{display:'flex',justifyContent:'center',mt:5}}>
+        <Button variant='contained'>Enviar Currículo</Button>
+       </Box>
         </Box>
 
-          
+     
     
            </Container>
             </Box>
