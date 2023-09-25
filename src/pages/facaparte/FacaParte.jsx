@@ -1,6 +1,6 @@
 import AppWithPreloader from "../../components/appwithpreloader/AppWithPreloader"
 import React, { useEffect, useState } from 'react';
-import { Box, Button, Checkbox, Container, FormControl, InputLabel, Link, MenuItem, Select, Skeleton, Tab, Tabs, TextField, Typography, useMediaQuery } from '@mui/material';
+import { Box,Container,Tab, Tabs,Typography, useMediaQuery } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -10,8 +10,10 @@ import { NavBar } from '../../components/navbar/NavBar';
 import TawkToChatbot from '../../config/TawkToChatbot';
 import { useTheme } from "@emotion/react";
 
-import { NossosBeneficios } from "../../components/nossosbeneficios/NossosBeneficios";
 import { Footer } from "../../components/footer/Footer";
+import { SejaNossoColaborador } from "../../components/sejanossocolaborador/SejaNossoColaborador";
+import { SejaUmCooperado } from "../../components/sejaUmcooperado/SejaUmCooperado";
+import { SejaUmVendedor } from "../../components/sejaumvendedor/SejaUmVendedor";
 
 export const FacaParte = () => {
     const theme = useTheme();
@@ -24,7 +26,9 @@ export const FacaParte = () => {
         console.log(selectedTab)
     }, [selectedTab])
     const tabComponents = [
-        <NossosBeneficios />,
+        <SejaNossoColaborador/>,
+        <SejaUmCooperado/>,
+        <SejaUmVendedor/>
 
     ];
     return (
@@ -112,9 +116,12 @@ export const FacaParte = () => {
             <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', mt: 4 }}>
                 <Box sx={{ width: '100%' }}>
                     <Box sx={{ display: 'flex', justifyContent: 'center'}}>
-                        <Tabs value={selectedTab} onChange={handleTabChange} centered
+                        <Tabs value={selectedTab} onChange={handleTabChange} 
 
                             variant="scrollable"
+                            scrollButtons
+                            allowScrollButtonsMobile
+                            
                             sx={{
                             
 
@@ -131,7 +138,7 @@ export const FacaParte = () => {
                                 sx={{
                                    borderTopLeftRadius:'10px',
                                    borderTop:1,
-                                   width:'380px',
+                                   width:{xs:'300px',md:'380px'},
                                    borderLeft:1,
                                    borderRight:1,
                                     '&.Mui-selected': {
@@ -151,7 +158,7 @@ export const FacaParte = () => {
                                 label="Seja nosso Colaborador"
                                 sx={{
                                    borderTopLeftRadius:'10px',
-                                   width:'380px',
+                                   width:{xs:'300px',md:'380px'},
                                    py:2,
                                    borderTop:1,
                                    borderLeft:1,
@@ -177,7 +184,7 @@ export const FacaParte = () => {
                                 sx={{
                                    borderTopLeftRadius:'10px',
                                    borderTop:1,
-                                   width:'380px',
+                                   width:{xs:'300px',md:'380px'},
                                    borderLeft:1,
                                    borderRight:1,
                                     '&.Mui-selected': {
