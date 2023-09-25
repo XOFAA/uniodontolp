@@ -58,7 +58,7 @@ export const BoxAcessos = () => {
         <motion.div
           whileHover={{ scale: 1.1 }}
         >
-          <Link href="/facaparte" target="_blank">
+          <Link href="/facaparte">
           <Box sx={{ width: "100%",height:{xs:'150px',md:'100%'} }}>
               <img src="images/botoesacessos/link5.svg" alt="Link 5" width={'100%'} height={'100%'} />
             </Box>

@@ -1,29 +1,8 @@
 import React from 'react';
-import {Box,Button,Container, Typography,TextField,MenuItem } from '@mui/material';
-import { Navigation, Pagination, Scrollbar, A11y,Autoplay } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import {Box,Button,Container, Typography,TextField} from '@mui/material';
+
 export const SejaUmVendedor =()=>{
-    const numParcerias = 6;
-  const Setores = [
-    {
-      value: 'Atendimento',
-    },
-    {
-      value: 'Vendas',
-    
-    },
-    {
-      value: 'Saúde odontológica',
-    
-    },
-    {
-      value: 'Recursos Humanos',
-    
-    }, {
-      value: 'Tecnologia da Informação(TI)',
-    
-    },
-  ];
+
     return(
         <>
         <Box   sx={{height:'100%'}}>
@@ -88,6 +67,8 @@ Se você tem habilidades em vendas, é movido por desafios e deseja uma carreira
         />
          <TextField
         label='Estado'
+        defaultValue={'Amazonas'}
+        disabled
         required  
         />
              <TextField

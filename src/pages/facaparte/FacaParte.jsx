@@ -54,7 +54,7 @@ export const FacaParte = () => {
                                 }}>
 
                                     <img
-                                        src="images/pessoafisica/foto1.png"
+                                        src="images/facaparte/foto1.png"
                                         style={{ width: '100%', height: '100%' }}
 
                                     />
@@ -69,8 +69,8 @@ export const FacaParte = () => {
                                         }}
                                     >
                                         <>
-                                            <Typography sx={{ fontStyle: 'italic', fontSize: '2.6vw', textAlign: 'end', color: '#A60069' }}><span style={{ fontWeight: 'bold' }}>Planos</span> para você e sua família</Typography>
-                                            <Typography sx={{ fontStyle: 'italic', fontSize: '1.3vw', textAlign: 'end', color: '#A60069' }}>A Uniodonto Manaus tem planos odontológicos que atendam adequadamente às suas necessidades e de seus familiares, levando serviços de qualidade e ampla coberura.</Typography>
+                                            <Typography sx={{ fontStyle: 'italic', fontSize: '2.6vw', textAlign: 'end', color: '#A60069' }}>Faça parte do <span style={{ fontWeight: 'bold' }}>Nosso Time!</span></Typography>
+                                            <Typography sx={{ fontStyle: 'italic', fontSize: '1.3vw', textAlign: 'end', color: '#A60069' }}>Como cooperativa, a Uniodonto Manaus tem na sua força vital o profissionalismo e a dedicação de nossos cirurgiões-dentistas cooperados, colaboradores e representantes de vendas para atender bem e oferecer sorrisos únicos</Typography>
                                         </>
                                     </Box>
                                 </Box>
@@ -83,7 +83,7 @@ export const FacaParte = () => {
                         <>
                             <SwiperSlide>
                                 <img
-                                    src="images/pessoafisica/foto_mobile1.png"
+                                    src="images/facaparte/foto_mobile1.png"
                                     style={{ width: '100%', height: '100%' }}
 
                                 />
@@ -96,7 +96,7 @@ export const FacaParte = () => {
                                         width: '60%'
                                     }}
                                 >
-                                    <Typography sx={{ fontStyle: 'italic', fontSize: '7vw', textAlign: 'center', color: '#A60069', width: '100%' }}><span style={{ fontWeight: 'bold' }}>Planos</span>  para você e sua família</Typography>
+                                    <Typography sx={{ fontStyle: 'italic', fontSize: '7vw', textAlign: 'center', color: '#A60069', width: '100%' }}><span style={{ fontWeight: 'bold' }}>Faça parte</span> do Nosso Time</Typography>
                                 </Box>
                             </SwiperSlide>
                             {/* Add more slides as needed */}
@@ -155,9 +155,9 @@ export const FacaParte = () => {
                                 }}
                             />
                            <Tab
-                                label="Seja nosso Colaborador"
+                                label="Seja um Dentista Cooperado"
                                 sx={{
-                                   borderTopLeftRadius:'10px',
+                                 
                                    width:{xs:'300px',md:'380px'},
                                    py:2,
                                    borderTop:1,
@@ -180,9 +180,9 @@ export const FacaParte = () => {
         
 
                              <Tab
-                                label="Seja nosso Colaborador"
+                                label="Seja um Consultor de Vendas"
                                 sx={{
-                                   borderTopLeftRadius:'10px',
+                                    borderTopRightRadius:'10px',
                                    borderTop:1,
                                    width:{xs:'300px',md:'380px'},
                                    borderLeft:1,

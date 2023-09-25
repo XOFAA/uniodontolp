@@ -1,29 +1,9 @@
 import React from 'react';
-import {Box,Button,Container, Typography,TextField,MenuItem } from '@mui/material';
-import { Navigation, Pagination, Scrollbar, A11y,Autoplay } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import {Box,Button,Container, Typography,TextField} from '@mui/material';
+
 export const SejaUmCooperado =()=>{
-    const numParcerias = 6;
-  const Setores = [
-    {
-      value: 'Atendimento',
-    },
-    {
-      value: 'Vendas',
     
-    },
-    {
-      value: 'Saúde odontológica',
-    
-    },
-    {
-      value: 'Recursos Humanos',
-    
-    }, {
-      value: 'Tecnologia da Informação(TI)',
-    
-    },
-  ];
+
     return(
         <>
         <Box  className="CarouselParcerias"  sx={{height:'100%'}}>
@@ -99,7 +79,7 @@ export const SejaUmCooperado =()=>{
         required  
         />
         <TextField
-        label='Por favor, informe seu número de registro no CRO*'
+        label='Por favor, informe seu número de registro no CRO'
         required  
         />
         

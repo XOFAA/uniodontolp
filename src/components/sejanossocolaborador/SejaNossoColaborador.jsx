@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box,Button,Container, Typography,TextField,MenuItem } from '@mui/material';
+import {Box,Button,Container, Typography,TextField,MenuItem, Link } from '@mui/material';
 import { Navigation, Pagination, Scrollbar, A11y,Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 export const SejaNossoColaborador =()=>{
@@ -101,13 +101,16 @@ export const SejaNossoColaborador =()=>{
             <Box sx={{display:'flex'}}>
               <Box sx={{display:'flex',flexDirection:'column',textAlign:{xs:'center',md:'start'}}}>
             <Typography sx={{fontSize:'28px',fontStyle:'italic',color:'#A60069'}}><span style={{fontWeight:'bold'}}>Participe</span> do Banco de Talentos</Typography> 
-            <Typography sx={{color:'#363636',fontSize:'20px',fontStyle:'italic'}}>Solicitamos que preencha o máximo de informações possíveis para que seja realizada a avaliação por parte dos conselhos diretivos</Typography>
+            <Typography sx={{color:'#363636',fontSize:'20px',fontStyle:'italic'}}>Solicitamos que preencha o máximo de informações possíveis para que seja realizada a avaliação pelo recursos humanos.</Typography>
             
               </Box>
+              <Link href='https://linklist.bio/vagasuniomao' target='_blank' sx={{textDecoration:'none'}}>
+            
             <Button variant='contained' sx={{display:{xs:'none',md:'flex'},textTransform:'none',height:'124px',width:'370px',borderRadius: '10px', bgcolor: '#A60069',mr:5}}>
            <img src='images/nossosbeneficios/icon1.png' style={{marginLeft:'30px'}}/>
             <Typography sx={{fontSize:'22px',fontStyle:'italic',textAlign:'center'}}>Conheça vagas <span style={{fontWeight:'bolder',fontSize:'27px'}}>Disponíveis</span></Typography>
            </Button>
+           </Link>
             </Box>
          
           
