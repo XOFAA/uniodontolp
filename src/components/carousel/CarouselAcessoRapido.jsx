@@ -109,7 +109,7 @@ export const CarouselAcessoRapido = ()=>{
         <Swiper
             
             modules={[Navigation, Pagination, Scrollbar, A11y,Autoplay]}
-            spaceBetween={35}
+            spaceBetween={45}
            
             autoplay={{
               delay: 2500,

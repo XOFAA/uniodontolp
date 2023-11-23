@@ -11,9 +11,8 @@ export const Renegociacao = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     return (
-        <AppWithPreloader>
 
-    
+        <AppWithPreloader>
             <NavBar backgroundColor={'linear-gradient(rgba(0, 0, 0, 0.8) , rgba(0, 0, 0, 0.0))'} />
             <TawkToChatbot/>
             <Swiper

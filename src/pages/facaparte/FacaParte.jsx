@@ -9,7 +9,6 @@ import 'swiper/css/scrollbar';
 import { NavBar } from '../../components/navbar/NavBar';
 import TawkToChatbot from '../../config/TawkToChatbot';
 import { useTheme } from "@emotion/react";
-
 import { Footer } from "../../components/footer/Footer";
 import { SejaNossoColaborador } from "../../components/sejanossocolaborador/SejaNossoColaborador";
 import { SejaUmCooperado } from "../../components/sejaUmcooperado/SejaUmCooperado";

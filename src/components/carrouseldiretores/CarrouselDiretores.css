@@ -1,0 +1,10 @@
+.CarrouselDiretores .swiper {
+  z-index: 12;
+}
+.CarrouselDiretores .swiper-slide {
+    display: flex;
+    justify-content: center;
+  z-index: 12;
+
+  }
+  
