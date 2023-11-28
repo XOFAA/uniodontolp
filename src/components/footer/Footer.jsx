@@ -208,10 +208,13 @@ export const Footer = () => {
             </Box>
         
 
+          <Link href="https://indeias.com.br" target="_blank">
           <Box sx={{display:'flex',justifyContent:'center',alignItems:'center',mt:8,gap:2,pb:4}}>
             <Typography sx={{fontStyle:'italic',fontSize:'13px',color:'#fff'}}>Tecnologia desenvolvida por</Typography>
             <img src="images/indeias/logoindeias.png"/>
+           
           </Box>
+          </Link>
           </Container>
         </Box>
   )

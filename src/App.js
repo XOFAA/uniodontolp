@@ -11,6 +11,7 @@ import { Home } from "./pages/body/Home";
 import { Atendimento } from "./pages/atendimento/Atendimento";
 import { FacaParte } from "./pages/facaparte/FacaParte";
 import { Institucional } from "./pages/institucional/Institucional";
+import { Ouvidoria } from "./pages/ouvidoria/Ouvidoria";
 
 
 
@@ -30,6 +31,7 @@ function App() {
             <Route path="/prontoatendimento" element={<ProntoAtendimento/>} />
             <Route path="/facaparte" element={<FacaParte/>} />
             <Route path="/institucional" element={<Institucional/>} />
+            <Route path="/ouvidoria" element={<Ouvidoria/>} />
 
           </Routes>
       </BrowserRouter>

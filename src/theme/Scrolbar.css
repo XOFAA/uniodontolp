@@ -1,10 +1,10 @@
 /* Estilos da barra de rolagem */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 12px;
   }
   
   ::-webkit-scrollbar-thumb {
-    background-color: #be8cac; /* Cor de fundo do polegar */
+    background-color: #FF99A7; /* Cor de fundo do polegar */
     border-radius: 8px; /* Raio das bordas do polegar */
   }
   
