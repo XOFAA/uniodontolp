@@ -1,5 +1,4 @@
 import AppWithPreloader from "../../components/appwithpreloader/AppWithPreloader"
-import React, { useEffect, useState } from 'react';
 import { Box, Container, Typography, useMediaQuery } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';

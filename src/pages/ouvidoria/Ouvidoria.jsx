@@ -10,7 +10,7 @@ export const Ouvidoria = () => {
         <AppWithPreloader>
 
 
-            <NavBar backgroundColor={'linear-gradient(rgba(0, 0, 0, 0.8) , rgba(0, 0, 0, 0.0))'} />
+            <NavBar/>
 
             <Box sx={{ mt: 20 }}>
 
@@ -19,7 +19,7 @@ export const Ouvidoria = () => {
                         <Typography sx={{ fontSize: '28px', fontStyle: 'italic', fontWeight: 'bold', color: '#A60069' }}>Ouvidoria</Typography>
                         <Typography sx={{ fontSize: '20px', fontStyle: 'italic' }}><span style={{ fontWeight: 'bolder' }}>Bem-vindo à nossa Ouvidoria!</span> Aqui na Uniodonto Manaus, estamos dedicados a proporcionar a melhor experiência aos nossos clientes, valorizando suas opiniões e feedback. Sua voz é essencial, e nossa Ouvidoria está pronta para ouvir e resolver suas preocupações, sempre em busca de aprimorar nosso atendimento.</Typography>
                         <Typography sx={{ fontSize: '20px', fontStyle: 'italic' }}>Para garantir a melhor assistência, lembre-se de que a Ouvidoria é uma instância de segunda instância. <span style={{ fontWeight: 'bolder' }}>Recomendamos que, caso necessário, entre primeiro em contato com nosso Serviço de Atenção ao Beneficiário (SAB) e obtenha um número de protocolo</span></Typography>
-                        <Typography sx={{ fontSize: '20px', fontStyle: 'italic' }}>Você pode acionar a Ouvidoria com Protocolo do SAB em mãos, através do formulário abaixo ou pelo e-mail: <Link>ouvidoria@uniodontomao.com.br.</Link> </Typography>
+                        <Typography sx={{ fontSize: '20px', fontStyle: 'italic' }}>Você pode acionar a Ouvidoria com Protocolo do SAB em mãos, através do formulário abaixo ou pelo e-mail: <Link href="mailto:ouvidoria@uniodontomao.com.br">ouvidoria@uniodontomao.com.br.</Link> </Typography>
                         <Typography sx={{ fontSize: '20px', fontStyle: 'italic' }}>Estamos aqui para ouvir e melhorar continuamente. Sua experiência importa para nós!</Typography>
                     </Box>
                 </Container>

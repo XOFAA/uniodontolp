@@ -12,6 +12,7 @@ import { Atendimento } from "./pages/atendimento/Atendimento";
 import { FacaParte } from "./pages/facaparte/FacaParte";
 import { Institucional } from "./pages/institucional/Institucional";
 import { Ouvidoria } from "./pages/ouvidoria/Ouvidoria";
+import { Compilance } from "./pages/compilance/Compilance";
 
 
 
@@ -32,7 +33,7 @@ function App() {
             <Route path="/facaparte" element={<FacaParte/>} />
             <Route path="/institucional" element={<Institucional/>} />
             <Route path="/ouvidoria" element={<Ouvidoria/>} />
-
+            <Route path="/compilance" element={<Compilance/>} />
           </Routes>
       </BrowserRouter>
     </AppThemeProvider>
