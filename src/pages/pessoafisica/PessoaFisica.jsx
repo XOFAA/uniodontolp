@@ -8,10 +8,10 @@ import 'swiper/css/scrollbar';
 import { useTheme } from '@emotion/react';
 import { NavBar } from '../../components/navbar/NavBar';
 import TawkToChatbot from '../../config/TawkToChatbot';
-import { Faqpj } from '../../components/faqpj/Faqpj';
 import { Footer } from '../../components/footer/Footer';
 import { CarrouselPlanos } from '../../components/carrouselplanos/CarrouselPlanos';
 import AppWithPreloader from '../../components/appwithpreloader/AppWithPreloader';
+import { Faqpf } from '../../components/faqpf/Faqpf';
 
 
 export const PessoaFisica = () => {
@@ -116,7 +116,7 @@ export const PessoaFisica = () => {
         </Box>
       </Box>
       <CarrouselPlanos qtdpessoas={selecao} />
-      <Faqpj />
+      <Faqpf/>
       <Footer />
     </AppWithPreloader>
 

@@ -7,7 +7,9 @@ function AppWithPreloader({ children }) {
   const [errorImages, setErrorImages] = useState(0);
 
   useEffect(() => {
+
     const images = document.querySelectorAll("img");
+    
     setTotalImages(images.length);
 
     const handleImageLoad = () => {

@@ -5,7 +5,13 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import TelegramIcon from '@mui/icons-material/Telegram';
+import { useEffect } from "react";
 export const Footer = () => {
+
+
+
+
+
   return (
  
 
@@ -212,7 +218,6 @@ export const Footer = () => {
           <Box sx={{display:'flex',justifyContent:'center',alignItems:'center',mt:8,gap:2,pb:4}}>
             <Typography sx={{fontStyle:'italic',fontSize:'13px',color:'#fff'}}>Tecnologia desenvolvida por</Typography>
             <img src="images/indeias/logoindeias.png"/>
-           
           </Box>
           </Link>
           </Container>

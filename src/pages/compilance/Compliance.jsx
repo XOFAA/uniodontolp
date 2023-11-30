@@ -1,5 +1,5 @@
 import AppWithPreloader from "../../components/appwithpreloader/AppWithPreloader"
-import { Box, Container, Typography, useMediaQuery } from '@mui/material';
+import { Box, Container, Link, Typography, useMediaQuery } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -9,17 +9,12 @@ import { useTheme } from "@emotion/react";
 import { NavBar } from "../../components/navbar/NavBar";
 import { Footer } from "../../components/footer/Footer";
 import { SwiperCompilance } from "../../components/swipercompilance/SwiperCompilance";
-import { Document, Page } from 'react-pdf';
-import { useState } from "react";
 
-export const Compilance = () => {
+
+export const Compliance = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-    const [numPages, setNumPages] = useState(null);
-    const [pageNumber, setPageNumber] = useState(1);
-    function onDocumentLoadSuccess({ numPages }) {
-        setNumPages(numPages);
-    }
+
     return (
         <AppWithPreloader>
 
@@ -121,7 +116,7 @@ export const Compilance = () => {
                 </Box>
 
                 <Box sx={{height:'650px'}}>
-                    <iframe title="PDF Viewer"  src="pdf/cv.pdf#zoom=50%" width="100%" height="100%" />
+                <iframe title="PDF Preview" src="pdf/cv.pdf#view=Fit" width="100%" height="100%" style={{ border: 'none' }} />
                 </Box>
 
                 <Box sx={{ display: 'flex', flexDirection: 'column', textAlign: 'center', gap: 2, py: 5 }}>
@@ -131,24 +126,28 @@ export const Compilance = () => {
 
                 
                 <Box sx={{height:'650px'}}>
-                    <iframe title="PDF Viewer"  src="pdf/cv.pdf#zoom=50%" width="100%" height="100%" />
+                <iframe title="PDF Preview" src="pdf/cv.pdf#view=Fit" width="100%" height="100%" style={{ border: 'none' }} />
                 </Box>
 
                 <Box sx={{ display: 'flex', flexDirection: 'column', textAlign: 'center', gap: 2, py: 5 }}>
                     <Typography sx={{ fontSize: '28px', fontStyle: 'italic', fontWeight: 'bold', color: '#A60069' }}>Canais de Denúncia e Ouvidoria</Typography>
-                    <Typography>Ao clicar em uma das opções abaixo, você terá mais detalhes sobre nosso Canal de Denúncia e a Ouvidoria</Typography>
+                    <Typography  sx={{ fontSize: '20px', color: '#363636', fontStyle: 'italic' }}>Ao clicar em uma das opções abaixo, você terá mais detalhes sobre nosso Canal de Denúncia e a Ouvidoria</Typography>
                     <Typography sx={{ fontSize: '20px', color: '#363636', fontStyle: 'italic' }}>Saberá como nossa cooperativa facilita a denúncia de comportamentos antiéticos ou irregularidades, bem como como operamos nossa ouvidoria para garantir um ambiente seguro e confidencial para todos que necessitarem dos serviços.</Typography>
                 </Box>
 
                 <Box sx={{display:'flex',gap:{xs:5,md:0},justifyContent:'space-between',flexDirection:{xs:'column',md:'row'}}}>
+                <Link href='https://uniodontoservices.com.br/LGPD/canal-de-denuncia?codigo=37' target='_blank' sx={{textDecoration:'none'}}>
                 <Box sx={{bgcolor:'#5DE4F7',width:{xs:'100%',md:'540px'},height:{xs:'200px',md:'150px'},borderRadius:'10px',p:2}}>
                     <Typography sx={{color:'#363636',fontSize:'28px',fontWeight:'bolder',fontStyle:'italic'}}>Canal de Denúncia</Typography>  
-                    <Typography sx={{color:'#363636',fontSize:'22px',fontStyle:'italic',lineHeight:'25.6px'}}>Preencha o formulário abaixo com as<br/> informações necessárias.</Typography>            
+                    <Typography sx={{color:'#363636',fontSize:'22px',fontStyle:'italic',lineHeight:'25.6px'}}>Clique aqui para conhecer esta ferramenta sigilosa e imparcial disponível a quem necessitar</Typography>            
                 </Box>
+                </Link>
+                <Link href='/ouvidoria' target='_blank' sx={{textDecoration:'none'}}>
                 <Box sx={{bgcolor:'#A60069',width:{xs:'100%',md:'540px'},height:{xs:'200px',md:'150px'},borderRadius:'10px',p:2}}>
                     <Typography sx={{color:'#fff',fontSize:'28px',fontWeight:'bolder',fontStyle:'italic'}}>Ouvidoria Uniodonto Manaus</Typography>  
                     <Typography sx={{color:'#fff',fontSize:'22px',fontStyle:'italic',lineHeight:'25.6px'}}>Nosso time analisará sua solicitação<br/> com cuidado.</Typography>            
                 </Box>
+                </Link>
                 </Box>
                 </Box>
             </Container>

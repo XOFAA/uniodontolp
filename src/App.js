@@ -12,7 +12,10 @@ import { Atendimento } from "./pages/atendimento/Atendimento";
 import { FacaParte } from "./pages/facaparte/FacaParte";
 import { Institucional } from "./pages/institucional/Institucional";
 import { Ouvidoria } from "./pages/ouvidoria/Ouvidoria";
-import { Compilance } from "./pages/compilance/Compilance";
+import { Compliance } from "./pages/compilance/Compliance";
+import { Lgpd } from "./pages/lgpd/Lgpd";
+import { Cooperativismo } from "./pages/cooperativismo/Cooperativismo";
+
 
 
 
@@ -33,7 +36,9 @@ function App() {
             <Route path="/facaparte" element={<FacaParte/>} />
             <Route path="/institucional" element={<Institucional/>} />
             <Route path="/ouvidoria" element={<Ouvidoria/>} />
-            <Route path="/compilance" element={<Compilance/>} />
+            <Route path="/compliance" element={<Compliance/>} />
+            <Route path="/lgpd" element={<Lgpd/>} />
+            <Route path="/cooperativismo" element={<Cooperativismo/>} />
           </Routes>
       </BrowserRouter>
     </AppThemeProvider>
