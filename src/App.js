@@ -15,6 +15,7 @@ import { Ouvidoria } from "./pages/ouvidoria/Ouvidoria";
 import { Compliance } from "./pages/compilance/Compliance";
 import { Lgpd } from "./pages/lgpd/Lgpd";
 import { Cooperativismo } from "./pages/cooperativismo/Cooperativismo";
+import { Cpd } from "./pages/cpd/Cpd";
 
 
 
@@ -39,6 +40,7 @@ function App() {
             <Route path="/compliance" element={<Compliance/>} />
             <Route path="/lgpd" element={<Lgpd/>} />
             <Route path="/cooperativismo" element={<Cooperativismo/>} />
+            <Route path="/cpd" element={<Cpd/>} />
           </Routes>
       </BrowserRouter>
     </AppThemeProvider>

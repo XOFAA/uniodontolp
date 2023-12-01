@@ -38,7 +38,7 @@ export const Cooperativismo = () => {
                                 }}>
 
                                     <img
-                                        src="images/compilance/foto1.png"
+                                        src="images/cooperativismo/foto1.png"
                                         style={{ width: '100%', height: '100%' }}
 
                                     />
@@ -68,7 +68,7 @@ export const Cooperativismo = () => {
                         <>
                             <SwiperSlide>
                                 <img
-                                    src="images/compilance/foto_mobile1.png"
+                                    src="images/cooperativismo/foto_mobile1.png"
                                     style={{ width: '100%', height: '100%' }}
 
                                 />
