@@ -11,7 +11,7 @@ import 'swiper/css/scrollbar';
 import './CarouselParcerias.css'
 
 export const Parcerias = ()=>{
-  const numParcerias = 17;
+  const numParcerias = 24;
   const parcerias = Array.from({ length: numParcerias }, (_, index) => `/images/parcerias/link${index + 1}.png`);
     return(
       

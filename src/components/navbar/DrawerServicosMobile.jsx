@@ -41,39 +41,35 @@ export const DrawerServicosMobile = ({onOpenDrawer,onCloseDrawer}) => {
                 <AccordionDetails >
                
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 5 }}>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
-                  Acesso Pessoa Física
+              <Link href="https://onelink.to/appuniomao" target="_blank" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
+                  Acesso Beneficiário
                 </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
-                  Conheça Nossos Planos
-                </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
+
+                <Link href="https://seguro.fisistemas.com.br/EncontreSeuDentista/pesquisa;s=311391
+" target='_blank' sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
                   Encontre um Dentista
                 </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
+                <Link href="http://cloud4.fisistemas.com.br/manaus/itau/
+" target='_blank' sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
                   Segunda via de Boleto
                 </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
-                  Regenegociar Débitos
+                <Link href="renegociacao" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
+                  Renegociar Débitos
                 </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
+                <Link href="https://tiss.uniodontomanaus.com.br/solucoesextras/irpf/InformacaoDados.aspx
+" target='_blank' sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
                   Informe de Rendimentos
                 </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
-                  Pagamento Cartões
+                <Link href="/trocacartao" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
+                  Trocar Cartão
                 </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
-                  Carta de Quitação de Débitos
-                </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
+                <Link sx={{ textDecoration: 'none', color: '#999999', fontSize: '16px' }}>
                   Clube de Vantagens
                 </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
+                <Link href="/prontoatendimento" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
                   Pronto Atendimento 24h
                 </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
-                  Documentos Importantes
-                </Link>
+
               </Box>
                     </AccordionDetails>
                
@@ -87,29 +83,22 @@ export const DrawerServicosMobile = ({onOpenDrawer,onCloseDrawer}) => {
                 <AccordionDetails>
               
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 5 }}>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
-                  Acesso Pessoa Jurídica
+              <Link href="https://tiss.uniodontomanaus.com.br/SAEX/Modulos/Empresa/Paginas/Login.aspx" target='_blank' sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
+                  Acesso Empresas
                 </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
+                <Link href="/pessoajuridica" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
                   Solicite uma Proposta
                 </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
-                  Faturamento
-                </Link>
-                <Link sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
+
+                <Link href='/renegociacao' sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
                   Renegociar Débitos
                 </Link>
-                <Link sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
-                  Documentos Importantes
-                </Link>
+
                 <Typography sx={{ fontWeight: 'bold', fontStyle: 'italic', fontSize: '18px', color: '#A60069', mt: 5 }}>Para Consultores</Typography>
-                <Link sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px', mt: 3 }}>
+                <Link href='https://seuplanoonline.fisistemas.com.br/vendedor' target='_blank' sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px', mt: 3 }}>
                   Acesso Consultores
                 </Link>
-                <Typography sx={{ fontWeight: 'bold', fontStyle: 'italic', fontSize: '18px', color: '#A60069', mt: 2 }}>Para Colaboradores</Typography>
-                <Link sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px', mt: 3 }}>
-                  Acesso Colaborador
-                </Link>
+
               </Box>
                     </AccordionDetails>
                
@@ -123,41 +112,30 @@ export const DrawerServicosMobile = ({onOpenDrawer,onCloseDrawer}) => {
                 <AccordionDetails>
             
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 5 }}>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
+              <Link href="https://tiss.uniodontomanaus.com.br/SAEX/Modulos/Singular/Paginas/Login.aspx" target='_blank' sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
                   Acesso Cooperados
                 </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
-                  Aprovação Online
-                </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
-                  Relacionamento com Cooperado
-                </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
-                  Seja nosso Cooperado
-                </Link>
+
+
 
                 <Box sx={{ mt: 3 }}>
                   <Typography sx={{ fontWeight: 'bold', fontStyle: 'italic', fontSize: '18px', color: '#A60069' }}>Outros Links</Typography>
                 </Box>
                 <Box sx={{ mt: 1, display: 'flex', flexDirection: 'column', gap: 2 }}>
-
-                  <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
-                    ANS
-                  </Link>
-                  <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
+                  <Link href="https://www.uniodonto.coop.br/uniodonto-mais-proxima/" target='_blank' sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
                     Outras Uniodontos
                   </Link>
-                  <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
+                  <Link href="http://www.procon.am.gov.br/" target='_blank' sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
                     PROCON/AM
                   </Link>
-                  <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
+                  <Link href="https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm" target='_blank' sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
                     Código de Defesa do Consumidor
                   </Link>
-                  <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
-                    OCB/AM
-                  </Link>
-                  <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
+                  <Link href="https://capacita.coop.br/" target='_blank' sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
                     CapacitaCoop
+                  </Link>
+                  <Link href="/documentos" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
+                    Documentos Importantes
                   </Link>
                 </Box>
               </Box>
@@ -173,40 +151,40 @@ export const DrawerServicosMobile = ({onOpenDrawer,onCloseDrawer}) => {
                 <AccordionDetails>
                 
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 2, fontSize: '18px' }}>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
+              <Link href="/institucional" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
                   Instituicional
                 </Link>
                 <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
                   Diretorias e Conselhos
                 </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
+                <Link href="https://uniodontoservices.com.br/demonstrativos?ans=37#" target='_blank' sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
                   IDSS
+                </Link>
+                <Link href="https://uniodontoservices.com.br/demonstrativos?ans=37#" target='_blank' sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
+                  Demonstrativo Financeiro
                 </Link>
                 <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
                   Unidades de Atendimento
                 </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
+                <Link href="/compliance" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
                   Compliance
                 </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
+                <Link href="/ouvidoria" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
                   Ouvidoria
                 </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
+                <Link href="/cooperativismo" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
                   Cooperativismo
                 </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
+                <Link href="/esg" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
                   ESG
                 </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
-                  Atenção à Saúde Bucal
-                </Link>
+
                 <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
                   Blog da Uniodonto Manaus
                 </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
+                <Link href="/facaparte" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
                   Faça Parte de Nosso Time
                 </Link>
-
               </Box>
                     </AccordionDetails>
                

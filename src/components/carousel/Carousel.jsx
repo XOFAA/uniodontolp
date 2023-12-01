@@ -82,7 +82,7 @@ export const Carousel = () => {
       <Box
         sx={{
           position: 'absolute',
-          bottom:{xs:-130,md:-40},
+          bottom:{xs:-130,sm:-40},
           left: '50%',
           transform: 'translateX(-50%)',
           zIndex: 2,

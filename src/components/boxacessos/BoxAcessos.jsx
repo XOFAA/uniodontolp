@@ -7,7 +7,7 @@ export const BoxAcessos = () => {
   return (
     <Container sx={{ mt: { xs: 20, md: 4 } }} >
       <Typography sx={{ fontSize: '28px', fontStyle: 'italic', textAlign: 'center', color: "#363636" }}><span style={{ fontWeight: 'bold' }}>Já é Uniodonto?</span> Acesse seu portal</Typography>
-      <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, alignItems: 'center', mt: 3, gap: { xs: 2, md: 4 } }}>
+      <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, alignItems: 'center', mt: 3, gap: { xs: 2, md: 4 } }}>
         <motion.div
           whileHover={{ scale: 1.1 }}
         >
