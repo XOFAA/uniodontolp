@@ -35,11 +35,11 @@ export const FormOuvidoria = () => {
                     </Box>
                     <Link href='#' target='_blank' sx={{ textDecoration: 'none' }}>
 
-                        <Button variant='contained' sx={{ display:'flex', flexDirection: 'column', textTransform: 'none', height: {xs:'116px',md:'124px'}, width: {xs:'100%',md:'370px'}, borderRadius: '10px', bgcolor: '#A60069', mr: 5 }}>
+                        {/* <Button variant='contained' sx={{ display:'flex', flexDirection: 'column', textTransform: 'none', height: {xs:'116px',md:'124px'}, width: {xs:'100%',md:'370px'}, borderRadius: '10px', bgcolor: '#A60069', mr: 5 }}>
 
                             <Typography sx={{ fontSize: {xs:'17px',md:'22px'}, fontStyle: 'italic', textAlign: 'center' }}>Copie o número do protocolo deste registro</Typography>
                             <Typography sx={{ fontSize: '27px', fontWeight: 'bolder', fontStyle: 'italic', textAlign: 'center' }}>UN20230297</Typography>
-                        </Button>
+                        </Button> */}
                     </Link>
                 </Box>
 

@@ -19,7 +19,7 @@ export const Cooperativismo = () => {
         <AppWithPreloader>
 
             <NavBar backgroundColor={'linear-gradient(rgba(0, 0, 0, 0.8) , rgba(0, 0, 0, 0.0))'} />
-            <Box sx={{ bgcolor: '#f1f1f1' }}>
+          
                 <Swiper
                     slidesPerView={1}
                     autoplay={{
@@ -88,7 +88,7 @@ export const Cooperativismo = () => {
                         </>
                     )}
                 </Swiper>
-            </Box>
+           
             <Container>
             <Box sx={{display:'flex',flexDirection:'column',textAlign:'center',py:5}}>
                 <Typography sx={{fontSize:'28px',color:'#A60069',fontStyle:'italic'}}>O modelo de negócios da Uniodonto Manaus é baseado no cooperativismo.

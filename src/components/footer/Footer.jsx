@@ -215,7 +215,7 @@ export const Footer = () => {
 
 
 
-        <Box sx={{ display: 'flex', gap: { xs: 1, md: 5 }, mt: 5, alignItems: 'center', justifyContent: { xs: 'center' },flexDirection:{sm:'column'},flexWrap: { xs: 'wrap', md: 'unset' } }}>
+        <Box sx={{ display: 'flex', gap: { xs: 1,md:5}, mt: 5,alignItems: 'center', justifyContent: { xs: 'center'},flexDirection:{sm:'column',md:'row'},flexWrap: { xs: 'wrap', md: 'unset' } }}>
           <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: { xs: 1, md: 2 }, alignItems: 'center' }}>
             <Typography sx={{ textAlign: 'center', fontSize: { xs: '22px', md: '20px' }, fontStyle: 'italic', color: '#fff' }}><span style={{ fontWeight: 'bold' }}>Baixe</span> o app Uniodonto Manaus</Typography>
 
@@ -249,7 +249,7 @@ export const Footer = () => {
 
 
 
-        <Box sx={{ mt: 15 }}>
+        <Box sx={{ mt: {xs:5,md:15} }}>
 
 
 

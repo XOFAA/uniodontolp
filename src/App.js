@@ -16,6 +16,9 @@ import { Compliance } from "./pages/compilance/Compliance";
 import { Lgpd } from "./pages/lgpd/Lgpd";
 import { Cooperativismo } from "./pages/cooperativismo/Cooperativismo";
 import { Cpd } from "./pages/cpd/Cpd";
+import { Esg } from "./pages/esg/esg";
+import { DocumentosImportantes } from "./pages/documentosimportantes/DocumentosImportantes";
+import { SiteMap } from "./pages/sitemap/SiteMap";
 
 
 
@@ -41,6 +44,9 @@ function App() {
             <Route path="/lgpd" element={<Lgpd/>} />
             <Route path="/cooperativismo" element={<Cooperativismo/>} />
             <Route path="/cpd" element={<Cpd/>} />
+            <Route path="/esg" element={<Esg/>} />
+            <Route path="/documentos" element={<DocumentosImportantes/>} />
+            <Route path="/sitemap" element={<SiteMap/>} />
           </Routes>
       </BrowserRouter>
     </AppThemeProvider>

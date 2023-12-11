@@ -15,46 +15,7 @@ import '../carrouselplanos/CarrouselPlanos.css'
 import { useEffect, useRef, useState } from "react";
 
 export const CarrouselPlanos = ({ qtdpessoas }) => {
-  const [scrolling, setScrolling] = useState(false);
 
-  const [isFirstSlide, setIsFirstSlide] = useState(true);
-  const [isLastSlide, setIsLastSlide] = useState(false);
-
-  const swiperRef = useRef(null);
-
-  const handlePrev = () => {
-    if (swiperRef.current && swiperRef.current.swiper) {
-      swiperRef.current.swiper.slidePrev();
-    }
-  };
-
-  const handleNext = () => {
-    if (swiperRef.current && swiperRef.current.swiper) {
-      swiperRef.current.swiper.slideNext();
-    }
-  };
-
-  useEffect(() => {
-    const handleScroll = () => {
-      // Obtenha a altura total da página/documento
-      const totalHeight = document.documentElement.scrollHeight;
-
-      // Calcule a porcentagem da posição vertical atual
-      const scrollPercentage = (window.scrollY / (totalHeight - window.innerHeight)) * 100;
-
-      if (scrollPercentage > 19) { // Exemplo: Faça algo quando a rolagem atingir 50% da página
-        setScrolling(true);
-      } else {
-        setScrolling(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
   const procedimentos = [
     "Consultas e diagnósticos",
     "Urgências odontológicas",
@@ -296,83 +257,42 @@ export const CarrouselPlanos = ({ qtdpessoas }) => {
       <Container>
 
         <Box className="CarrouselPlanos" sx={{ bgcolor: '#f1f1f1' }}>
-          <Box
-            sx={{
-              display: 'flex',
-              
-              justifyContent: 'space-between',
-              position: 'sticky',
-              top: 0,
-              textAlign: 'center',
-              zIndex: 5,
-              pt: { xs: scrolling ? 8.3 : 0, lg: scrolling ? 15 : 0 },
-              bgcolor: '#f1f1f1',
-              alignItems: 'center',
-              transition: '0.3s ease-in-out',
-             
-
-            }}
-          >
-            <motion.div
-              animate={
-                !isLastSlide
-                  ? { scale: 'none' }
-                  : { scale: [1, 1.3, 1] }
-              }
-              transition={{ repeat: Infinity, duration: 0.7 }} 
-
-            >
-              <IconButton onClick={handlePrev} disabled={isFirstSlide}>
-
-                <ArrowBackIosNewIcon sx={{ fontSize: "50px", color: "#A60069" }} />
-
-              </IconButton>
-            </motion.div>
-            <Typography sx={{ pt: 2, fontSize: '18px', fontWeight: 'bolder', fontStyle: 'italic', color: '#A60069' }}>Clique nas setas para ver mais planos</Typography>
-
-            <motion.div
-
-              animate={
-                isLastSlide
-                  ? { scale: 'none' }
-                  : { scale: [1, 1.3, 1] }
-              }
-              transition={{ repeat: Infinity, duration: 0.7 }} // Configuração da animação contínua
-
-
-            >
-              <IconButton onClick={handleNext} disabled={isLastSlide}>
-                <ArrowForwardIosIcon sx={{ fontSize: '50px', color: '#A60069' }} />
-              </IconButton>
-            </motion.div>
-          </Box>
+    
           <Swiper
 
             modules={[Navigation, Pagination]}
-
-            onSlideChange={(swiper) => {
-              setIsFirstSlide(swiper.isBeginning);
-              setIsLastSlide(swiper.isEnd);
-            }}
+            grabCursor
+          
             breakpoints={{
               0: {
                 slidesPerView: 1,
+                spaceBetween:80
 
               },
-
+              375:{
+                slidesPerView: 1,
+                spaceBetween:40
+              },
+              425:{
+                slidesPerView: 1,
+                spaceBetween:10
+              },
               600: {
                 slidesPerView: 2,
+                spaceBetween:-50
               },
               900: {
                 slidesPerView: 3,
+           
+                spaceBetween:-50
 
               },
 
 
             }}
 
-            spaceBetween={100}
-            ref={swiperRef}
+         
+           
 
 
 
@@ -388,15 +308,14 @@ export const CarrouselPlanos = ({ qtdpessoas }) => {
 
                 <Box sx={{ width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
 
-                  <Box
+                <Box
                     alt="Planos"
                     sx={{
 
                       width: '260px',
                       height: '131px',
-                      position: 'sticky',
-                      top: 0,
-                      pt: { xs: scrolling ? 15 : 0, lg: scrolling ? 23 : 0 },
+                      position:'sticky',
+                      top:{xs:65,md:67,lg:120},
                       transition: '0.3s ease-in-out'
                     }}
                   >
