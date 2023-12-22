@@ -1,6 +1,6 @@
 import AppWithPreloader from "../../components/appwithpreloader/AppWithPreloader"
 import React, { useEffect, useState } from 'react';
-import { Box,Container,Tab, Tabs,Typography, useMediaQuery } from '@mui/material';
+import { Box, Container, Tab, Tabs, Typography, useMediaQuery } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -25,9 +25,9 @@ export const FacaParte = () => {
         console.log(selectedTab)
     }, [selectedTab])
     const tabComponents = [
-        <SejaNossoColaborador/>,
-        <SejaUmCooperado/>,
-        <SejaUmVendedor/>
+        <SejaNossoColaborador />,
+        <SejaUmCooperado />,
+        <SejaUmVendedor />
 
     ];
     return (
@@ -114,15 +114,15 @@ export const FacaParte = () => {
 
             <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', mt: 4 }}>
                 <Box sx={{ width: '100%' }}>
-                    <Box sx={{ display: 'flex', justifyContent: 'center'}}>
-                        <Tabs value={selectedTab} onChange={handleTabChange} 
+                    <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+                        <Tabs value={selectedTab} onChange={handleTabChange}
 
                             variant="scrollable"
                             scrollButtons
                             allowScrollButtonsMobile
-                            
+
                             sx={{
-                            
+
 
                                 '& .MuiTabs-indicator': {
                                     height: '0px'
@@ -135,68 +135,68 @@ export const FacaParte = () => {
                             <Tab
                                 label="Seja nosso Colaborador"
                                 sx={{
-                                   borderTopLeftRadius:'10px',
-                                   borderTop:1,
-                                   width:{xs:'300px',md:'380px'},
-                                   borderLeft:1,
-                                   borderRight:1,
+                                    borderTopLeftRadius: '10px',
+                                    borderTop: 1,
+                                    width: { xs: '300px', md: '380px' },
+                                    borderLeft: 1,
+                                    borderRight: 1,
                                     '&.Mui-selected': {
                                         color: '#fff',
-                                        backgroundColor:'#A60069'
-                                      },
-                                    color:'#A60069',
+                                        backgroundColor: '#A60069'
+                                    },
+                                    color: '#A60069',
                                     borderColor: '#E4E4E4',
                                     textTransform: 'none',
                                     fontSize: '22px',
                                     fontStyle: 'italic',
                                     fontWeight: 'bolder',
-                                   
+
                                 }}
                             />
-                           <Tab
+                            <Tab
                                 label="Seja um Dentista Cooperado"
                                 sx={{
-                                 
-                                   width:{xs:'300px',md:'380px'},
-                                   py:2,
-                                   borderTop:1,
-                                   borderLeft:1,
-                                   borderRight:1,
+
+                                    width: { xs: '300px', md: '380px' },
+                                    py: 2,
+                                    borderTop: 1,
+                                    borderLeft: 1,
+                                    borderRight: 1,
                                     '&.Mui-selected': {
                                         color: '#fff',
-                                        backgroundColor:'#A60069'
-                                      },
-                                    color:'#A60069',
+                                        backgroundColor: '#A60069'
+                                    },
+                                    color: '#A60069',
                                     borderColor: '#E4E4E4',
                                     textTransform: 'none',
                                     fontSize: '22px',
                                     fontStyle: 'italic',
                                     fontWeight: 'bolder',
-                                   
+
                                 }}
                             />
 
-        
 
-                             <Tab
+
+                            <Tab
                                 label="Seja um Consultor de Vendas"
                                 sx={{
-                                    borderTopRightRadius:'10px',
-                                   borderTop:1,
-                                   width:{xs:'300px',md:'380px'},
-                                   borderLeft:1,
-                                   borderRight:1,
+                                    borderTopRightRadius: '10px',
+                                    borderTop: 1,
+                                    width: { xs: '300px', md: '380px' },
+                                    borderLeft: 1,
+                                    borderRight: 1,
                                     '&.Mui-selected': {
                                         color: '#fff',
-                                        backgroundColor:'#A60069'
-                                      },
-                                    color:'#A60069',
+                                        backgroundColor: '#A60069'
+                                    },
+                                    color: '#A60069',
                                     borderColor: '#E4E4E4',
                                     textTransform: 'none',
                                     fontSize: '22px',
                                     fontStyle: 'italic',
                                     fontWeight: 'bolder',
-                                   
+
                                 }}
                             />
                         </Tabs>

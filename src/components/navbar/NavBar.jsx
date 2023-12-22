@@ -199,8 +199,8 @@ export const NavBar = ({backgroundColor,draweropen,drawerclose}) => {
         }}
       >
         {/* Conteúdo do submenu no ícone do portal no desktop */}
-        {options.map((option) => (
-          <Link href={option.link} target='_blank' sx={{ color: "#323232", fontSize: '18px', fontStyle:'italic', fontWeight:'bold', textDecoration:'none' }}>
+        {options.map((option,index) => (
+          <Link href={option.link} key={index} target='_blank' sx={{ color: "#323232", fontSize: '18px', fontStyle:'italic', fontWeight:'bold', textDecoration:'none' }}>
         <MenuItem   onClick={handleCloseDesktopMenu}>
         <MenuList>
             {option.page}
