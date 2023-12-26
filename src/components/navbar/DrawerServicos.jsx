@@ -129,17 +129,11 @@ export const DrawerServicos = ({ onOpenDrawer, onCloseDrawer }) => {
                 <Link href="/institucional" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
                   Instituicional
                 </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
-                  Diretorias e Conselhos
-                </Link>
                 <Link href="https://uniodontoservices.com.br/demonstrativos?ans=37#" target='_blank' sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
                   IDSS
                 </Link>
                 <Link href="https://uniodontoservices.com.br/demonstrativos?ans=37#" target='_blank' sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
                   Demonstrativo Financeiro
-                </Link>
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
-                  Unidades de Atendimento
                 </Link>
                 <Link href="/compliance" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
                   Compliance
@@ -154,8 +148,8 @@ export const DrawerServicos = ({ onOpenDrawer, onCloseDrawer }) => {
                   ESG
                 </Link>
 
-                <Link href="#" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
-                  Blog da Uniodonto Manaus
+                <Link href="https://uniodontomanaus.substack.com" target='_target' sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
+                  Newsletter
                 </Link>
                 <Link href="/facaparte" sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px' }}>
                   Faça Parte de Nosso Time
@@ -170,16 +164,13 @@ export const DrawerServicos = ({ onOpenDrawer, onCloseDrawer }) => {
             </Grid>
             <Grid item sm={6}>
               <Box sx={{ display: 'flex', gap: 5, mt: 10, alignItems: 'center', justifyContent: 'end' }}>
-                <Link href="#" sx={{ color: '#A60069', fontWeight: 'bold', fontStyle: 'italic', fontSize: '16px', }}>
-                  Diretiva de Privacidade
-                </Link>
-                <Link href="#" sx={{ color: '#A60069', fontWeight: 'bold', fontStyle: 'italic', fontSize: '16px' }}>
-                  Segurança no Uso da Internet
+                <Link href="/cpd" sx={{ color: '#A60069', fontWeight: 'bold', fontStyle: 'italic', fontSize: '16px', }}>
+                  Centro de Proteção de Dados
                 </Link>
                 <Link href="/lgpd" sx={{ color: '#A60069', fontWeight: 'bold', fontStyle: 'italic', fontSize: '16px' }}>
                   LGPD
                 </Link>
-                <Link href="#" sx={{ color: '#A60069', fontWeight: 'bold', fontStyle: 'italic', fontSize: '16px' }}>
+                <Link href="/sitemap" sx={{ color: '#A60069', fontWeight: 'bold', fontStyle: 'italic', fontSize: '16px' }}>
                   Sitemap
                 </Link>
               </Box>

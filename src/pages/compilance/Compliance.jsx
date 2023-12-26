@@ -116,7 +116,7 @@ export const Compliance = () => {
                 </Box>
 
                 <Box sx={{height:'650px'}}>
-                <iframe title="PDF Preview" src="pdf/cv.pdf#view=Fit" width="100%" height="100%" style={{ border: 'none' }} />
+                <iframe title="PDF Preview" src="https://drive.google.com/file/d/1e1_Jp0lFH8ftvWi79RbTiW_0TXkbxRpw/preview"  width="100%" height="100%" style={{ border: 'none' }} />
                 </Box>
 
                 <Box sx={{ display: 'flex', flexDirection: 'column', textAlign: 'center', gap: 2, py: 5 }}>
@@ -126,7 +126,7 @@ export const Compliance = () => {
 
                 
                 <Box sx={{height:'650px'}}>
-                <iframe title="PDF Preview" src="pdf/cv.pdf#view=Fit" width="100%" height="100%" style={{ border: 'none' }} />
+                <iframe title="PDF Preview" src="https://drive.google.com/file/d/10GUE0AmBAQrP_mGPsoljXBItsc5G6V4m/preview"  width="100%" height="100%" style={{ border: 'none' }} />
                 </Box>
 
                 <Box sx={{ display: 'flex', flexDirection: 'column', textAlign: 'center', gap: 2, py: 5 }}>

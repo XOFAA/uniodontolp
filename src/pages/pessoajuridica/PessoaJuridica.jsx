@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { Alert, Box, Button, Checkbox, CircularProgress, Container, Link, Snackbar, TextField, Typography, useMediaQuery } from '@mui/material';
-import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
-import Favorite from '@mui/icons-material/Favorite';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -17,7 +15,7 @@ import AppWithPreloader from '../../components/appwithpreloader/AppWithPreloader
 import Api from '../../config/Api';
 import HCaptcha from '@hcaptcha/react-hcaptcha';
 import ReactInputMask from 'react-input-mask';
-
+import { motion } from "framer-motion";
 
 
 export const PessoaJuridica = () => {
@@ -53,8 +51,8 @@ export const PessoaJuridica = () => {
         setSnackbarOpen(false);
     };
     const handleSubmit = (e) => {
-          
-    setIsLoading(true);
+
+        setIsLoading(true);
         e.preventDefault();
         if (!recaptchaValue) {
 
@@ -96,8 +94,8 @@ export const PessoaJuridica = () => {
                 setEnvioSucesso(false);
                 setRecaptchaValue(null)
                 setHcaptchaKey(new Date().getTime().toString());
-            
-            }).finally(()=>{
+
+            }).finally(() => {
                 setIsLoading(false)
             })
     };
@@ -222,13 +220,13 @@ export const PessoaJuridica = () => {
             <Container>
 
 
-                <Box component={'form'}  onSubmit={handleSubmit} sx={{ bgcolor: '#fff', borderRadius: 3, display: 'flex', flexDirection: 'column', boxShadow: 2, p: 5, mt: { xs: 90, md: 2 } }}>
+                <Box component={'form'} onSubmit={handleSubmit} sx={{ bgcolor: '#fff', borderRadius: 3, display: 'flex', flexDirection: 'column', boxShadow: 2, p: 5, mt: { xs: 90, md: 2 } }}>
 
 
-                    <Box sx={{ mt: 5, display: 'flex', flexDirection: 'column', gap: 1 }}>
+                    <Box sx={{ mt: 2, display: 'flex', flexDirection: 'column', gap: 1 }}>
                         <Typography sx={{ fontSize: { xs: '22px', md: '28px' }, fontStyle: 'italic', color: '#A60069', textAlign: 'center' }}>De MEI a grandes empresas, <span style={{ fontStyle: 'italic', fontWeight: 'bold' }}>temos o plano ideal para você</span></Typography>
-                        <Typography sx={{ fontSize: { xs: '14px', md: '28px' }, fontStyle: 'italic', color: '#323232', textAlign: 'center' }}>Solicite uma proposta, preenchendo o formulário abaixo ou clique no botão para falar com um consultor</Typography>
-                        <Typography sx={{ fontSize: { xs: '14px', md: '28px' }, fontStyle: 'italic', color: '#323232', textAlign: 'center' }}>Nossos consultores ficam disponíveis 7h30 às 18h (horário Manaus), exceto sábados, domingos e feriados nacionais (sem expediente).</Typography>
+                        <Typography sx={{ fontSize: { xs: '14px', md: '20px' }, fontStyle: 'italic', color: '#323232', textAlign: 'center' }}>Solicite uma proposta, preenchendo o formulário abaixo ou clique no botão para falar com um consultor</Typography>
+                        <Typography sx={{ fontSize: { xs: '14px', md: '16px' }, fontStyle: 'italic', color: '#323232', textAlign: 'center' }}>Nossos consultores ficam disponíveis 7h30 às 18h (horário Manaus), exceto sábados, domingos e feriados nacionais (sem expediente).</Typography>
 
 
                     </Box>
@@ -238,7 +236,11 @@ export const PessoaJuridica = () => {
                             <Typography sx={{ fontStyle: 'italic', fontSize: '20px', color: '#363636', textAlign: { xs: 'center', md: 'start' } }}>Os planos para empresas e negócios são voltados na modalidade Pessoa Jurídica e estão disponíveis para a partir de 2 vidas.</Typography>
                         </Box>
                         <Box>
-                            <Button variant='contained' sx={{ borderRadius: '10px', width: '370px', height: '111px', bgcolor: '#107E75', display: { xs: 'none', md: 'flex' }, gap: 1 }}><img src='images/pessoajuridica/icon-wpp.png' />Fale com um<br />Consultor</Button>
+                        <motion.div
+                        whileHover={{ scale: 1.1 }}
+                    >
+                            <Button variant='contained' href='https://linklist.bio/vendasuniomao' target='_pointer' sx={{ borderRadius: '10px', width: '370px', height: '111px', bgcolor: '#107E75', display: { xs: 'none', md: 'flex' }, gap: 1 }}><img src='images/pessoajuridica/icon-wpp.png' />Fale com um<br />Consultor</Button>
+                            </motion.div>
                         </Box>
                     </Box>
                     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 5 }}>
@@ -282,7 +284,7 @@ export const PessoaJuridica = () => {
                             onChange={(e) => setCelular(e.target.value)}
 
                         >
-                            {() => <TextField  label="Celular/WhatsApp do solicitante *"/>}
+                            {() => <TextField label="Celular/WhatsApp do solicitante *" />}
                         </ReactInputMask>
 
                         <TextField label="Quantidade de vidas (beneficiários)"
@@ -349,47 +351,48 @@ export const PessoaJuridica = () => {
                         <Typography sx={{ fontSize: '15px', fontStyle: 'italic', color: '#363636' }}><span style={{ fontWeight: 'bold' }}>LGPD:</span> Ao enviar esta proposta, estou declarando, para todos os fins, ser titular dos dados pessoais inseridos e, desde já, consinto com o tratamento dos mesmos para os fins do contato referido na respectiva mensagem inserida no campo apropriado para tanto.</Typography>
                     </Box>
                     <Box sx={{ display: 'flex', justifyContent: 'center', mt: 3, flexDirection: 'column', alignItems: 'center', gap: 2 }}>
-                <HCaptcha sitekey="99f91ef4-ac33-4816-a78b-0397f8d6a036" onVerify={(token) => handleRecaptchaChange(token)} key={hcaptchaKey} />
+                        <HCaptcha sitekey="99f91ef4-ac33-4816-a78b-0397f8d6a036" onVerify={(token) => handleRecaptchaChange(token)} key={hcaptchaKey} />
 
-                {recaptchaValue ? (
-                  <Button
-                    variant='contained'
-                    type='submit'
-                    sx={{ borderRadius: '5px', width: '260px', height: '50px', position: 'relative' }}
-                    disabled={isLoading} // Desativa o botão quando estiver em processo de envio
-                  >
-                    {isLoading && (
-                      <CircularProgress
-                        size={24}
-                        sx={{
-                          color: '#fff',
-                          position: 'absolute',
-                          top: '50%',
-                          left: '50%',
-                          marginTop: '-12px',
-                          marginLeft: '-12px',
-                        }}
-                      />
-                    )}
-                    {!isLoading ? 'Enviar Proposta' : 'Enviando...'}
-                  </Button>
-                ) : (
-                  <Alert severity="error">Por favor, resolva o CAPTCHA antes de enviar o formulário.</Alert>
-                )}
+                        {recaptchaValue ? (
+                            <Button
+                                variant='contained'
+                                type='submit'
+                                sx={{ borderRadius: '5px', width: '260px', height: '50px', position: 'relative' }}
+                                disabled={isLoading} // Desativa o botão quando estiver em processo de envio
+                            >
+                                {isLoading && (
+                                    <CircularProgress
+                                        size={24}
+                                        sx={{
+                                            bgcolor:'#A60069',
+                                            color: '#fff',
+                                            position: 'absolute',
+                                            top: '50%',
+                                            left: '50%',
+                                            marginTop: '-12px',
+                                            marginLeft: '-12px',
+                                        }}
+                                    />
+                                )}
+                                {!isLoading ? 'Enviar Proposta' : 'Enviando...'}
+                            </Button>
+                        ) : (
+                            <Alert severity="error">Por favor, resolva o CAPTCHA antes de enviar o formulário.</Alert>
+                        )}
 
-              </Box>
+                    </Box>
                 </Box>
                 {envioSucesso ? <Snackbar open={snackbarOpen} autoHideDuration={6000} onClose={handleCloseSnackbar}>
-              <Alert onClose={handleCloseSnackbar} severity="success" sx={{ width: '100%' }}>
-              <Typography sx={{fontWeight:'bold',fontSize:'20px'}}>{snackbarMessage}</Typography> 
-              </Alert>
-            </Snackbar> : (
-              <Snackbar open={snackbarOpen} autoHideDuration={6000} onClose={handleCloseSnackbar}>
-                <Alert onClose={handleCloseSnackbar} severity="error" sx={{ width: '100%' }}>
-                 <Typography sx={{fontWeight:'bold',fontSize:'20px'}}>{snackbarMessage}</Typography> 
-                </Alert>
-              </Snackbar>
-            )}
+                    <Alert onClose={handleCloseSnackbar} severity="success" sx={{ width: '100%' }}>
+                        <Typography sx={{ fontWeight: 'bold', fontSize: '20px' }}>{snackbarMessage}</Typography>
+                    </Alert>
+                </Snackbar> : (
+                    <Snackbar open={snackbarOpen} autoHideDuration={6000} onClose={handleCloseSnackbar}>
+                        <Alert onClose={handleCloseSnackbar} severity="error" sx={{ width: '100%' }}>
+                            <Typography sx={{ fontWeight: 'bold', fontSize: '20px' }}>{snackbarMessage}</Typography>
+                        </Alert>
+                    </Snackbar>
+                )}
 
             </Container>
             <Parcerias />

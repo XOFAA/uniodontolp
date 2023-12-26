@@ -5,6 +5,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import TelegramIcon from '@mui/icons-material/Telegram';
+import { motion } from "framer-motion";
 
 export const Footer = () => {
 
@@ -26,22 +27,33 @@ export const Footer = () => {
             <Box sx={{ width: '120px', height: '30px' }}>
               <img src='/images/logosfooter/codigo_ans.svg' alt="Logo" width={'100%'} height={'100%'} />
             </Box>
+            <Link href="https://gov.br/ans" target="_blank">
             <Box sx={{ width: '200px', height: '60px' }}>
               <img src='/images/logosfooter/botao_ans.svg' alt="Logo" width={'100%'} height={'100%'} />
             </Box>
+            </Link>
+            <Link href="https://transparencyreport.google.com/safe-browsing/search?url=uniodontomanaus.com.br&hl=pt-PT" target="_blank">
             <Box sx={{ width: '120px', height: '60px' }}>
               <img src='/images/logosfooter/google_ssl.svg' alt="Logo" width={'100%'} height={'100%'} />
             </Box>
-
+            </Link>
             <Box sx={{ display: 'flex', flexDirection: 'column' }}>
               <Typography sx={{ fontSize: '18px', fontStyle: 'italic', color: '#fff', textAlign: { xs: 'center', lg: 'unset' } }}> <span style={{ fontWeight: 'bold' }}>Siga</span> a gente!</Typography>
               <Box sx={{ display: 'flex', gap: 1 }}>
+               <Link href="https://facebook.com/uniodontomao" target="_blank">
                 <FacebookIcon sx={{ height: '30px', width: '30px', color: '#fff' }} />
+                </Link> 
+                <Link href="https://instagram.com/uniodontomanaus" target="_blank">
                 <InstagramIcon sx={{ height: '30px', width: '30px', color: '#fff' }} />
+                </Link>
+                <Link href="https://br.linkedin.com/company/uniodontomanaus" target="_blank">
                 <LinkedInIcon sx={{ height: '30px', width: '30px', color: '#fff' }} />
+                </Link>
+               
+                <Link href="https://www.youtube.com/@UniodontoManausPlay" target="_blank">
                 <YouTubeIcon sx={{ height: '30px', width: '30px', color: '#fff' }} />
-                <TelegramIcon sx={{ height: '30px', width: '30px', color: '#fff' }} />
-                <WhatsAppIcon sx={{ height: '30px', width: '30px', color: '#fff' }} />
+                </Link>
+
               </Box>
             </Box>
           </Box>
@@ -60,14 +72,22 @@ export const Footer = () => {
 
 
 
-              <Typography sx={{ fontSize: '18px', fontWeight: 'bold', fontStyle: 'italic', color: '#fff', mt: 3 }}>Ouvidoria<br />
-                Uniodonto Manaus</Typography>
-              <Typography sx={{ fontSize: '22px', color: '#E1FF7B', fontWeight: 'bold', fontStyle: 'italic' }}>(92) 2126-0604</Typography>
+              <Typography sx={{ fontSize: '18px', fontWeight: 'bold', fontStyle: 'italic', color: '#fff', mt: 3 }}>Pronto<br />
+               Atendimento 24h</Typography>
+              <Typography sx={{ fontSize: '22px', color: '#E1FF7B', fontWeight: 'bold', fontStyle: 'italic' }}>(92) 2126-0650</Typography>
             </Box>
             <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: { md: 'center', lg: 'start' } }}>
               <Typography sx={{ fontSize: '18px', fontWeight: 'bold', color: '#fff', fontStyle: 'italic' }}>Canais de atendimento online<br /> e telefônico</Typography>
               <Box sx={{ display: 'flex', justifyContent: { md: 'flex-start', xs: 'center' } }}>
-                <Button variant="contained" sx={{ mt: 1, bgcolor: '#E1FF7B', color: "#363636", fontStyle: 'italic', fontWeight: 'bold', width: '150px', height: '50px', borderRadius: '5px', fontSize: '18px' }}>Acesse aqui</Button>
+              <motion.div
+          whileHover={{ scale: 1.1 }}
+        >
+                <Link href="/atendimento">
+                <Button variant="contained" sx={{  '&:hover': {
+                  bgcolor:'#E1FF7B'
+          },mt: 1, bgcolor: '#E1FF7B', color: "#363636", fontStyle: 'italic', fontWeight: 'bold', width: '150px', height: '50px', borderRadius: '5px', fontSize: '18px' }}>Acesse aqui</Button>
+                </Link>
+                </motion.div>
               </Box>
             </Box>
           </Box>

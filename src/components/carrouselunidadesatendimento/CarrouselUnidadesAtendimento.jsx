@@ -4,7 +4,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import { Box, Container } from '@mui/material';
+import { Box, Container, Link } from '@mui/material';
 import './CarrouselUnidadesAtendimento.css';
 
 export const CarrouselUnidadesAtendimento = ()=>{
@@ -46,24 +46,32 @@ export const CarrouselUnidadesAtendimento = ()=>{
     
     >
       <SwiperSlide>
+      <Link href="https://maps.app.goo.gl/efs9V1yjqCjcZMg76" target='_blank'>
         <Box sx={{width:'260px',height:'510px'}}>
         <img src='images/carrouselunidadedeatenimentos/link1.png'/>
         </Box>
+        </Link>
       </SwiperSlide>
       <SwiperSlide>
+      <Link href="https://maps.app.goo.gl/dL2PeQuRFhvCJkhC8" target='_blank'>
         <Box sx={{width:'260px',height:'510px'}}>
         <img src='images/carrouselunidadedeatenimentos/link2.png'/>
         </Box>
+        </Link>
       </SwiperSlide>
       <SwiperSlide>
+      <Link href='https://wa.me/559221260635' target='_blank'>
         <Box sx={{width:'260px',height:'510px'}}>
         <img src='images/carrouselunidadedeatenimentos/link3.png'/>
         </Box>
+        </Link>
       </SwiperSlide>
       <SwiperSlide>
+      <Link href='https://wa.me/559221260635' target='_blank'>
         <Box sx={{width:'260px',height:'510px'}}>
         <img src='images/carrouselunidadedeatenimentos/link4.png'/>
         </Box>
+        </Link>
       </SwiperSlide>
   
     </Swiper>

@@ -12,7 +12,7 @@ export const SiteMap =()=>{
         <Box sx={{textAlign:'center'}}>
 
     <Typography sx={{fontSize:'28px',fontStyle:'italic',color:'#A60069',fontWeight:'bolder'}}>Sitemap</Typography>
-       <Typography sx={{color:'#363636',fontSize:'20px',mt:2,fontStyle:'italic'}}>O Centro de Proteção de Dados da Uniodonto Manaus é um reforço de nosso compromisso com a segurança dos seus dados, privacidade e práticas seguras na internet. Explore para entender como coletamos, usamos e protegemos suas informações, garantindo seus direitos e uma experiência confiável, bem como se manter seguro no uso da internet. Sua privacidade é nossa prioridade.</Typography>
+       <Typography sx={{color:'#363636',fontSize:'20px',mt:2,fontStyle:'italic'}}>Utilize o sitemap para entender como organizamos as informações, garantindo uma experiência confiável, segura e organizada. Este recurso é projetado para assegurar a acessibilidade de todos que navegam em nosso site.</Typography>
       
        </Box>
        <Faqsitemap/>

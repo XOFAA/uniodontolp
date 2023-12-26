@@ -25,7 +25,7 @@ export const NovidadesBlog = () => {
 
   return (
     <Container>
-      <Box sx={{ my: 5 }}>
+      <Box sx={{ my: 2 }}>
         <Typography
           sx={{
             fontStyle: "italic",
@@ -39,7 +39,7 @@ export const NovidadesBlog = () => {
           >
             Novidades
           </span>{" "}
-          de nossas redes sociais e blog
+         de nossa Newsletter
         </Typography>
       </Box>
 

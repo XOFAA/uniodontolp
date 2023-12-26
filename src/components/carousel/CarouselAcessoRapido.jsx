@@ -21,73 +21,73 @@ export const CarouselAcessoRapido = ()=>{
         
         icon:<img src='images/carrouselmenu/link1.svg'/>,
         texto:'Encontre um Dentista',
-        link:'#'
+        link:'https://seguro.fisistemas.com.br/EncontreSeuDentista/pesquisa;s=311391'
       },
       {
         
         icon:<img src='images/carrouselmenu/link2.svg'/>,
         texto:'Segunda Via de Boleto',
-        link:'#'
+        link:'http://cloud4.fisistemas.com.br/manaus/itau/'
       },
       {
         
         icon:<img src='images/carrouselmenu/link3.svg'/>,
         texto:'Pronto Atendimento',
-        link:'#'
+        link:'/atendimento'
       },
       {
         
         icon:<img src='images/carrouselmenu/link4.svg'/>,
-        texto:'Acesso Portal Pessoa Física',
-        link:'#'
+        texto:'Acesso Beneficiário',
+        link:'https://tiss.uniodontomanaus.com.br/SolucoesExtras/consultaBeneficiarios/InformacaoDados.aspx'
       },
       {
         
         icon:<img src='images/carrouselmenu/link5.svg'/>,
         texto:'Canais de Atendimento',
-        link:'#'
+        link:'https://uniodontomanaus.com.br/atendimento'
       },
       {
         
         icon:<img src='images/carrouselmenu/link6.svg'/>,
         texto:'Renegociar Débitos',
-        link:'#'
+        link:'/renegociacao'
       },
       {
         
         icon:<img src='images/carrouselmenu/link7.svg'/>,
         texto:'Informe de Rendimentos',
-        link:'#'
+        link:'https://tiss.uniodontomanaus.com.br/solucoesextras/irpf/InformacaoDados.aspx'
       },
       {
         
         icon:<img src='images/carrouselmenu/link8.svg'/>,
-        texto:'Happy Clube de Vantagens',
-        link:'#'
+        texto:'Clube de Vantagens',
+        link:'/clube'
       },
       {
         
         icon:<img src='images/carrouselmenu/link9.svg'/>,
         texto:'Guia Nacional Uniodonto',
-        link:'#'
+        link:'https://www.uniodonto.coop.br/encontre-um-dentista/'
       },
       {
         
         icon:<img src='images/carrouselmenu/link10.svg'/>,
         texto:'O Que o Dentista Disse?',
-        link:'#'
+        link:'https://www.uniodonto.coop.br/vocabulario-de-dentista/'
       },
       {
         
         icon:<img src='images/carrouselmenu/link11.svg'/>,
-        texto:'Acesso Portal Pessoa Jurídica',
-        link:'#'
+        texto:'Acesso Empresas',
+        link:'https://tiss.uniodontomanaus.com.br/SAEX/Modulos/Empresa/Paginas/Login.aspx'
       },
       {
         
         icon:<img src='images/carrouselmenu/link12.svg'/>,
         texto:'Outras Uniodontos',
-        link:'#'
+        link:'https://www.uniodonto.coop.br/uniodonto-mais-proxima/'
       }
     ]
     return(
@@ -148,13 +148,13 @@ export const CarouselAcessoRapido = ()=>{
        {acessorapido.map((menu,index)=>(
 
       <SwiperSlide key={index}>
-        <Link href='#'>
+        <Link href={menu.link} target='_blank'>
      
               <Card  sx={{ height: '130px', width: '120px', p: 1, boxShadow: 3, bgcolor: '#A60069', borderRadius: 3 }}>
                 <CardMedia sx={{ textAlign: 'end' }}>
                   {menu.icon}
                 </CardMedia>
-                <Typography sx={{ fontSize: '16px', fontWeight: 'bolder', color: '#fff', mt: 3 }}>{menu.texto}</Typography>
+                <Typography sx={{ fontSize: '16px', fontWeight: 'bolder', color: '#fff', mt: 3,fontStyle:'italic' }}>{menu.texto}</Typography>
               </Card>
               </Link>
             </SwiperSlide>

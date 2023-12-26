@@ -1,5 +1,5 @@
 import AppWithPreloader from "../../components/appwithpreloader/AppWithPreloader"
-import { Box, Container, Typography, useMediaQuery } from '@mui/material';
+import { Box, Container, Link, Typography, useMediaQuery } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -112,7 +112,7 @@ export const Institucional = () => {
                     </Box>
 
                     <Box sx={{ width: ['100%', '48%'], height: '230px', bgcolor: '#A60069', borderRadius: '10px', p: 4, mb: 3 }}>
-                        <Typography sx={{ fontStyle: 'italic', fontSize: '28px', color: '#fff' }}>Nossa <span style={{ fontWeight: 'bold' }}>Missão</span></Typography>
+                        <Typography sx={{ fontStyle: 'italic', fontSize: '28px', color: '#fff' }}>Nossa <span style={{ fontWeight: 'bold' }}>Visão</span></Typography>
                         <Typography sx={{ mt: 2, fontStyle: 'italic', fontSize: '18px', color: '#fff', letterSpacing: '-0.56px' }}>Ser referência em assistência odontológica no Estado do Amazonas.</Typography>
                     </Box>
                 </Box>
@@ -142,20 +142,20 @@ export const Institucional = () => {
                         <Typography sx={{ pt: 6, fontSize: '28px', fontStyle: 'italic', textAlign: 'center', color: '#fff' }}><span style={{ fontWeight: 'bold' }}>Vantagens e Benefícios</span> que oferecemos à sua disposição</Typography>
                     </Box>
                     <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: { xs: 'column', md: 'row' }, gap: 3, mt: 8 }}>
-                        <Box sx={{ backgroundImage: 'url("/images/institucional/link7.svg")', backgroundSize: 'cover', borderRadius: '10px', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', width: { xs: '100%', md: '420px' }, height: { xs: '100%', md: '260px', sm: '260px' } }}>
-
+                        <Box  sx={{ backgroundImage: 'url("/images/institucional/link7.svg")', backgroundSize: 'cover', borderRadius: '10px', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', width: { xs: '100%', md: '420px' }, height: { xs: '100%', md: '260px', sm: '260px' } }}>
                             <Box sx={{ p: 2 }}>
                                 <Typography sx={{ fontStyle: 'italic', fontSize: { xs: '16px', sm: '24px', md: '16px' }, width: { xs: '142px', sm: '350px', md: '142px' }, color: '#fff' }}>Acesso a mais de 200 dentistas localizados em todas as regiões de Manaus, com especialidades desde tratamentos simples até cirurgias mais complexas</Typography>
                             </Box>
 
                         </Box>
+                        
                         <Box sx={{ backgroundImage: 'url("/images/institucional/link8.svg")', backgroundSize: 'cover', borderRadius: '10px', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', width: { xs: '100%', md: '420px' }, height: { xs: '100%', md: '260px', sm: '260px' } }}>
-
                             <Box sx={{ p: 2 }}>
                                 <Typography sx={{ fontStyle: 'italic', fontSize: { xs: '16px', sm: '24px', md: '16px' }, width: { xs: '142px', sm: '350px', md: '142px' }, color: '#fff' }}>Prontuário online de procedimentos, com todo o histórico de tratamentos finalizados disponível na internet e app Uniodonto Manaus</Typography>
                             </Box>
 
                         </Box>
+                    
                         <Box sx={{ backgroundImage: 'url("/images/institucional/link9.svg")', backgroundSize: 'cover', borderRadius: '10px', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', width: { xs: '100%', md: '420px' }, height: { xs: '100%', md: '260px', sm: '260px' } }}>
 
                             <Box sx={{ p: 2 }}>
