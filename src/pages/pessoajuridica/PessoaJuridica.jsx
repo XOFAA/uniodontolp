@@ -236,10 +236,15 @@ export const PessoaJuridica = () => {
                             <Typography sx={{ fontStyle: 'italic', fontSize: '20px', color: '#363636', textAlign: { xs: 'center', md: 'start' } }}>Os planos para empresas e negócios são voltados na modalidade Pessoa Jurídica e estão disponíveis para a partir de 2 vidas.</Typography>
                         </Box>
                         <Box>
-                        <motion.div
-                        whileHover={{ scale: 1.1 }}
-                    >
-                            <Button variant='contained' href='https://linklist.bio/vendasuniomao' target='_pointer' sx={{ borderRadius: '10px', width: '370px', height: '111px', bgcolor: '#107E75', display: { xs: 'none', md: 'flex' }, gap: 1 }}><img src='images/pessoajuridica/icon-wpp.png' />Fale com um<br />Consultor</Button>
+                            <motion.div
+                                whileHover={{ scale: 1.1 }}
+                            >
+                                <Link href='https://linklist.bio/vendasuniomao' target='_blank' variant='contained' sx={{ textDecoration:'none',cursor: 'pointer', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 1, height: { xs: '70px', md: '110px' }, width: '350px', borderRadius: '10px', bgcolor: '#107E75' }}>
+
+                                    <img src='images/pessoajuridica/icon-wpp.png' style={{ width: '46px', height: '48px' }} />
+
+                                    <Typography sx={{ fontSize: '22px', fontStyle: 'italic', color: '#fff' }}>  Fale com um<br /><span style={{ fontWeight: 'bolder' }}>CONSULTOR</span></Typography>
+                                </Link>
                             </motion.div>
                         </Box>
                     </Box>
@@ -364,7 +369,7 @@ export const PessoaJuridica = () => {
                                     <CircularProgress
                                         size={24}
                                         sx={{
-                                            bgcolor:'#A60069',
+                                            bgcolor: '#A60069',
                                             color: '#fff',
                                             position: 'absolute',
                                             top: '50%',

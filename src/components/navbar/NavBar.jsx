@@ -42,19 +42,19 @@ export const NavBar = ({backgroundColor,draweropen,drawerclose}) => {
 
   const options = [
     {
-      page:'Portal Pessoa Física',
+      page:'Acesso Beneficiário',
       link:"https://tiss.uniodontomanaus.com.br/SolucoesExtras/consultaBeneficiarios/InformacaoDados.aspx"
     },
     {
-      page:'Portal Pessoa Jurídica',
+      page:'Acesso Empresas',
       link:"https://tiss.uniodontomanaus.com.br/SAEX/Modulos/Empresa/Paginas/Login.aspx"
     },
     {
-      page:'Portal Cooperado',
+      page:'Acesso Cooperados',
       link:"https://tiss.uniodontomanaus.com.br/SAEX/Modulos/RedeCredenciada/Paginas/Login.aspx"
     },
     {
-      page:'Portal Vendas',
+      page:'Acesso Consultores',
       link:"https://seuplanoonline.fisistemas.com.br/vendedor"
     }
 ];
