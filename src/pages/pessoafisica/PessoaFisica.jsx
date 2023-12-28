@@ -104,7 +104,7 @@ export const PessoaFisica = () => {
           <Typography sx={{ color: '#363636', fontSize: '22px', fontWeight: 'bolder' }}>Quero um plano para</Typography>
           <FormControl sx={{ m: 1, minWidth: 140 }} size="medium">
             <Select value={selecao} onChange={handleChange}>
-              <MenuItem value={1}>Somente eu</MenuItem>
+              <MenuItem value={1}>somente eu</MenuItem>
               {/* Gere os itens de menu para 2 a 10 pessoas dinamicamente */}
               {Array.from({ length: 9 }, (_, index) => (
                 <MenuItem key={index + 2} value={index + 2}>

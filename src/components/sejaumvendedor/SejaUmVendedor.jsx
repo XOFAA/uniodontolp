@@ -1,8 +1,86 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Box,Button,Container, Typography,TextField} from '@mui/material';
-
+import HCaptcha from '@hcaptcha/react-hcaptcha';
+import CircularProgress from '@mui/material/CircularProgress';
+import Api from '../../config/Api';
 export const SejaUmVendedor =()=>{
+  const [isLoading, setIsLoading] = useState(false);
+  const [razaosocial,setRazaoSocial]=useState('')
+  const [nomefantasia,setNomeFantasia]=useState('')
+  const [cnpj,setCnpj]=useState('')
+  const [rua,setRua]=useState('')
+  const [bairro,setBairro]=useState('')
+  const [cidade,setCidade]=useState('')
+  const [estado,setEstado]=useState('')
+  const [nomesolicitante,setNomeSolicitante]=useState('')
+  const [celular,setCelular]=useState('')
+  const [email,setEmail]=useState('')
+  const [especialidade,setEspecialidade]=useState('')
+  const [servicoprestado,setServicoPrestado]=useState('')
+  const [hcaptchaKey, setHcaptchaKey] = useState(new Date().getTime().toString());
+  const [envioSucesso, setEnvioSucesso] = useState(false)
+  const [recaptchaValue, setRecaptchaValue] = useState(null);
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
+  const [snackbarMessage, setSnackbarMessage] = useState('');
+  const [curriculo, setCurriculo] = useState()
+  const handleRecaptchaChange = (value) => {
+    setRecaptchaValue(value);
+  };
+  const handleCloseSnackbar = () => {
+    setSnackbarOpen(false);
+  };
+  const handleSubmit = (e) => {
 
+    setIsLoading(true);
+    e.preventDefault();
+    if (!recaptchaValue) {
+
+      console.error("Por favor, resolva o reCAPTCHA antes de enviar o formulário.");
+      return;
+    }
+
+
+    Api.post('/enviar-email-cv', {
+      razaosocial: razaosocial,
+      nomefantasia: nomefantasia,
+      cnpj: cnpj,
+      rua: rua,
+      bairro: bairro,
+      cidade: cidade,
+      estado: estado,
+      nomesolicitante: nomesolicitante,
+      celular: celular,
+      email: email,
+      especialidade: especialidade,
+      servicoprestado: servicoprestado,
+      recaptchaToken: recaptchaValue,
+      pdfFile: curriculo
+
+    }, {
+      headers: {
+        'Content-Type': 'multipart/form-data'
+      }
+    })
+      .then(function (response) {
+        setSnackbarMessage('Formulário enviado com sucesso!')
+        setSnackbarOpen(true);
+        setRecaptchaValue(null)
+        setEnvioSucesso(true)
+        setHcaptchaKey(new Date().getTime().toString());
+        setCurriculo(null)
+      })
+      .catch(function (error) {
+        setSnackbarMessage('Falha interna, tente novamente mais tarde')
+        setSnackbarOpen(true)
+        setEnvioSucesso(false);
+        setRecaptchaValue(null)
+        setHcaptchaKey(new Date().getTime().toString());
+
+      }).finally(() => {
+        // Configura o estado de loading de volta para false, independentemente do resultado
+        setIsLoading(false);
+      });
+  };
     return(
         <>
         <Box   sx={{height:'100%'}}>
@@ -94,7 +172,7 @@ Se você tem habilidades em vendas, é movido por desafios e deseja uma carreira
         
 
         <TextField
-        label='Ou se preferir, você pode incluir algum arquivo, como ceritificados e outros documentos (jpg, jpeg, png, pdf, doc e docx)'
+        label='Ou se preferir, você pode incluir algum arquivo, como ceritificados e outros documentos (pdf)'
         required
         type='file'
           InputLabelProps={{shrink:true}}

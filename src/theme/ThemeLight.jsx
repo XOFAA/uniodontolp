@@ -11,6 +11,14 @@ export const ThemeLight = createTheme({
   },
   typography: {
     fontFamily: 'Georama, sans-serif',
-   
+  },
+  overrides: {
+    MuiCssBaseline: {
+      '@global': {
+        '*': {
+          fontStyle: 'italic',
+        },
+      },
+    },
   },
 });

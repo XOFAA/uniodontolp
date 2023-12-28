@@ -1,4 +1,4 @@
-import { Accordion, AccordionDetails, AccordionSummary, Box, Container, Typography } from "@mui/material"
+import { Accordion, AccordionDetails, AccordionSummary, Box, Container, Link, Typography } from "@mui/material"
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 export const Faqlgpd=()=>{
     return(
@@ -32,7 +32,7 @@ export const Faqlgpd=()=>{
                     </AccordionSummary>
                     <AccordionDetails>
                         <Typography sx={{ fontSize: '20px', fontStyle: 'italic' }}>
-                        A LGPD impõe que a Controladora, no caso a UNIODONTO, trate os dados pessoais do titular e de seus dependentes de acordo com os princípios e finalidades descritos no texto, assegurando o respeito à privacidade e à legislação pertinente.
+                        A LGPD impõe que a Controladora, no caso a UNIODONTO MANAUS, trate os dados pessoais do titular e de seus dependentes de acordo com os princípios e finalidades descritos no texto, assegurando o respeito à privacidade e à legislação pertinente.
                         </Typography>
                     </AccordionDetails>
                 </Accordion>
@@ -74,7 +74,7 @@ export const Faqlgpd=()=>{
                     </AccordionSummary>
                     <AccordionDetails>
                         <Typography sx={{ fontSize: '20px', fontStyle: 'italic' }}>
-                        Dado pessoal é toda informação relacionada à identidade do titular e de seus dependentes, como nome completo, data de nascimento, números de documentos, endereço, entre outros, conforme descrito no texto.
+                        Dado pessoal é toda informação relacionada à identidade do titular e de seus dependentes, como nome completo, data de nascimento, números de documentos, endereço, entre outros.
                         </Typography>
                     </AccordionDetails>
                 </Accordion>
@@ -159,7 +159,7 @@ export const Faqlgpd=()=>{
                     </AccordionSummary>
                     <AccordionDetails>
                         <Typography sx={{ fontSize: '20px', fontStyle: 'italic' }}>
-                        O titular pode solicitar informações à UNIODONTO MANAUS, denominada Controladora, possivelmente por e-mail ou correspondência, conforme mencionado em diversos parágrafos.
+                        O titular pode solicitar informações à UNIODONTO MANAUS, denominada Controladora, <Link href="https://uniodontoservices.com.br/LGPD/canal-atendimento-lgpd?codigo=37" target="_blank"> através da Central de Atendimento LGPD</Link> .
                         </Typography>
                     </AccordionDetails>
                 </Accordion>
@@ -173,7 +173,7 @@ export const Faqlgpd=()=>{
                     </AccordionSummary>
                     <AccordionDetails>
                         <Typography sx={{ fontSize: '20px', fontStyle: 'italic' }}>
-                        O titular pode entrar em contato com encarregado de dados (DPO) da UNIODONTO MANAUS, denominada Controladora, por e-mail ou correspondência para solicitar informações ou revogar o consentimento.
+                        O titular pode entrar em contato com a encarregada de dados (DPO), Geisa Mayara da Silva Martins, através do email <Link href="mailto:dpo@uniodontomao.com.br">dpo@uniodontomao.com.br</Link>, para solicitar informações ou revogar o consentimento.
                         </Typography>
                     </AccordionDetails>
                 </Accordion>

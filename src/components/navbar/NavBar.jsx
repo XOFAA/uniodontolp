@@ -75,6 +75,7 @@ export const NavBar = ({backgroundColor,draweropen,drawerclose}) => {
 
   const handleDrawerServicos = () => {
     setDrawerServicos(true)
+    
   }
   
   const handleOpenMobileMenu = (event) => {

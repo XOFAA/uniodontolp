@@ -58,12 +58,12 @@ export const Atendimento = () => {
                                     </Box>
                                     <Typography sx={{ fontSize: '16px', fontStyle: 'italic', color: '#363636', mt: 2 }}>Estamos também no WhatsApp para atender nos mais diversos assuntos que você precisar solucionar.</Typography>
                                     <Box sx={{ display: 'flex', gap: 4, flexDirection: { md: 'row', xs: 'column' }, alignItems: { xs: 'center', md: 'start' }, my: 2 }}>
-                                        <Button variant="contained" href="https://linklist.bio/vendasuniomao" target="_blank" sx={{ width: '200px', height: '40px', bgcolor: '#107E75', fontWeight: 'bolder' }}>FAÇA SEU PLANO</Button>
-                                        <Button variant="contained" href='https://wa.me/559221260629' target='_blank' sx={{ width: '200px', height: '40px', bgcolor: '#107E75', fontWeight: 'bolder' }}>RELACIONAMENTO</Button>
-                                        <Button variant="contained" href="https://wa.me/559221260625" target='_blank' sx={{ width: '200px', height: '40px', bgcolor: '#107E75', fontWeight: 'bolder' }}>RENEGOCIAÇÃO</Button>
-                                        <Button variant="contained" href='https://wa.me/559221260604' target='_balnk' sx={{ width: '200px', height: '40px', bgcolor: '#107E75', fontWeight: 'bolder' }}>SAB</Button>
+                                        <Button variant="contained" href="https://linklist.bio/vendasuniomao" target="_blank" sx={{ width: '200px', height: '40px', bgcolor: '#107E75', fontWeight: 'bolder',fontStyle:'italic' }}>FAÇA SEU PLANO</Button>
+                                        <Button variant="contained" href='https://wa.me/5592981428155' target='_blank' sx={{ width: '200px', height: '40px', bgcolor: '#107E75', fontWeight: 'bolder',fontStyle:'italic' }}>RELACIONAMENTO</Button>
+                                        <Button variant="contained" href="https://wa.me/559221260625" target='_blank' sx={{ width: '200px', height: '40px', bgcolor: '#107E75', fontWeight: 'bolder',fontStyle:'italic' }}>RENEGOCIAÇÃO</Button>
+                                        <Button variant="contained" href='https://wa.me/5592982320088' target='_balnk' sx={{ width: '200px', height: '40px', bgcolor: '#107E75', fontWeight: 'bolder',fontStyle:'italic' }}>SAB</Button>
 
-                                    </Box>
+                                    </Box> 
                                     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 3 }}>
                                     <Typography sx={{ fontSize: '20px', fontWeight: 'bold', fontStyle: 'italic', color: '#363636' }}>
                                             Atendimento via E-Mail
@@ -135,10 +135,10 @@ export const Atendimento = () => {
                                     </Box>
                                     <Typography sx={{ fontSize: '16px', fontStyle: 'italic', color: '#363636', mt: 2 }}>Estamos também no WhatsApp para atender nos mais diversos assuntos que você precisar solucionar.</Typography>
                                     <Box sx={{ display: 'flex', gap: 4, flexDirection: { md: 'row', xs: 'column' }, alignItems: { xs: 'center', md: 'start' }, my: 2 }}>
-                                        <Button variant="contained" href="https://linklist.bio/vendasuniomao" target="_blank" sx={{ width: '200px', height: '40px', bgcolor: '#107E75', fontWeight: 'bolder' }}>FAÇA SEU PLANO</Button>
-                                        <Button variant="contained" href='https://wa.me/559221260629' target='_blank' sx={{ width: '200px', height: '40px', bgcolor: '#107E75', fontWeight: 'bolder' }}>RELACIONAMENTO</Button>
-
-                                        <Button variant="contained" href='https://wa.me/559221260604' target='_balnk' sx={{ width: '200px', height: '40px', bgcolor: '#107E75', fontWeight: 'bolder' }}>SAB</Button>
+                                        <Button variant="contained" href="https://linklist.bio/vendasuniomao" target="_blank" sx={{ width: '200px', height: '40px', bgcolor: '#107E75', fontWeight: 'bolder',fontStyle:'italic' }}>FAÇA SEU PLANO</Button>
+                                        <Button variant="contained" href='https://wa.me/5592981428155' target='_blank' sx={{ width: '200px', height: '40px', bgcolor: '#107E75', fontWeight: 'bolder',fontStyle:'italic' }}>RELACIONAMENTO</Button>
+                                      
+                                        <Button variant="contained" href='https://wa.me/5592982320088' target='_balnk' sx={{ width: '200px', height: '40px', bgcolor: '#107E75', fontWeight: 'bolder',fontStyle:'italic' }}>SAB</Button>
                                     </Box>
                                     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 3 }}>
                                         <Typography sx={{ fontSize: '20px', fontWeight: 'bold', fontStyle: 'italic', color: '#363636' }}>
@@ -199,7 +199,7 @@ export const Atendimento = () => {
                                     </Box>
                                     <Typography sx={{ fontSize: '16px', fontStyle: 'italic', color: '#363636', mt: 2 }}>Estamos também no WhatsApp para atender nos mais diversos assuntos que você precisar solucionar.</Typography>
                                     <Box sx={{ display: 'flex', gap: 4, flexDirection: { md: 'row', xs: 'column' }, alignItems: { xs: 'center', md: 'start' }, my: 2 }}>
-                                        <Button variant="contained" href="https://wa.me/559221260629" target="_blank" sx={{ width: '200px', height: '40px', bgcolor: '#107E75', fontWeight: 'bolder' }}>DAC/Intercâmbio</Button>
+                                        <Button variant="contained" href="https://wa.me/559221260629" target="_blank" sx={{ width: '200px', height: '40px', bgcolor: '#107E75', fontWeight: 'bolder',fontStyle:'italic' }}>DAC/Intercâmbio</Button>
 
                                     </Box>
                                     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 3 }}>

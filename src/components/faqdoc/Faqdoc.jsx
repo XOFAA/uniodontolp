@@ -60,7 +60,7 @@ export const Faqdoc = () => {
                     </AccordionSummary>
                     <AccordionDetails>
                         <Typography sx={{ fontSize: '20px', fontStyle: 'italic' }}>
-                           <Link href="https://drive.google.com/drive/folders/16_ijFo6BdWlmVl26phB9fwfEVHRPpx99?usp=sharing">Acesse aqui</Link>
+                           <Link href="https://drive.google.com/drive/folders/16_ijFo6BdWlmVl26phB9fwfEVHRPpx99?usp=sharing" target="_blank">Acesse aqui</Link>
                         </Typography>
                     </AccordionDetails>
                 </Accordion>

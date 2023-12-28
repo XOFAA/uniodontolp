@@ -88,11 +88,17 @@ export const SejaNossoColaborador = () => {
       .catch(function (error) {
         setSnackbarMessage('Falha interna, tente novamente mais tarde')
         setSnackbarOpen(true)
-        console.error(error);
+        setNomeCompleto('')
+        setCelular('')
+        setEmail('')
+        setFormacao('')
+        setEspecializacao('')
+        setAtuacao('')
+        setResumo('')
         setEnvioSucesso(false);
         setRecaptchaValue(null)
         setHcaptchaKey(new Date().getTime().toString());
-        console.error("errodasdad", error);
+      
       }).finally(() => {
         // Configura o estado de loading de volta para false, independentemente do resultado
         setIsLoading(false);
@@ -252,7 +258,7 @@ export const SejaNossoColaborador = () => {
                 onChange={(e) => setResumo(e.target.value)}
               />
               <TextField
-                label='Inclua em anexo seu currículo para verificação (jpg, jpeg, png, pdf, doc e docx)'
+                label='Inclua em anexo seu currículo para verificação (pdf)'
                 name='pdfFile'  // Verifique se o nome do campo está correto
                 type='file'
                 onChange={(e) => setCurriculo(e.target.files[0])}

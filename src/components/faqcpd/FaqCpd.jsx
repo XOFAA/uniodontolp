@@ -155,7 +155,7 @@ export const FaqCpd = () => {
                         aria-controls="panel2a-content"
                         id="panel2a-header"
                     >
-                        <Typography sx={{ fontSize: '20px', fontStyle: 'italic' }}>Segurança em E-mails Corporativos
+                        <Typography sx={{ fontSize: '20px', fontStyle: 'italic' }}>Segurança em e-mails corporativos
                         </Typography>
                     </AccordionSummary>
                     <AccordionDetails>
@@ -171,7 +171,7 @@ export const FaqCpd = () => {
                         aria-controls="panel2a-content"
                         id="panel2a-header"
                     >
-                        <Typography sx={{ fontSize: '20px', fontStyle: 'italic' }}>Roubo de Identidade
+                        <Typography sx={{ fontSize: '20px', fontStyle: 'italic' }}>Roubo de identidade
                         </Typography>
                     </AccordionSummary>
                     <AccordionDetails>

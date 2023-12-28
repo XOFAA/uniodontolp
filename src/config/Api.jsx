@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const Api = axios.create({
-  baseURL: 'https://api.uniodonto.gdelivery.app.br/', 
+  baseURL: 'http://localhost:3001', 
 });
 
 export default Api;

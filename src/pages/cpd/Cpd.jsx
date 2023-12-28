@@ -1,4 +1,4 @@
-import { Box, Container, Link, Typography } from "@mui/material"
+import { Box, Container, Divider, Link, Typography } from "@mui/material"
 import { NavBar } from "../../components/navbar/NavBar"
 import AppWithPreloader from "../../components/appwithpreloader/AppWithPreloader"
 import { Footer } from "../../components/footer/Footer"
@@ -65,9 +65,18 @@ export const Cpd = () => {
                 </Box>
                 <Box sx={{display:'flex',alignItems:'center',justifyContent:'center',my:5}}>
                 <Typography sx={{fontSize:'28px',color:'#A60069'}}><span style={{fontWeight:'bold'}}>Conteúdos</span> úteis para sua segurança na internet</Typography>
+                
                 </Box>
                 <Container>
-                <SwiperCpd/>
+                <Box sx={{display:'flex',justifyContent:'space-between'}}>
+                <Link sx={{fontSize:'21px',fontWeight:'bold',color:'#363636',textDecoration:'none'}}>Internet Segura</Link>
+                <Divider orientation="vertical" flexItem/>
+                <Link sx={{fontSize:'21px',fontWeight:'bold',color:'#363636',textDecoration:'none'}}>Antispam</Link>
+                <Divider orientation="vertical" flexItem/>
+                <Link sx={{fontSize:'21px',fontWeight:'bold',color:'#363636',textDecoration:'none'}}> Cidadão na Rede</Link>
+                <Divider orientation="vertical" flexItem />
+                <Link sx={{fontSize:'21px',fontWeight:'bold',color:'#363636',textDecoration:'none'}}>Cartilha de Segurança para Internet</Link>
+                </Box>
                 <FaqCpd/>
                 </Container>
             
