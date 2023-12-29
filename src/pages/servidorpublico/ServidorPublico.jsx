@@ -126,9 +126,9 @@ export const ServidorPublico = () => {
             </Box>
           </Box>
           <Box sx={{ display: 'flex', mt: 5,flexDirection:{xs:'column',md:'unset',alignItems:'center'}}}>
-          <Typography sx={{ fontSize: '28px', fontStyle: 'italic', color: '#A60069', textAlign: 'center' }}><span style={{ fontWeight: 'bold' }}>Para saber mais informações</span>, fale com um consultor ou clique no botão ao lado</Typography>
+          <Typography sx={{ fontSize: '28px', fontStyle: 'italic', color: '#A60069', textAlign: 'center' }}><span style={{ fontWeight: 'bold' }}>Para saber mais informações</span>, fale com um consultor ou clique no botão</Typography>
 
-          <Box variant='contained' sx={{cursor:'pointer',display:'flex',justifyContent:'center',alignItems:'center',gap:1,height:{xs:'70px',md:'110px'},width: '350px', borderRadius: '10px', bgcolor: '#107E75' }}>
+          <Box variant='contained' sx={{cursor:'pointer',display:'flex',justifyContent:'center',alignItems:'center',gap:1,height:{xs:'70px',md:'110px'},width: '350px', borderRadius: '10px', bgcolor: '#107E75',mt:{xs:2}}}>
 
             <img src='images/pessoajuridica/icon-wpp.png' style={{width:'46px',height:'48px'}} />
 

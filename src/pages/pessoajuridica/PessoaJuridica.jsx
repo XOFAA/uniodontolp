@@ -225,21 +225,21 @@ export const PessoaJuridica = () => {
 
                     <Box sx={{ mt: 2, display: 'flex', flexDirection: 'column', gap: 1 }}>
                         <Typography sx={{ fontSize: { xs: '22px', md: '28px' }, fontStyle: 'italic', color: '#A60069', textAlign: 'center' }}>De MEI a grandes empresas, <span style={{ fontStyle: 'italic', fontWeight: 'bold' }}>temos o plano ideal para você</span></Typography>
-                        <Typography sx={{ fontSize: { xs: '14px', md: '20px' }, fontStyle: 'italic', color: '#323232', textAlign: 'center' }}>Solicite uma proposta, preenchendo o formulário abaixo ou clique no botão para falar com um consultor</Typography>
+                        <Typography sx={{ fontSize: { xs: '18px', md: '20px' }, fontStyle: 'italic', color: '#323232', textAlign: 'center' }}>Solicite uma proposta, preenchendo o formulário abaixo ou clique no botão para falar com um consultor</Typography>
                         <Typography sx={{ fontSize: { xs: '14px', md: '16px' }, fontStyle: 'italic', color: '#323232', textAlign: 'center' }}>Nossos consultores ficam disponíveis 7h30 às 18h (horário Manaus), exceto sábados, domingos e feriados nacionais (sem expediente).</Typography>
 
 
                     </Box>
-                    <Box sx={{ display: 'flex', gap: 2, textAlign: { xs: 'center', md: 'initial' }, mt: 10 }}>
+                    <Box sx={{ display: 'flex', gap: 2, flexDirection:{xs:'column',md:'unset'},alignItems:{xs:'center',md:'unset'},textAlign: { xs: 'center', md: 'initial' }, mt: 5 }}>
                         <Box>
-                            <Typography sx={{ fontSize: '28px', fontStyle: 'italic', color: '#A60069', textAlign: { xs: 'center', md: 'start' } }}><span style={{ fontWeight: 'bold' }}>Solicite</span> uma Proposta</Typography>
-                            <Typography sx={{ fontStyle: 'italic', fontSize: '20px', color: '#363636', textAlign: { xs: 'center', md: 'start' } }}>Os planos para empresas e negócios são voltados na modalidade Pessoa Jurídica e estão disponíveis para a partir de 2 vidas.</Typography>
+                            <Typography sx={{ fontSize: '22px', fontStyle: 'italic', color: '#A60069', textAlign: { xs: 'center', md: 'start' } }}><span style={{ fontWeight: 'bold' }}>Solicite</span> uma Proposta</Typography>
+                            <Typography sx={{ fontStyle: 'italic', fontSize: '18px', color: '#363636', textAlign: { xs: 'center', md: 'start' } }}>Os planos para empresas e negócios são voltados na modalidade Pessoa Jurídica e estão disponíveis para a partir de 2 vidas.</Typography>
                         </Box>
                         <Box>
                             <motion.div
                                 whileHover={{ scale: 1.1 }}
                             >
-                                <Link href='https://linklist.bio/vendasuniomao' target='_blank' variant='contained' sx={{ textDecoration:'none',cursor: 'pointer', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 1, height: { xs: '70px', md: '110px' }, width: '350px', borderRadius: '10px', bgcolor: '#107E75' }}>
+                                <Link href='https://linklist.bio/vendasuniomao' target='_blank' variant='contained' sx={{textDecoration:'none',cursor: 'pointer', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 1, height: { xs: '70px', md: '110px' }, width: '350px', borderRadius: '10px', bgcolor: '#107E75' }}>
 
                                     <img src='images/pessoajuridica/icon-wpp.png' style={{ width: '46px', height: '48px' }} />
 
@@ -369,8 +369,8 @@ export const PessoaJuridica = () => {
                                     <CircularProgress
                                         size={24}
                                         sx={{
-                                            bgcolor: '#A60069',
-                                            color: '#fff',
+                                           
+                                            color: '#A60069',
                                             position: 'absolute',
                                             top: '50%',
                                             left: '50%',

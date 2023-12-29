@@ -2,11 +2,11 @@ import { Accordion, AccordionDetails, AccordionSummary, Box, Container, Typograp
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 export const Faqpa=()=>{
     return(
-        <Box sx={{ my:5}}>
+        <Box sx={{ my:2}}>
             <Container>
 
             <Box sx={{ display: 'flex', justifyContent: 'center'}}>
-                            <Typography sx={{ color: '#A60069', fontSize: '28px', fontStyle: 'italic', my: 5 }}><span style={{ fontWeight: 'bold' }}>Dúvidas</span> Frequentes</Typography>
+                            <Typography sx={{ color: '#A60069', fontSize: '28px', fontStyle: 'italic',mt:2,mb:5 }}><span style={{ fontWeight: 'bold' }}>Dúvidas</span> Frequentes</Typography>
                         </Box>
 
          

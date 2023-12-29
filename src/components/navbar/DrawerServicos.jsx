@@ -79,13 +79,13 @@ export const DrawerServicos = ({ onOpenDrawer, onCloseDrawer }) => {
                   Renegociar Débitos
                 </Link>
 
-                <Typography sx={{ fontWeight: 'bold', fontStyle: 'italic', fontSize: '18px', color: '#A60069', mt: 5 }}>Para Servidor Público</Typography>
-                <Link href='/servidorpublico' sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px', fontStyle: 'italic', mt: 3 }}>
+                <Typography sx={{ fontWeight: 'bold', fontStyle: 'italic', fontSize: '18px', color: '#A60069', mt: 3 }}>Para Servidor Público</Typography>
+                <Link href='/servidorpublico' sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px', fontStyle: 'italic' }}>
                   Planos Disponíveis
                 </Link>
 
-                <Typography sx={{ fontWeight: 'bold', fontStyle: 'italic', fontSize: '18px', color: '#A60069', mt: 5 }}>Para Consultores</Typography>
-                <Link href='https://seuplanoonline.fisistemas.com.br/vendedor' target='_blank' sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px', fontStyle: 'italic', mt: 3 }}>
+                <Typography sx={{ fontWeight: 'bold', fontStyle: 'italic', fontSize: '18px', color: '#A60069', mt: 3 }}>Para Consultores</Typography>
+                <Link href='https://seuplanoonline.fisistemas.com.br/vendedor' target='_blank' sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px', fontStyle: 'italic' }}>
                   Acesso Consultores
                 </Link>
 
@@ -106,7 +106,7 @@ export const DrawerServicos = ({ onOpenDrawer, onCloseDrawer }) => {
                 <Box sx={{ mt: 3 }}>
                   <Typography sx={{ fontWeight: 'bold', fontStyle: 'italic', fontSize: '18px', color: '#A60069' }}>Outros Links</Typography>
                 </Box>
-                <Box sx={{ mt: 1, display: 'flex', flexDirection: 'column', gap: 2 }}>
+                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
                   <Link href="https://www.uniodonto.coop.br/uniodonto-mais-proxima/" target='_blank' sx={{ textDecoration: 'none', color: '#373737', fontSize: '16px', fontStyle: 'italic' }}>
                     Outras Uniodontos
                   </Link>

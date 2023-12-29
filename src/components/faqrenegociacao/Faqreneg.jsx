@@ -2,7 +2,7 @@ import { Accordion, AccordionDetails, AccordionSummary, Box, Container, Typograp
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 export const Faqreneg=()=>{
     return(
-        <Box sx={{ my:5}}>
+        <Box sx={{ my:2}}>
             <Container>
 
             <Box sx={{ display: 'flex', justifyContent: 'center'}}>

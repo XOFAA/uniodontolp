@@ -1,5 +1,10 @@
 /* styles.css */
 * {
-    font-style: italic;
-  }
-  
+  font-style: italic;
+}
+
+
+.swiper-button-next,
+.swiper-button-prev{
+  font-style: normal ;
+}

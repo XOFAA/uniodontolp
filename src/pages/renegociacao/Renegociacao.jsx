@@ -55,14 +55,34 @@ export const Renegociacao = () => {
                 )}
 
                 {/* Mobile Images */}
-                {isMobile && (
-                    <>
-                        <SwiperSlide>
-                            <img src="images/servidorpublico/foto1.png" style={{ width: '100%', height: '100%' }} />
-                        </SwiperSlide>
-                        {/* Add more slides as needed */}
-                    </>
-                )}
+          {isMobile && (
+            <>
+              <SwiperSlide>
+                <Box sx={{
+                  position: 'relative',
+                  width: '100%',
+                  height: '100%'
+                }}>
+                  <img
+                   src="images/topslide/mobile_foto1.png"
+                    style={{ width: '100%', height: '100%' }}
+                  />
+                  <Box
+                    sx={{
+                      position: 'absolute',
+                      top: '90%',
+                      left: '50%',
+                      transform: 'translate(-50%, -50%)',
+                      width: '60%'
+                    }}
+                  >
+                    <Typography sx={{ fontStyle: 'italic', fontSize: '7vw', textAlign: 'center', color: '#A60069', width: '100%' }}><span style={{ fontWeight: 'bold' }}>Renegocie</span> seus débitos</Typography>
+                  </Box>
+                </Box>
+              </SwiperSlide>
+              {/* Add more slides as needed */}
+            </>
+          )}
             </Swiper>
             <Box sx={{ height: '420px', background: 'linear-gradient(to bottom, #A60069 50%, #f1f1f1 50%)'}}>
                 <Container>

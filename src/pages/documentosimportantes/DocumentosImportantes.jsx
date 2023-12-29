@@ -8,7 +8,7 @@ export const DocumentosImportantes =()=>{
         <Box>
 
      
-        <Container sx={{mt:20}}>
+        <Container sx={{mt:{xs:15,md:20}}}>
         <NavBar/>
 
         <Box sx={{textAlign:'center'}}>

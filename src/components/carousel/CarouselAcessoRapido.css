@@ -27,5 +27,6 @@
 .swiper-button-prev {
   --swiper-navigation-size: 20px;
   color: #363636;
-  font-weight: bolder; /* Defina o tamanho desejado para as setinhas */
+  font-weight: bolder;
+  font-size: normal; /* Defina o tamanho desejado para as setinhas */
 }

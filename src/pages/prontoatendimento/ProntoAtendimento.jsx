@@ -158,7 +158,7 @@ export const ProntoAtendimento = () => {
             </motion.div>
           </Box>
           <Box>
-            <Typography sx={{ fontSize: '28px', color: '#363636', my: 5, fontStyle: 'italic', textAlign: 'center' }}>Acesse nosso Pronto Atendimento<span style={{ fontWeight: 'bolder' }}> através da entrada do
+            <Typography sx={{ fontSize: '28px', color: '#363636', mt:5, fontStyle: 'italic', textAlign: 'center' }}>Acesse nosso Pronto Atendimento<span style={{ fontWeight: 'bolder' }}> através da entrada do
               Hospital Beneficente Português pela Rua 24 de Maio - Centro</span></Typography>
           </Box>
         </Container>

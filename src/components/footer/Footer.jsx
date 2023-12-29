@@ -75,7 +75,7 @@ export const Footer = () => {
               <Typography sx={{ fontSize: '22px', color: '#E1FF7B', fontWeight: 'bold', fontStyle: 'italic' }}>(92) 2126-0650</Typography>
             </Box>
             <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: { md: 'center', lg: 'start' } }}>
-              <Typography sx={{ fontSize: '18px', fontWeight: 'bold', color: '#fff', fontStyle: 'italic' }}>Canais de atendimento online<br /> e telefônico</Typography>
+              <Typography sx={{ fontSize: '18px', fontWeight: 'bold', color: '#fff', fontStyle: 'italic',mt:3 }}>Canais de atendimento online<br /> e telefônico</Typography>
               <Box sx={{ display: 'flex', justifyContent: { md: 'flex-start', xs: 'center' } }}>
                 <motion.div
                   whileHover={{ scale: 1.1 }}
@@ -132,7 +132,7 @@ export const Footer = () => {
 
           {/* Coluna 2 */}
           <Grid item xs={12} md={3}>
-            <Typography sx={{ fontWeight: 'bold', fontStyle: 'italic', fontSize: '18px', color: '#E1FF7B', textAlign: { xs: 'center', md: 'unset' } }}>Para Empresas</Typography>
+            <Typography sx={{ mt:3,fontWeight: 'bold', fontStyle: 'italic', fontSize: '18px', color: '#E1FF7B', textAlign: { xs: 'center', md: 'unset' } }}>Para Empresas</Typography>
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 2, alignItems: { xs: 'center', md: 'unset' } }}>
             <Link href="https://tiss.uniodontomanaus.com.br/SAEX/Modulos/Empresa/Paginas/Login.aspx" target='_blank' sx={{ textDecoration: 'none', color: '#fff', fontSize: '16px',fontStyle:'italic' }}>
                   Acesso Empresas
@@ -145,7 +145,7 @@ export const Footer = () => {
                   Renegociar Débitos
                 </Link>
 
-                <Typography sx={{ fontWeight: 'bold', fontStyle: 'italic', fontSize: '18px', color: '#E1FF7B', mt: 5 }}>Para Servidor Público</Typography>
+                <Typography sx={{ fontWeight: 'bold', fontStyle: 'italic', fontSize: '18px', color: '#E1FF7B', mt: 3 }}>Para Servidor Público</Typography>
                 <Link href='/servidorpublico'  sx={{ textDecoration: 'none', color: '#fff', fontSize: '16px',fontStyle:'italic', }}>
                  Planos Disponíveis
                 </Link>
@@ -161,7 +161,7 @@ export const Footer = () => {
 
           {/* Coluna 3 */}
           <Grid item xs={12} md={3}>
-            <Typography sx={{ fontWeight: 'bold', fontStyle: 'italic', fontSize: '18px', color: '#E1FF7B', textAlign: { xs: 'center', md: 'unset' } }}>Para Cooperados</Typography>
+            <Typography sx={{ fontWeight: 'bold', fontStyle: 'italic', fontSize: '18px', color: '#E1FF7B', textAlign: { xs: 'center', md: 'unset' },mt:3 }}>Para Cooperados</Typography>
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 2, alignItems: { xs: 'center', md: 'unset' } }}>
             <Link href="https://tiss.uniodontomanaus.com.br/SAEX/Modulos/Singular/Paginas/Login.aspx" target='_blank' sx={{ textDecoration: 'none', color: '#fff', fontSize: '16px',fontStyle:'italic' }}>
                   Acesso Cooperados
@@ -194,7 +194,7 @@ export const Footer = () => {
 
           {/* Coluna 4 */}
           <Grid item xs={12} md={3}>
-            <Typography sx={{ fontWeight: 'bold', fontStyle: 'italic', fontSize: '18px', color: '#E1FF7B', textAlign: { xs: 'center', md: 'unset' } }}>Sobre Uniodonto Manaus</Typography>
+            <Typography sx={{ mt:3,fontWeight: 'bold', fontStyle: 'italic', fontSize: '18px', color: '#E1FF7B', textAlign: { xs: 'center', md: 'unset' } }}>Sobre Uniodonto Manaus</Typography>
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 2, alignItems: { xs: 'center', md: 'unset' }, fontSize: '18px' }}>
             <Link href="/institucional" sx={{ textDecoration: 'none', color:'#fff', fontSize: '16px',fontStyle:'italic' }}>
                   Instituicional
@@ -234,10 +234,10 @@ export const Footer = () => {
 
 
 
-        <Box sx={{display: 'flex', gap: { xs: 1, md: 5 }, mt: 5, alignItems: 'center', justifyContent: { xs: 'center',md:'space-between' }, flexDirection: { sm: 'column', md: 'row' }, flexWrap: { xs: 'wrap', md: 'unset' } }}>
-            <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: { xs: 1, md: 2 }, alignItems: 'center' }}>
+        <Box sx={{display: 'flex', gap: { xs: 1, md: 5 }, mt: 5,justifyContent:'space-between', alignItems: 'center', flexDirection: { xs: 'column', md: 'row' }}}>
+            <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: { xs: 3, md: 2 }, alignItems: 'center' }}>
             <Typography sx={{ textAlign: 'center', fontSize: { xs: '22px', md: '20px' }, fontStyle: 'italic', color: '#fff' }}><span style={{ fontWeight: 'bold' }}>Baixe</span> o app Uniodonto Manaus</Typography>
-
+            
             <Link href="https://onelink.to/appuniomao" sx={{height:'50px'}}>
             
                 <img src="images/downloadapp/botaogoogleplay.png" width={'100%'} height={'100%'} />
@@ -248,13 +248,16 @@ export const Footer = () => {
             
             </Link>
           </Box>
-          <Link href="/cpd" sx={{ color: '#E1FF7B', fontWeight: 'bold', fontStyle: 'italic', fontSize: '16px', }}>
+          <Box>
+            
+          </Box>
+          <Link href="/cpd" sx={{ color: '#E1FF7B', fontWeight: 'bold', fontStyle: 'italic', fontSize: '16px',mt:3}}>
                   Centro de Proteção de Dados
                 </Link>
-                <Link href="/lgpd" sx={{ color: '#E1FF7B', fontWeight: 'bold', fontStyle: 'italic', fontSize: '16px' }}>
+                <Link href="/lgpd" sx={{ color: '#E1FF7B', fontWeight: 'bold', fontStyle: 'italic', fontSize: '16px',mt:3}}>
                   LGPD
                 </Link>
-                <Link href="/sitemap" sx={{ color: '#E1FF7B', fontWeight: 'bold', fontStyle: 'italic', fontSize: '16px' }}>
+                <Link href="/sitemap" sx={{ color: '#E1FF7B', fontWeight: 'bold', fontStyle: 'italic', fontSize: '16px',mt:3}}>
                   Sitemap
                 </Link>
 

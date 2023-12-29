@@ -80,14 +80,9 @@ export const SejaNossoColaborador = () => {
       .then(function (response) {
         setSnackbarMessage('Formulário enviado com sucesso!')
         setSnackbarOpen(true);
-        console.log(response)
         setRecaptchaValue(null)
         setEnvioSucesso(true)
         setHcaptchaKey(new Date().getTime().toString());
-      })
-      .catch(function (error) {
-        setSnackbarMessage('Falha interna, tente novamente mais tarde')
-        setSnackbarOpen(true)
         setNomeCompleto('')
         setCelular('')
         setEmail('')
@@ -95,6 +90,11 @@ export const SejaNossoColaborador = () => {
         setEspecializacao('')
         setAtuacao('')
         setResumo('')
+        setCurriculo(null)
+      })
+      .catch(function (error) {
+        setSnackbarMessage('Falha interna, tente novamente mais tarde')
+        setSnackbarOpen(true)
         setEnvioSucesso(false);
         setRecaptchaValue(null)
         setHcaptchaKey(new Date().getTime().toString());
@@ -261,6 +261,7 @@ export const SejaNossoColaborador = () => {
                 label='Inclua em anexo seu currículo para verificação (pdf)'
                 name='pdfFile'  // Verifique se o nome do campo está correto
                 type='file'
+               
                 onChange={(e) => setCurriculo(e.target.files[0])}
                 InputLabelProps={{ shrink: true }}
               />

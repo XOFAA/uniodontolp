@@ -80,7 +80,6 @@ export const SejaUmCooperado = () => {
       .catch(function (error) {
         setSnackbarMessage('Falha interna, tente novamente mais tarde')
         setSnackbarOpen(true)
-      
         setEnvioSucesso(false);
         setRecaptchaValue(null)
         setHcaptchaKey(new Date().getTime().toString());
@@ -126,12 +125,14 @@ export const SejaUmCooperado = () => {
               <TextField
                 label='Nome Completo'
                 required
+                value={nomeCompleto}
                 onChange={(e)=>setNomeCompleto(e.target.value)}
               />
 
               <TextField
                 label='Contato de Telefone/Celular/Whatsapp'
                 required
+                value={celular}
                 onChange={(e)=>setCelular(e.target.value)}
               />
 
@@ -139,44 +140,52 @@ export const SejaUmCooperado = () => {
                 label='E-mail do solicitante'
                 required
                 type='email'
+                value={email}
                 onChange={(e)=>setEmail(e.target.value)}
               />
 
               <TextField
                 label='Locais de atendimento (se tiver mais de um local, separar)'
                 required
+                value={locaisatendimento}
                 onChange={(e)=>setLocaisAtendimento(e.target.value)}
               />
 
               <TextField
                 label='Por favor, informe a instituição de graduação na qual se formou'
                 required
+                value={instituicao}
                 onChange={(e)=>setInstituicao(e.target.value)}
               />
 
               <TextField
                 label='Por favor, informe o ano de conclusão de sua graduação'
                 required
+                value={anoconclusao}
                 onChange={(e)=>setAnoConclusao(e.target.value)}
               />
               <TextField
                 label='Caso tenha especialização acadêmica, favor fazer um resumo.'
                 required
+                value={especializacaoacademica}
                 onChange={(e)=>setEspecializacaoAcademia(e.target.value)}
               />
               <TextField
                 label='Caso tenha especialização odontológica, favor fazer um resumo.'
                 required
+                  value={especializacaoodontologica}
                 onChange={(e)=>setEspecializacaoOdontologica(e.target.value)}
               />
               <TextField
                 label='Queremos saber um pouco das suas áreas de atuação na odontologia, fazendo um breve resumo'
                 required
+                value={areadeatuacao}
                 onChange={(e)=>setAreaDeAtuacao(e.target.value)}
               />
               <TextField
                 label='Por favor, informe seu número de registro no CRO'
                 required
+                value={cro}
                 onChange={(e)=>setCro(e.target.value)}
               />
 
@@ -185,6 +194,7 @@ export const SejaUmCooperado = () => {
                 label='Ou se preferir, você pode incluir algum arquivo, como ceritificados e outros documentos (pdf)'
                 required
                 type='file'
+                value={curriculo}
                 InputLabelProps={{ shrink: true }}
                 onChange={(e) => setCurriculo(e.target.files[0])}
               />
